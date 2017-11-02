@@ -1,8 +1,8 @@
 import React from 'react'
-import {TabBarBottom, TabNavigator} from 'react-navigation';
-import Sheet from "./app/component/Sheet";
-import ProfileScreen from "./app/component/Sheet/ProfileScreen";
-import TabBarItem from "./app/TabBarItem";
+import {TabBarBottom, TabNavigator} from 'react-navigation'
+import Sheet from "./app/component/Sheet"
+import ProfileScreen from "./app/component/Sheet/ProfileScreen"
+import {Image} from 'react-native'
 
 export default TabNavigator(
     {
@@ -11,12 +11,10 @@ export default TabNavigator(
             navigationOptions: ({navigation}) => ({
                 tabBarLabel: '书架',
                 tabBarIcon: ({focused, tintColor}) => (
-                    <TabBarItem
-                        tintColor={tintColor}
-                        focused={focused}
-                        // normalImage={import('./imgs/nav_fav@2x.png')}
-                        // selectedImage={import('./imgs/nav_fav_actived@3x.png')}
+                    <Image source={require('./app/assets/BookShelf_tabBar_Normal_Image.png')}
+                           style={{tintColor: tintColor}}
                     />
+
                 )
             }),
         },
@@ -25,12 +23,8 @@ export default TabNavigator(
             navigationOptions: ({navigation}) => ({
                 tabBarLabel: '书城',
                 tabBarIcon: ({focused, tintColor}) => (
-                    <TabBarItem
-                        tintColor={tintColor}
-                        focused={focused}
-                        // normalImage={require('./imgs/tab_me_nor@3x.png')}
-                        // selectedImage={require('./imgs/tab_me_selected@2x.png')}
-
+                    <Image source={require('./app/assets/BookStore_tabBar_Normal_Image.png')}
+                           style={{tintColor: tintColor}}
                     />
                 )
             }),
@@ -40,12 +34,8 @@ export default TabNavigator(
             navigationOptions: ({navigation}) => ({
                 tabBarLabel: '数据库',
                 tabBarIcon: ({focused, tintColor}) => (
-                    <TabBarItem
-                        tintColor={tintColor}
-                        focused={focused}
-                        // normalImage={require('./imgs/tab_me_nor@3x.png')}
-                        // selectedImage={require('./imgs/tab_me_selected@2x.png')}
-
+                    <Image source={require('./app/assets/DataBase_tabBar_Normal_Image.png')}
+                           style={{tintColor: tintColor}}
                     />
                 )
             }),
@@ -55,12 +45,8 @@ export default TabNavigator(
             navigationOptions: ({navigation}) => ({
                 tabBarLabel: '考试',
                 tabBarIcon: ({focused, tintColor}) => (
-                    <TabBarItem
-                        tintColor={tintColor}
-                        focused={focused}
-                        // normalImage={require('./imgs/tab_me_nor@3x.png')}
-                        // selectedImage={require('./imgs/tab_me_selected@2x.png')}
-
+                    <Image source={require('./app/assets/ExamSystem_tabBar_Normal_Image.png')}
+                           style={{tintColor: tintColor}}
                     />
                 )
             }),
@@ -70,12 +56,8 @@ export default TabNavigator(
             navigationOptions: ({navigation}) => ({
                 tabBarLabel: '教程',
                 tabBarIcon: ({focused, tintColor}) => (
-                    <TabBarItem
-                        tintColor={tintColor}
-                        focused={focused}
-                        // normalImage={require('./imgs/tab_me_nor@3x.png')}
-                        // selectedImage={require('./imgs/tab_me_selected@2x.png')}
-
+                    <Image source={require('./app/assets/Surgery_tabBar_Normal_Image.png')}
+                           style={{tintColor: tintColor}}
                     />
                 )
             }),
@@ -88,11 +70,10 @@ export default TabNavigator(
         animationEnabled: false,
         lazy: true,
         tabBarOptions: {
-            activeTintColor: '#06c1ae',
-            inactiveTintColor: '#979797',
-            style: {backgroundColor: '#ffffff',},
+            activeTintColor: 'red',
+            inactiveTintColor: 'gray',
             labelStyle: {
-                fontSize: 15, // 文字大小
+                fontSize: 12, // 文字大小
             },
         }
 
