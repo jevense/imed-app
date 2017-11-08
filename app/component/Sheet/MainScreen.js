@@ -3,9 +3,9 @@ import Drawer from 'react-native-drawer'
 import {Button, Text, View} from 'react-native';
 
 export default class MainScreen extends Component<{}> {
-    static navigationOptions = {
-        title: '主页',
-    };
+    // static navigationOptions = {
+    //     title: '主页',
+    // };
 
     render() {
         const {navigate} = this.props.navigation;
