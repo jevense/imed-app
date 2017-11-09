@@ -1,6 +1,6 @@
 import React from 'react'
-import {DrawerItems, DrawerNavigator} from 'react-navigation';
-import {Button, Image, ScrollView, StyleSheet} from 'react-native'
+import {DrawerNavigator} from 'react-navigation';
+import {Button, Image, StyleSheet} from 'react-native'
 import Sheet from './Sheet'
 import CustomDrawerContentComponent from "./CustomDrawerContentComponent";
 
