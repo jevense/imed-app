@@ -1,11 +1,39 @@
 import React, {Component} from 'react'
 import Drawer from 'react-native-drawer'
-import {Button, Text, View} from 'react-native';
+import {Button, Image, Text, TouchableHighlight, View} from 'react-native';
 
-export default class MainScreen extends Component<{}> {
-    static navigationOptions = {
-        title: '主页',
+export default class SubScreen extends Component<{}> {
+
+    static navigationOptions = ({navigation}) => {
+        const {
+            params = {
+                openControlPanel: () => {
+                }
+            }
+        } = navigation.state;
+        return {
+            headerLeft: <TouchableHighlight onPress={() => {
+                console.log('====')
+            }}>
+                <Image source={require('../../assets/Profile_tabBar_Select_Image.png')}/>
+            </TouchableHighlight>,
+            headerTitle: <Button title="Info" onPress={params.openControlPanel}/>,
+            headerRight: <Button title="Info" onPress={params.openControlPanel}/>,
+        };
     };
+
+    closeControlPanel = () => {
+        this._drawer.close()
+    };
+    openControlPanel = () => {
+        this._drawer.open()
+    };
+
+    componentDidMount() {
+        // We can only set the function after the component has been initialized
+        this.props.navigation.setParams({openControlPanel: this.openControlPanel});
+    }
+
 
     render() {
         const {navigate} = this.props.navigation;
@@ -22,13 +50,13 @@ export default class MainScreen extends Component<{}> {
                 content={
                     <View style={{flex: 1, backgroundColor: 'red'}}>
                         <Text onPress={() => {
-                            this._drawer.close()
+                            this.closeControlPanel()
                         }} style={{fontSize: 100}}>抽屉的内容</Text>
                     </View>}
             >
                 <View style={{flex: 1, backgroundColor: 'blue'}}>
                     <Text onPress={() => {
-                        this._drawer.open()
+                        this.openControlPanel()
                     }} style={{fontSize: 30,}}>打开抽屉</Text>
                 </View>
                 <Button

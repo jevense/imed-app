@@ -1,13 +1,13 @@
 import React from 'react'
 import {TabBarBottom, TabNavigator} from 'react-navigation'
-import Sheet from "./app/component/Sheet"
 import ProfileScreen from "./app/component/Sheet/ProfileScreen"
 import {Image} from 'react-native'
+import DrawerNavigator from "./app/component/DrawerNavigator";
 
 export default TabNavigator(
     {
         Sheet: {
-            screen: Sheet,
+            screen: DrawerNavigator,
             navigationOptions: ({navigation}) => ({
                 tabBarLabel: '书架',
                 tabBarIcon: ({focused, tintColor}) => (

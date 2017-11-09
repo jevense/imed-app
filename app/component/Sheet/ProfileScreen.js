@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Button, Platform, StyleSheet, Text, View} from 'react-native';
 
 const instructions = Platform.select({
     ios: 'Press Cmd+R to reload,\n' +
@@ -10,11 +10,12 @@ const instructions = Platform.select({
 
 export default class ProfileScreen extends Component<{}> {
 
-    static navigationOptions = {
-        title: '测试',
-    };
+    // static navigationOptions = ({navigation}) => ({
+    //     title: navigation.state.params.name,
+    // });
 
     render() {
+        const {goBack} = this.props.navigation;
         return (
             <View style={styles.container}>
                 <Text style={styles.welcome}>
@@ -26,6 +27,10 @@ export default class ProfileScreen extends Component<{}> {
                 <Text style={styles.instructions}>
                     {instructions}
                 </Text>
+                <Button
+                    title="Go back"
+                    onPress={() => goBack()}
+                />
             </View>
         );
     }

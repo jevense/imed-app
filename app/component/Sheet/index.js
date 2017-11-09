@@ -1,10 +1,10 @@
 import {StackNavigator} from 'react-navigation';
-import MainScreen from "./MainScreen";
 import ProfileScreen from "./ProfileScreen";
+import SubScreen from "./SubScreen";
 
 export default StackNavigator({
     Main: {
-        screen: MainScreen,
+        screen: SubScreen,
     },
     Profile: {
         screen: ProfileScreen,
