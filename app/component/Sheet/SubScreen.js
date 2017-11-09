@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Drawer from 'react-native-drawer'
-import {Button, Image, Text, TouchableHighlight, View} from 'react-native';
+import {Button, Image, Text, View} from 'react-native';
 
 export default class SubScreen extends Component<{}> {
 
@@ -12,11 +12,11 @@ export default class SubScreen extends Component<{}> {
             }
         } = navigation.state;
         return {
-            headerLeft: <TouchableHighlight onPress={() => {
-                console.log('====')
-            }}>
+            headerLeft: <Button title="Info" isCustom={true} customView={
                 <Image source={require('../../assets/Profile_tabBar_Select_Image.png')}/>
-            </TouchableHighlight>,
+            } onPress={() => {
+                console.log('====')
+            }}/>,
             headerTitle: <Button title="Info" onPress={params.openControlPanel}/>,
             headerRight: <Button title="Info" onPress={params.openControlPanel}/>,
         };
