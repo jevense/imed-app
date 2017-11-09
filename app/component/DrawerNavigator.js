@@ -2,7 +2,7 @@ import React from 'react'
 import {DrawerNavigator} from 'react-navigation';
 import {Button, Image, StyleSheet} from 'react-native'
 import Sheet from './Sheet'
-import CustomDrawerContentComponent from "./CustomDrawerContentComponent";
+import ContentComponent from "./ContentComponent";
 
 class MyNotificationsScreen extends React.Component {
     static navigationOptions = {
@@ -42,8 +42,7 @@ export default DrawerNavigator({
 }, {
     drawerWidth: 300, // 抽屉宽
     drawerPosition: 'left', // 抽屉在左边还是右边
-    // contentComponent: props => <ScrollView><DrawerItems {...props} /></ScrollView>,  // 自定义抽屉组件
-    contentComponent: CustomDrawerContentComponent,  // 自定义抽屉组件
+    contentComponent: ContentComponent,  // 自定义抽屉组件
     contentOptions: {
         initialRouteName: Sheet, // 默认页面组件
         activeTintColor: 'white',  // 选中文字颜色

@@ -1,12 +1,14 @@
 import React from 'react';
 import {DrawerItems} from 'react-navigation';
-import {StyleSheet, View} from "react-native";
+import {ScrollView, StyleSheet} from "react-native";
+// import DrawerItems from "./DrawerItems";
 
-export default CustomDrawerContentComponent = (props) => (
-    <View style={styles.container}>
+export default ContentComponent = (props) => {
+    console.log(props)
+    return (
         <DrawerItems {...props} />
-    </View>
-);
+    )
+};
 
 const styles = StyleSheet.create({
     container: {
