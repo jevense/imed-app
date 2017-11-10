@@ -8,11 +8,11 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-export default class ProfileScreen extends Component<{}> {
+export default class Person extends Component<{}> {
 
-    // static navigationOptions = ({navigation}) => ({
-    //     title: navigation.state.params.name,
-    // });
+    static navigationOptions = ({navigation}) => ({
+        title: '我的',
+    });
 
     render() {
         const {goBack} = this.props.navigation;

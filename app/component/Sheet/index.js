@@ -1,25 +1,76 @@
-import {StackNavigator} from 'react-navigation';
-import ProfileScreen from "./ProfileScreen";
-import SubScreen from "./SubScreen";
+import React, {Component} from 'react';
+import {Button, Image, Platform, StyleSheet, Text, View} from 'react-native';
+import TouchableItem from "react-navigation/src/views/TouchableItem";
 
-export default StackNavigator({
-    Main: {
-        screen: SubScreen,
+const instructions = Platform.select({
+    ios: 'Press Cmd+R to reload,\n' +
+    'Cmd+D or shake for dev menu',
+    android: 'Double tap R on your keyboard to reload,\n' +
+    'Shake or press menu button for dev menu',
+});
+
+export default class Sheet extends Component<{}> {
+
+    static navigationOptions = ({navigation}) => {
+        return {
+            headerLeft: <TouchableItem
+                onPress={() => {
+                    navigation.navigate('Person')
+                }}
+            >
+                <Image
+                    source={require('../../assets/Profile_tabBar_Select_Image.png')}
+                    style={styles.person}
+                />
+            </TouchableItem>,
+            headerTitle: <Button title="Info" onPress={() => {
+            }}/>,
+            headerRight: <Button title="Info" onPress={() => {
+            }}/>,
+        };
+    };
+
+    render() {
+        const {goBack} = this.props.navigation;
+        return (
+            <View style={styles.container}>
+                <Text style={styles.welcome}>
+                    Welcome to React Native!
+                </Text>
+                <Text style={styles.instructions}>
+                    To get started, edit App.js
+                </Text>
+                <Text style={styles.instructions}>
+                    {instructions}
+                </Text>
+                <Button
+                    title="Go back"
+                    onPress={() => goBack()}
+                />
+            </View>
+        );
+    }
+}
+
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#F5FCFF',
     },
-    Profile: {
-        screen: ProfileScreen,
+    welcome: {
+        fontSize: 20,
+        textAlign: 'center',
+        margin: 10,
     },
-}, {
-    initialRouteName: 'Main', // 默认显示界面
-    navigationOptions: {  // 屏幕导航的默认选项, 也可以在组件内用 static navigationOptions 设置(会覆盖此处的设置)
-        gesturesEnabled: true
+    instructions: {
+        textAlign: 'center',
+        color: '#333333',
+        marginBottom: 5,
     },
-    mode: 'card',  // 页面切换模式, 左右是card(相当于iOS中的push效果), 上下是modal(相当于iOS中的modal效果)
-    headerMode: 'screen', // 导航栏的显示模式, screen: 有渐变透明效果, float: 无透明效果, none: 隐藏导航栏
-    onTransitionStart: () => {
-        console.log('导航栏切换开始');
-    },  // 回调
-    onTransitionEnd: () => {
-        console.log('导航栏切换结束');
-    }  // 回调
+    person: {
+        marginLeft: 10,
+    },
 });
