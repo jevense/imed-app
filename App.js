@@ -1,13 +1,13 @@
 import React from 'react'
 import {TabBarBottom, TabNavigator} from 'react-navigation'
-import ProfileScreen from "./app/component/Sheet/ProfileScreen"
+import Sheet from "./app/component/Sheet"
 import {Image} from 'react-native'
-import DrawerNavigator from "./app/component/DrawerNavigator";
+import Home from './app/component/Home'
 
 export default TabNavigator(
     {
         Sheet: {
-            screen: DrawerNavigator,
+            screen: Home,
             navigationOptions: ({navigation}) => ({
                 tabBarLabel: '书架',
                 tabBarIcon: ({focused, tintColor}) => (
@@ -19,7 +19,7 @@ export default TabNavigator(
             }),
         },
         Store: {
-            screen: ProfileScreen,
+            screen: Sheet,
             navigationOptions: ({navigation}) => ({
                 tabBarLabel: '书城',
                 tabBarIcon: ({focused, tintColor}) => (
@@ -30,7 +30,7 @@ export default TabNavigator(
             }),
         },
         Database: {
-            screen: ProfileScreen,
+            screen: Sheet,
             navigationOptions: ({navigation}) => ({
                 tabBarLabel: '数据库',
                 tabBarIcon: ({focused, tintColor}) => (
@@ -41,7 +41,7 @@ export default TabNavigator(
             }),
         },
         Exam: {
-            screen: ProfileScreen,
+            screen: Sheet,
             navigationOptions: ({navigation}) => ({
                 tabBarLabel: '考试',
                 tabBarIcon: ({focused, tintColor}) => (
@@ -52,7 +52,7 @@ export default TabNavigator(
             }),
         },
         Course: {
-            screen: ProfileScreen,
+            screen: Sheet,
             navigationOptions: ({navigation}) => ({
                 tabBarLabel: '教程',
                 tabBarIcon: ({focused, tintColor}) => (
