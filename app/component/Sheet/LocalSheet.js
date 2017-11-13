@@ -1,98 +1,106 @@
-import React from 'react'
-import {SectionList, StyleSheet, Text, View} from 'react-native';
-// import Dimensions from 'Dimensions'; //获取屏幕的宽高
+import React, { Component } from 'react';
+import {
+  AppRegistry,
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  Platform,
+  Dimensions,
+  RefreshControl,
+  FlatList,
+  ActivityIndicator,
+  DeviceEventEmitter,
+  ScrollView
+} from 'react-native';
+import linkageData from './linkage.json'
+let {width,height} = Dimensions.get('window');
+let dataAry = []
 
-// const ScreenWidth = Dimensions.get('window').width;
-// const ScreenHeight = Dimensions.get('window').height;
+export default class LocalSheet extends Component{
 
-export default class LocalSheet extends React.Component {
+  static navigationOptions = {
+    tabBarVisible: false
+  }
 
-    static navigationOptions = {
-        tabBarVisible: false
+  // 构造
+  constructor(props) {
+    super(props);
+    dataAry = linkageData
+    this.state = {
+      dataAry: dataAry,
+      cell:0  //默认选中第一行
     };
-
-    render() {
-        return (
-            <SectionList
-                keyExtractor={(item, index) => ("index" + index + item)}
-                renderItem={
-                    ({item}) => (
-                        <View>
-                            <Text>{item.name}</Text>
-                            {console.log(item)
-                                // item.map((item, index) => (
-                                //     <TouchableOpacity
-                                //         key={index}
-                                //         onPress={
-                                //             () => {
-                                //             }
-                                //         }
-                                //         underlayColor="transparent">
-                                //         <View style={styles.row}>
-                                //             <Image source={require('../../assets/cover/fc442b02fad726d0.png')}
-                                //                    style={{width: 100, height: 140}}
-                                //             />
-                                //             <Text>{item.name}</Text>
-                                //         </View>
-                                //     </TouchableOpacity>
-                                // ))
-                            }
-                        </View>
-                    )
-                }
-                // renderSectionHeader={({section}) =>
-                //     <Text>{section.title}</Text>
-                // }
-                sections={[
-                    {
-                        data: [
-                            {cover: 'fc442b02fad726d0.png', name: '1data1', status: false,},
-                            {cover: 'fc442b02fad726d0.png', name: '1data1', status: false,},
-                        ], title: '1title'
-                    }
-                ]}
-            />
-        );
+  }
+  render() {
+    return (
+      <FlatList
+        ref='FlatList'
+        style={{width:80}}
+        data = {this.state.dataAry} //数据源
+        renderItem = {(item) => this.renderRow(item)} //每一行render
+        ItemSeparatorComponent = {()=>{return(<View style={{height:1,backgroundColor:'cyan'}}/>)}} //分隔线
+        keyExtractor={this.keyExtractor}  //使用json中的title动态绑定key
+      />
+    );
+  }
+  //使用json中的title动态绑定key
+  keyExtractor(item: Object, index: number) {
+    return item.title
+  }
+  //每一行render
+  renderRow =(item) =>{
+    return(
+      <TouchableOpacity onPress={()=>this.cellAction(item)}>
+        <View style={{height:60,flexDirection:'row',alignItems:'center'}}>
+          <View style={{height:50,width:5,backgroundColor: item.index == this.state.cell ? 'red' : 'rgba(0,0,0,0)'}}/>
+          <Text style={{marginLeft:20}}>{item.item.title}</Text>
+        </View>
+      </TouchableOpacity>
+    )
+  }
+  //点击某行
+  cellAction =(item)=>{
+    // alert(item.index)
+    if(item.index < this.state.dataAry.length - 1){
+      this.setState({
+        cell:item.index
+      })
+      DeviceEventEmitter.emit('left',item.index); //发监听
     }
-}
 
-const styles = StyleSheet.create({
-    navigatorStyle: {
-        height: 64,
-        backgroundColor: '#FFFFFF',
-        textAlign: 'center',
-        paddingTop: 33.5,
-        fontSize: 17,
-        fontWeight: '600',
-    },
-    list: {
-        //justifyContent: 'space-around',
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-        alignItems: 'flex-start',
-        backgroundColor: '#FFFFFF'
-    },
-    row: {
-        backgroundColor: '#FFFFFF',
-        justifyContent: 'center',
-        // width: (ScreenWidth - 1) / 4,
-        // height: (ScreenWidth - 1) / 4,
-        alignItems: 'center',
-        // borderWidth: 0.5,
-        // borderRadius: 5,
-        // borderColor: '#E6E6E6'
-    },
-    sectionHeader: {
-        marginLeft: 10,
-        padding: 6.5,
-        fontSize: 12,
-        color: '#787878'
-    },
-    remark: {
-        margin: 10,
-        fontSize: 10,
-        color: '#D2D2D2',
-        marginBottom: 10,
-        alignSelf: 'center',
-    },
+  }
+
+  componentWillUnmount(){
+    // 移除监听
+    this.listener.remove();
+  }
+
+  componentWillMount() {
+    this.listener = DeviceEventEmitter.addListener('right',(e)=>{
+      this.refs.FlatList.scrollToIndex({animated: true, index: e-1})
+      this.setState({
+        cell:e-1
+      })
+    });
+  }
+
+};
+
+var styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#F5FCFF',
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
+  }
 });
