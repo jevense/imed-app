@@ -1,14 +1,7 @@
 import React, {Component} from 'react';
-import {Image, Platform, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 import TouchableItem from "react-navigation/src/views/TouchableItem";
 import Switch from './Switch'
-
-const instructions = Platform.select({
-    ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-    android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
 
 export default class Sheet extends Component<{}> {
 
@@ -30,7 +23,7 @@ export default class Sheet extends Component<{}> {
         return {
             headerLeft: <TouchableItem
                 onPress={() => {
-                    navigation.navigate('Person')
+                    navigation.navigate('DrawerOpen')
                 }}
             >
                 <Image
@@ -44,6 +37,7 @@ export default class Sheet extends Component<{}> {
                     onPress={() => {
                         params.switch._navigation.navigate('Sheet');
                         setParams({selected: 'Sheet'});
+                        // navigation.navigate('Sheet')
                     }}>
                     <Text
                         style={[styles.buttonText, selected === 'Sheet' ? selectedStyles.buttonText : unSelectedStyles.buttonText]}>本地书架</Text>
@@ -54,6 +48,7 @@ export default class Sheet extends Component<{}> {
                     onPress={() => {
                         params.switch._navigation.navigate('Store');
                         setParams({selected: 'Store'});
+                        // navigation.navigate('Store')
                     }}>
                     <Text
                         style={[styles.buttonText, selected === 'Store' ? selectedStyles.buttonText : unSelectedStyles.buttonText]}>已获取图书</Text>

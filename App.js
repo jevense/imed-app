@@ -2,19 +2,18 @@ import React from 'react'
 import {TabBarBottom, TabNavigator} from 'react-navigation'
 import Sheet from "./app/component/Sheet"
 import {Image} from 'react-native'
-import Home from './app/component/Home'
+import DrawerNavigator from "./app/component/DrawerNavigator";
 
 export default TabNavigator(
     {
         Sheet: {
-            screen: Home,
+            screen: DrawerNavigator,
             navigationOptions: ({navigation}) => ({
                 tabBarLabel: '书架',
                 tabBarIcon: ({focused, tintColor}) => (
                     <Image source={require('./app/assets/BookShelf_tabBar_Normal_Image.png')}
                            style={{tintColor: tintColor}}
                     />
-
                 )
             }),
         },
@@ -76,6 +75,5 @@ export default TabNavigator(
                 fontSize: 12, // 文字大小
             },
         }
-
     }
 );

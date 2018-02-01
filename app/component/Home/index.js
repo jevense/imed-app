@@ -1,13 +1,9 @@
 import {StackNavigator} from 'react-navigation';
 import Sheet from "../Sheet";
-import Person from "../Person";
 
 export default StackNavigator({
     Sheet: {
         screen: Sheet,
-    },
-    Person: {
-        screen: Person,
     },
 }, {
     initialRouteName: 'Sheet', // 默认显示界面

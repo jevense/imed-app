@@ -1,10 +1,12 @@
 import React from 'react'
 import {DrawerNavigator} from 'react-navigation';
 import {Button, Image, StyleSheet} from 'react-native'
-import Sheet from './Sheet'
-import ContentComponent from "./ContentComponent";
+import ContentComponent from "./ContentComponent"
+import Home from "./Home";
+import Person from "./Person/index";
 
 class MyNotificationsScreen extends React.Component {
+
     static navigationOptions = {
         drawerLabel: 'Notifications',
         drawerIcon: ({tintColor}) => (
@@ -34,7 +36,10 @@ const styles = StyleSheet.create({
 
 export default DrawerNavigator({
     Home: {
-        screen: Sheet,
+        screen: Home,
+    },
+    Person: {
+        screen: Person,
     },
     Notifications: {
         screen: MyNotificationsScreen,
@@ -44,7 +49,7 @@ export default DrawerNavigator({
     drawerPosition: 'left', // 抽屉在左边还是右边
     contentComponent: ContentComponent,  // 自定义抽屉组件
     contentOptions: {
-        initialRouteName: Sheet, // 默认页面组件
+        initialRouteName: Person, // 默认页面组件
         activeTintColor: 'white',  // 选中文字颜色
         activeBackgroundColor: '#ff8500', // 选中背景颜色
         inactiveTintColor: '#666',  // 未选中文字颜色
