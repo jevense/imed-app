@@ -1,21 +1,22 @@
 import React from 'react'
-import { TabNavigator } from 'react-navigation'
+import {TabNavigator} from 'react-navigation'
 import LocalSheet from './LocalSheet'
 import StoreSheet from './StoreSheet'
 
 export default TabNavigator(
-  {
-    Sheet: {
-      screen: LocalSheet,
+    {
+        Sheet: {
+            screen: LocalSheet,
 
+        },
+        Store: {
+            screen: StoreSheet,
+        }
     },
-    Store: {
-      screen: StoreSheet,
+    {
+        swipeEnabled: true,
+        animationEnabled: false,
+        lazy: true,
     }
-  },
-  {
-    swipeEnabled: true,
-    animationEnabled: false,
-    lazy: true,
-  }
-)
+);
+

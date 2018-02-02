@@ -58,11 +58,11 @@ export default class LocalSheet extends Component {
         if (item.index < this.state.dataAry.length - 1) {
             this.setState({
                 cell: item.index
-            })
+            });
             DeviceEventEmitter.emit('left', item.index); //发监听
         }
 
-    }
+    };
 
     componentWillUnmount() {
         // 移除监听
@@ -80,7 +80,7 @@ export default class LocalSheet extends Component {
 
 };
 
-var styles = StyleSheet.create({
+let styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#F5FCFF',

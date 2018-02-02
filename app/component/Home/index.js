@@ -1,7 +1,7 @@
 import {StackNavigator} from 'react-navigation';
 import Sheet from "../Sheet";
 
-export default StackNavigator({
+const stackNavigator = StackNavigator({
     Sheet: {
         screen: Sheet,
     },
@@ -19,3 +19,5 @@ export default StackNavigator({
         console.log('导航栏切换结束');
     }  // 回调
 });
+
+export default stackNavigator;

@@ -2,28 +2,16 @@ import React, {Component} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import TouchableItem from "react-navigation/src/views/TouchableItem";
 import Switch from './Switch'
+import Person from "../Person";
 
 export default class Sheet extends Component<{}> {
 
     static navigationOptions = ({navigation}) => {
 
-        const {
-            state: {
-                params = {
-                    switch: {},
-                },
-            },
-            setParams,
-        } = navigation;
-
-        const {
-            selected = 'Sheet'
-        } = params;
-
         return {
             headerLeft: <TouchableItem
                 onPress={() => {
-                    navigation.navigate('DrawerOpen')
+                    navigation.navigate('Person')
                 }}
             >
                 <Image
@@ -32,38 +20,32 @@ export default class Sheet extends Component<{}> {
                 />
             </TouchableItem>,
             headerTitle: <View style={styles.headerTitle}>
-                <TouchableItem
-                    style={[styles.button, styles.buttonLeft, selected === 'Sheet' ? selectedStyles.button : unSelectedStyles.button]}
-                    onPress={() => {
-                        params.switch._navigation.navigate('Sheet');
-                        setParams({selected: 'Sheet'});
-                        // navigation.navigate('Sheet')
-                    }}>
-                    <Text
-                        style={[styles.buttonText, selected === 'Sheet' ? selectedStyles.buttonText : unSelectedStyles.buttonText]}>本地书架</Text>
-                </TouchableItem>
-                <TouchableItem
-                    style={[[styles.button, styles.buttonRight, selected === 'Store' ? selectedStyles.button : unSelectedStyles.button]]}
-                    title="已获取图书"
-                    onPress={() => {
-                        params.switch._navigation.navigate('Store');
-                        setParams({selected: 'Store'});
-                        // navigation.navigate('Store')
-                    }}>
-                    <Text
-                        style={[styles.buttonText, selected === 'Store' ? selectedStyles.buttonText : unSelectedStyles.buttonText]}>已获取图书</Text>
-                </TouchableItem>
+                {/*<TouchableItem*/}
+                    {/*style={[styles.button, styles.buttonLeft, selected === 'Sheet' ? selectedStyles.button : unSelectedStyles.button]}*/}
+                    {/*onPress={() => {*/}
+                        {/*params.switch._navigation.navigate('Sheet');*/}
+                        {/*setParams({selected: 'Sheet'});*/}
+                        {/*// navigation.navigate('Sheet')*/}
+                    {/*}}>*/}
+                    {/*<Text*/}
+                        {/*style={[styles.buttonText, selected === 'Sheet' ? selectedStyles.buttonText : unSelectedStyles.buttonText]}>本地书架</Text>*/}
+                {/*</TouchableItem>*/}
+                {/*<TouchableItem*/}
+                    {/*style={[[styles.button, styles.buttonRight, selected === 'Store' ? selectedStyles.button : unSelectedStyles.button]]}*/}
+                    {/*title="已获取图书"*/}
+                    {/*onPress={() => {*/}
+                        {/*params.switch._navigation.navigate('Store');*/}
+                        {/*setParams({selected: 'Store'});*/}
+                        {/*// navigation.navigate('Store')*/}
+                    {/*}}>*/}
+                    {/*<Text*/}
+                        {/*style={[styles.buttonText, selected === 'Store' ? selectedStyles.buttonText : unSelectedStyles.buttonText]}>已获取图书</Text>*/}
+                {/*</TouchableItem>*/}
             </View>,
             // headerRight: <CheckBox
             //     leftText='test'/>,
         };
-    }
-    ;
-
-    componentDidMount() {
-        // We can only set the function after the component has been initialized
-        this.props.navigation.setParams({switch: this._switch});
-    }
+    };
 
     render() {
         const {goBack} = this.props.navigation;
