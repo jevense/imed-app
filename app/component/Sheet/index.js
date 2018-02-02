@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Image, StyleSheet, TextInput, View} from 'react-native';
+import {Image, StyleSheet, View} from 'react-native';
 import TouchableItem from 'react-navigation/src/views/TouchableItem';
 import Switch from './Switch'
 import Person from '../Person';
@@ -20,22 +20,29 @@ export default class Sheet extends Component<{}> {
                     style={styles.person}
                 />
             </TouchableItem>,
-            headerTitle: <TextInput placeholder='搜索图书' returnKeyType='search'/>,
-            headerRight: <View style={styles.headerTitle}>
+            headerTitle: '书架',
+            headerRight: <View style={{flexDirection: 'row'}}>
                 <TouchableItem
+                    style={{marginLeft: 10, marginRight: 5}}
                     onPress={() => {
 
                     }}>
-                    <Ionicons name='ios-search' size={25}/>
+                    <Ionicons name='ios-search'
+                              size={25}
+                              style={{color: 'red'}}
+                    />
                 </TouchableItem>
                 <TouchableItem
-                    style={{marginLeft: 20}}
+                    style={{marginLeft: 5, marginRight: 10}}
                     onPress={() => {
                         // params.switch._navigation.navigate('Sheet');
                         // setParams({selected: 'Sheet'});
                         // navigation.navigate('Sheet')
                     }}>
-                    <Ionicons name='ios-add-outline' size={25}/>
+                    <Ionicons name='ios-add-outline'
+                              size={25}
+                              style={{color: 'red'}}
+                    />
                 </TouchableItem>
             </View>,
         };
