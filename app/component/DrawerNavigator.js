@@ -1,7 +1,6 @@
 import React from 'react'
 import {DrawerNavigator} from 'react-navigation';
 import {StyleSheet} from 'react-native'
-import ContentComponent from "./ContentComponent"
 import Home from "./Home"
 import Person from "./Person/index";
 

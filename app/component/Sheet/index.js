@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
-import TouchableItem from "react-navigation/src/views/TouchableItem";
+import {Image, StyleSheet, TextInput, View} from 'react-native';
+import TouchableItem from 'react-navigation/src/views/TouchableItem';
 import Switch from './Switch'
-import Person from "../Person";
+import Person from '../Person';
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 export default class Sheet extends Component<{}> {
 
@@ -19,31 +20,24 @@ export default class Sheet extends Component<{}> {
                     style={styles.person}
                 />
             </TouchableItem>,
-            headerTitle: <View style={styles.headerTitle}>
-                {/*<TouchableItem*/}
-                    {/*style={[styles.button, styles.buttonLeft, selected === 'Sheet' ? selectedStyles.button : unSelectedStyles.button]}*/}
-                    {/*onPress={() => {*/}
-                        {/*params.switch._navigation.navigate('Sheet');*/}
-                        {/*setParams({selected: 'Sheet'});*/}
-                        {/*// navigation.navigate('Sheet')*/}
-                    {/*}}>*/}
-                    {/*<Text*/}
-                        {/*style={[styles.buttonText, selected === 'Sheet' ? selectedStyles.buttonText : unSelectedStyles.buttonText]}>本地书架</Text>*/}
-                {/*</TouchableItem>*/}
-                {/*<TouchableItem*/}
-                    {/*style={[[styles.button, styles.buttonRight, selected === 'Store' ? selectedStyles.button : unSelectedStyles.button]]}*/}
-                    {/*title="已获取图书"*/}
-                    {/*onPress={() => {*/}
-                        {/*params.switch._navigation.navigate('Store');*/}
-                        {/*setParams({selected: 'Store'});*/}
-                        {/*// navigation.navigate('Store')*/}
-                    {/*}}>*/}
-                    {/*<Text*/}
-                        {/*style={[styles.buttonText, selected === 'Store' ? selectedStyles.buttonText : unSelectedStyles.buttonText]}>已获取图书</Text>*/}
-                {/*</TouchableItem>*/}
+            headerTitle: <TextInput placeholder='搜索图书' returnKeyType='search'/>,
+            headerRight: <View style={styles.headerTitle}>
+                <TouchableItem
+                    onPress={() => {
+
+                    }}>
+                    <Ionicons name='ios-search' size={25}/>
+                </TouchableItem>
+                <TouchableItem
+                    style={{marginLeft: 20}}
+                    onPress={() => {
+                        // params.switch._navigation.navigate('Sheet');
+                        // setParams({selected: 'Sheet'});
+                        // navigation.navigate('Sheet')
+                    }}>
+                    <Ionicons name='ios-add-outline' size={25}/>
+                </TouchableItem>
             </View>,
-            // headerRight: <CheckBox
-            //     leftText='test'/>,
         };
     };
 
