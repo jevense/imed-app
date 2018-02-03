@@ -1,6 +1,7 @@
 import {StackNavigator} from 'react-navigation';
-import Sheet from "../Sheet";
-import Search from "../Search";
+import Sheet from '../Sheet';
+import Search from '../Search';
+import BookAdd from '../BookAdd';
 
 const stackNavigator = StackNavigator({
     Sheet: {
@@ -8,6 +9,9 @@ const stackNavigator = StackNavigator({
     },
     Search: {
         screen: Search,
+    },
+    BookAdd: {
+        screen: BookAdd,
     },
 }, {
     initialRouteName: 'Sheet', // 默认显示界面

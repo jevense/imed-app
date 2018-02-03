@@ -1,10 +1,10 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 
-const HomeScreen = () => (
+const BookAddScreen = () => (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text>Home Screen</Text>
+        <Text>BookAdd Screen</Text>
     </View>
 );
 
-export default HomeScreen
+export default BookAddScreen

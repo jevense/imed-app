@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
-import {Image, StyleSheet, View} from 'react-native';
+import {Button, Image, StyleSheet, Text, View} from 'react-native';
 import TouchableItem from 'react-navigation/src/views/TouchableItem';
 import Switch from './Switch'
 import Person from '../Person';
 import Ionicons from "react-native-vector-icons/Ionicons";
+import Search from "../Search";
+
 
 export default class Sheet extends Component<{}> {
 
@@ -12,7 +14,7 @@ export default class Sheet extends Component<{}> {
         return {
             headerLeft: <TouchableItem
                 onPress={() => {
-                    navigation.navigate('Person')
+                    navigation.navigate('DrawerOpen')
                 }}
             >
                 <Image
@@ -25,7 +27,7 @@ export default class Sheet extends Component<{}> {
                 <TouchableItem
                     style={{marginLeft: 10, marginRight: 5}}
                     onPress={() => {
-
+                        navigation.navigate('Search')
                     }}>
                     <Ionicons name='ios-search'
                               size={25}
@@ -35,9 +37,7 @@ export default class Sheet extends Component<{}> {
                 <TouchableItem
                     style={{marginLeft: 5, marginRight: 10}}
                     onPress={() => {
-                        // params.switch._navigation.navigate('Sheet');
-                        // setParams({selected: 'Sheet'});
-                        // navigation.navigate('Sheet')
+                        navigation.navigate('BookAdd')
                     }}>
                     <Ionicons name='ios-add-outline'
                               size={25}
@@ -52,7 +52,6 @@ export default class Sheet extends Component<{}> {
         const {goBack} = this.props.navigation;
         return (
             <Switch
-                ref={(ref) => this._switch = ref}
                 style={styles.container}
             />
         );

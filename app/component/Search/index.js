@@ -1,10 +1,10 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 
-const HomeScreen = () => (
+const SearchScreen = () => (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text>Home Screen</Text>
+        <Text>Search Screen</Text>
     </View>
 );
 
-export default HomeScreen
+export default SearchScreen
