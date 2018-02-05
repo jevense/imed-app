@@ -1,19 +1,25 @@
 import React from 'react';
 import {DrawerItems} from 'react-navigation';
 import {StyleSheet, Text, View} from "react-native";
-// import DrawerItems from "./DrawerItems";
+import Person from "./Person";
 
 export default ContentComponent = (props) => {
-    console.log(props)
+    console.log(props);
     return (
-        <View style={styles.container}>
-            <View style={styles.header}>
-                <Text style={styles.welcome}>欢迎</Text>
-            </View>
-            <DrawerItems {...props} />
-        </View>
+        <Person {...props}/>
     )
 };
+
+{/*<View style={styles.container}>*/}
+{/*<View style={styles.header}>*/}
+{/*<Text style={styles.welcome}>欢迎</Text>*/}
+{/*</View>*/}
+
+{/*<DrawerItems {...props} />*/}
+{/*<View style={styles.footer}>*/}
+{/*<Text>设置</Text>*/}
+{/*</View>*/}
+{/*</View>*/}
 
 const styles = StyleSheet.create({
     container: {
@@ -30,4 +36,8 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         textAlignVertical: 'center'
     },
+    footer: {
+        position: 'absolute',
+        bottom: 0,
+    }
 });

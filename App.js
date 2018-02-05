@@ -1,85 +1,49 @@
-import React, {Component} from 'react'
-import {SafeAreaView, TabBarBottom, TabNavigator} from 'react-navigation'
-import {Image, Text, View} from 'react-native'
-// import Sheet from "./app/component/Sheet"
-import DrawerNavigator from "./app/component/DrawerNavigator";
+import React from 'react'
+import {StyleSheet} from 'react-native'
+import {DrawerNavigator, StackNavigator} from 'react-navigation';
+import Home from "./app/component/TabNavigator"
+import Person from "./app/component/Person";
+import ContentComponent from './app/component/ContentComponent'
 
-const Sheet = () => (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text>Profile Screen</Text>
-    </View>
-);
-
-export default TabNavigator(
-    {
-        Sheet: {
-            screen: DrawerNavigator,
-            navigationOptions: ({navigation}) => ({
-                tabBarLabel: '书架',
-                tabBarIcon: ({focused, tintColor}) => (
-                    <Image source={require('./app/assets/BookShelf_tabBar_Normal_Image.png')}
-                           style={{tintColor: tintColor}}
-                    />
-                )
-            }),
-        },
-        Store: {
-            screen: Sheet,
-            navigationOptions: ({navigation}) => ({
-                tabBarLabel: '书城',
-                tabBarIcon: ({focused, tintColor}) => (
-                    <Image source={require('./app/assets/BookStore_tabBar_Normal_Image.png')}
-                           style={{tintColor: tintColor}}
-                    />
-                )
-            }),
-        },
-        Database: {
-            screen: Sheet,
-            navigationOptions: ({navigation}) => ({
-                tabBarLabel: '数据库',
-                tabBarIcon: ({focused, tintColor}) => (
-                    <Image source={require('./app/assets/DataBase_tabBar_Normal_Image.png')}
-                           style={{tintColor: tintColor}}
-                    />
-                )
-            }),
-        },
-        Exam: {
-            screen: Sheet,
-            navigationOptions: ({navigation}) => ({
-                tabBarLabel: '考试',
-                tabBarIcon: ({focused, tintColor}) => (
-                    <Image source={require('./app/assets/ExamSystem_tabBar_Normal_Image.png')}
-                           style={{tintColor: tintColor}}
-                    />
-                )
-            }),
-        },
-        Course: {
-            screen: Sheet,
-            navigationOptions: ({navigation}) => ({
-                tabBarLabel: '教程',
-                tabBarIcon: ({focused, tintColor}) => (
-                    <Image source={require('./app/assets/Surgery_tabBar_Normal_Image.png')}
-                           style={{tintColor: tintColor}}
-                    />
-                )
-            }),
-        },
+const styles = StyleSheet.create({
+    icon: {
+        width: 24,
+        height: 24,
     },
-    {
-        tabBarComponent: TabBarBottom,
-        tabBarPosition: 'bottom',
-        swipeEnabled: false,
-        animationEnabled: false,
-        lazy: true,
-        tabBarOptions: {
-            activeTintColor: 'red',
-            inactiveTintColor: 'gray',
-            labelStyle: {
-                fontSize: 12, // 文字大小
-            },
+});
+
+const DrawerNavigatorHome = DrawerNavigator({
+    Home: {
+        screen: Home,
+    },
+    Person: {
+        screen: Person,
+    }
+}, {
+    drawerWidth: 300, // 抽屉宽
+    drawerPosition: 'left', // 抽屉在左边还是右边
+    contentComponent: ContentComponent,  // 自定义抽屉组件
+    contentOptions: {
+        initialRouteName: Home, // 默认页面组件
+        activeTintColor: 'white',  // 选中文字颜色
+        activeBackgroundColor: '#ff8500', // 选中背景颜色
+        inactiveTintColor: '#666',  // 未选中文字颜色
+        inactiveBackgroundColor: '#fff', // 未选中背景颜色
+        style: {  // 样式
+
         }
     }
-);
+});
+
+const MainMenu = StackNavigator({
+    Home: {
+        screen: DrawerNavigatorHome
+    },
+    Person: {
+        screen: Person
+    }
+}, {
+    headerMode: 'none',
+});
+
+export default MainMenu

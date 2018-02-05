@@ -25,23 +25,23 @@ export default class Sheet extends Component<{}> {
             headerTitle: '书架',
             headerRight: <View style={{flexDirection: 'row'}}>
                 <TouchableItem
-                    style={{marginLeft: 10, marginRight: 5}}
+                    style={{padding: 10}}
                     onPress={() => {
                         navigation.navigate('Search')
                     }}>
                     <Ionicons name='ios-search'
                               size={25}
-                              style={{color: 'red'}}
+                              style={{color: '#D7433E'}}
                     />
                 </TouchableItem>
                 <TouchableItem
-                    style={{marginLeft: 5, marginRight: 10}}
+                    style={{padding: 10}}
                     onPress={() => {
                         navigation.navigate('BookAdd')
                     }}>
-                    <Ionicons name='ios-add-outline'
+                    <Ionicons name='ios-menu'
                               size={25}
-                              style={{color: 'red'}}
+                              style={{color: '#D7433E'}}
                     />
                 </TouchableItem>
             </View>,
