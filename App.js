@@ -1,4 +1,3 @@
-// @flow
 import React, {Component} from 'react'
 import {SafeAreaView, TabBarBottom, TabNavigator} from 'react-navigation'
 import {Image, Text, View} from 'react-native'
