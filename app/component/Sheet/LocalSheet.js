@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import {DeviceEventEmitter, Dimensions, FlatList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+    DeviceEventEmitter, Dimensions, FlatList, ScrollView, StyleSheet, Text, TouchableOpacity,
+    View
+} from 'react-native';
 import linkageData from './linkage.json'
-
-let {width, height} = Dimensions.get('window');
 
 export default class LocalSheet extends Component {
 
@@ -21,37 +22,28 @@ export default class LocalSheet extends Component {
 
     render() {
         return (
-            <FlatList
-                ref='FlatList'
-                style={{width:80}}
-                data = {this.state.dataAry} //数据源
-                renderItem = {(item) => this.renderRow(item)} //每一行render
-                ItemSeparatorComponent = {()=>{return(<View style={{height:1,backgroundColor:'cyan'}}/>)}} //分隔线
-                keyExtractor={this.keyExtractor}  //使用json中的title动态绑定key
-            />
+            <ScrollView>
+                <FlatList
+                    style={{width: 80}}
+                    data={this.state.dataAry} //数据源
+                    renderItem={({item}) => (
+                        <TouchableOpacity onPress={() => this.cellAction(item)}>
+                            <View style={{height: 60, flexDirection: 'row', alignItems: 'center'}}>
+                                {/*<View style={{*/}
+                                {/*height: 50,*/}
+                                {/*width: 5,*/}
+                                {/*backgroundColor: item.index == this.state.cell ? 'red' : 'rgba(0,0,0,0)'*/}
+                                {/*}}/>*/}
+                                <Text style={{marginLeft: 20}}>{item.title}</Text>
+                            </View>
+                        </TouchableOpacity>)} //每一行render
+                    ItemSeparatorComponent={() => <View style={{height: 1, backgroundColor: 'cyan'}}/>} //分隔线
+                    keyExtractor={(item) => item.title}  //使用json中的title动态绑定key
+                />
+            </ScrollView>
         );
     }
 
-    //使用json中的title动态绑定key
-    keyExtractor(item: Object, index: number) {
-        return item.title
-    }
-
-    //每一行render
-    renderRow = (item) => {
-        return (
-            <TouchableOpacity onPress={() => this.cellAction(item)}>
-                <View style={{height: 60, flexDirection: 'row', alignItems: 'center'}}>
-                    <View style={{
-                        height: 50,
-                        width: 5,
-                        backgroundColor: item.index == this.state.cell ? 'red' : 'rgba(0,0,0,0)'
-                    }}/>
-                    <Text style={{marginLeft: 20}}>{item.item.title}</Text>
-                </View>
-            </TouchableOpacity>
-        )
-    }
     //点击某行
     cellAction = (item) => {
         // alert(item.index)
@@ -65,7 +57,6 @@ export default class LocalSheet extends Component {
     };
 
     componentWillUnmount() {
-        // 移除监听
         this.listener.remove();
     }
 

@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-import {Button, Image, SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, View} from 'react-native';
 import TouchableItem from 'react-navigation/src/views/TouchableItem';
-import Switch from './Switch'
-import Person from '../Person';
 import Ionicons from "react-native-vector-icons/Ionicons";
 import Search from "../Search";
+import LocalSheet from "./LocalSheet";
 
 
 export default class Sheet extends Component<{}> {
@@ -51,9 +50,7 @@ export default class Sheet extends Component<{}> {
     render() {
         const {goBack} = this.props.navigation;
         return (
-            <Switch
-                style={styles.container}
-            />
+            <LocalSheet style={styles.container}/>
         );
     }
 }
