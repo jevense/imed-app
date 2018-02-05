@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, Image, StyleSheet, Text, View} from 'react-native';
+import {Button, Image, SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import TouchableItem from 'react-navigation/src/views/TouchableItem';
 import Switch from './Switch'
 import Person from '../Person';

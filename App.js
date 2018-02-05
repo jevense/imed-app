@@ -1,11 +1,12 @@
-import React from 'react'
-import {TabBarBottom, TabNavigator} from 'react-navigation'
+// @flow
+import React, {Component} from 'react'
+import {SafeAreaView, TabBarBottom, TabNavigator} from 'react-navigation'
 import {Image, Text, View} from 'react-native'
 // import Sheet from "./app/component/Sheet"
 import DrawerNavigator from "./app/component/DrawerNavigator";
 
 const Sheet = () => (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <Text>Profile Screen</Text>
     </View>
 );
