@@ -16,7 +16,7 @@ class MineItemCell extends Component<{}> {
                         <Text style={{fontSize: 13, color: '#999999',}}>{this.props.subtitle}</Text>
                         <Image style={styles.arrow} source={require('../../assets/pesion/cell_arrow.png')}/>
                     </View>
-                    <View style={{height: 1}}/>
+                    <View style={{height: 1, backgroundColor: 'white'}}/>
                 </TouchableOpacity>
             </View>
         );
