@@ -13,11 +13,11 @@ import {
 import {Button} from 'react-native-elements'
 // import linkageData from './linkage.json'
 
-export default class LocalSheet extends Component {
+export default class LocalSheet extends Component<{}> {
 
-    static navigationOptions = {
-        tabBarVisible: false
-    };
+    // static navigationOptions = {
+    //     tabBarVisible: false
+    // };
 
     // 构造
     constructor(props) {

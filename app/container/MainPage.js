@@ -1,9 +1,9 @@
 import React from 'react'
 import {StyleSheet} from 'react-native'
 import {DrawerNavigator, StackNavigator} from 'react-navigation';
-import Home from "./app/component/TabNavigator"
-import Person from "./app/component/Person";
-import ContentComponent from './app/component/ContentComponent'
+import Home from "../component/TabNavigator"
+import Person from "../component/Person/index";
+import ContentComponent from '../component/ContentComponent'
 
 const styles = StyleSheet.create({
     icon: {

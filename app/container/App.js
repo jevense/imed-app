@@ -1,12 +1,33 @@
 import React from 'react';
-
-import {StackNavigator} from 'react-navigation';
+import {addNavigationHelpers, StackNavigator,} from 'react-navigation';
+import {connect} from 'react-redux';
 import LoginPage from '../pages/LoginPage'
-import MainPage from '../../App'
+import MainPage from './MainPage'
+import {addListener} from '../store/ConfigureStore';
 
-const App = StackNavigator({
-    Login: {screen: LoginPage},
+export const AppNavigator = StackNavigator({
+    Login: {
+        screen: LoginPage,
+        path: 'login'
+    },
     Main: {screen: MainPage},
+}, {
+    headerMode: 'none',
 });
 
-export default App
+class App extends React.Component {
+    render() {
+        const {dispatch, nav} = this.props;
+        return (
+            <AppNavigator navigation={addNavigationHelpers({
+                dispatch: dispatch,
+                state: nav,
+                addListener,
+            })}/>
+        );
+    }
+}
+
+export default connect(state => ({
+    nav: state.nav
+}))(App);

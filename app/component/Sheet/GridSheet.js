@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
     },
 });
 export default class GridView extends Component {
+
     constructor(props) {
         super(props);
         let {column = 3, dataSource} = this.props;

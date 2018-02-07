@@ -1,10 +1,20 @@
-import {createStore, applyMiddleware} from 'redux';
+import {applyMiddleware, createStore} from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import rootReducer from '../reducers/index';
+import {createReactNavigationReduxMiddleware, createReduxBoundAddListener} from "react-navigation-redux-helpers";
 
-const createStoreWithMiddleware = applyMiddleware(thunkMiddleware)(createStore);
 
+// Note: createReactNavigationReduxMiddleware must be run before createReduxBoundAddListener
+const middleware = createReactNavigationReduxMiddleware(
+    "root",
+    state => state.nav,
+);
+export const addListener = createReduxBoundAddListener("root");
+
+
+const createStoreWithMiddleware = applyMiddleware(middleware, thunkMiddleware)(createStore);
 export default function configureStore(initialState) {
-    const store = createStoreWithMiddleware(rootReducer, initialState);
-    return store;
+    return createStoreWithMiddleware(rootReducer, initialState);
 }
+
+
