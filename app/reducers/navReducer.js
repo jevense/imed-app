@@ -1,18 +1,18 @@
 import {AppNavigator} from '../container/App'
 import {NavigationActions} from 'react-navigation';
 
-// const firstAction = AppNavigator.router.getActionForPathAndParams('Main');
-// const secondAction = AppNavigator.router.getActionForPathAndParams('Login');
-// const tempNavState = AppNavigator.router.getStateForAction(secondAction);
-// const initialState = AppNavigator.router.getStateForAction(
-//     secondAction,
-//     tempNavState
-// );
+//设定Main是初始页面,保留初始状态，第一个展示的页面是Login页面
+const firstAction = AppNavigator.router.getActionForPathAndParams('Main');
+const tempNavState = AppNavigator.router.getStateForAction(firstAction);
+const secondAction = AppNavigator.router.getActionForPathAndParams('Login');
+const initialState = AppNavigator.router.getStateForAction(
+    secondAction,
+    tempNavState
+);
 
 // const initAction = NavigationActions.init();
 // const initAction = NavigationActions.navigate({routeName: 'Login',});
-
-const initialState = AppNavigator.router.getStateForAction(NavigationActions.init());
+// const initialState = AppNavigator.router.getStateForAction(NavigationActions.init());
 
 function navReducer(state = initialState, action) {
     let nextState;
