@@ -5,6 +5,7 @@ import {Platform} from 'react-native';
 
 
 import App from './container/App';
+import {MenuContext} from "react-native-menu";
 // app的入口
 const store = configureStore();
 
@@ -19,7 +20,9 @@ export default class Root extends Component {
     render() {
         return (
             <Provider store={store}>
-                <App uriPrefix={prefix}/>
+                <MenuContext style={{flex: 1}}>
+                    <App uriPrefix={prefix}/>
+                </MenuContext>
             </Provider>
         )
     }

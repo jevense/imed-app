@@ -13,33 +13,32 @@ class LoginPage extends Component<{}> {
         }
     };
 
-    shouldComponentUpdate(nextProps, nextState) {
-        // 登录完成,切成功登录
-        if (nextProps.status === '登陆成功' && nextProps.isSuccess) {
-            const resetAction = NavigationActions.reset({
-                index: 0,
-                actions: [
-                    NavigationActions.navigate({routeName: 'Main'}),
-                ]
-            });
-            // this.props.navigation.dispatch(resetAction);
-            this.props.navigation.dispatch({type: 'Main'});
-
-            // nav.dispatch({ type: 'Login' })
-
-            console.log(this.props);
-
-            return false;
-        }
-        return true;
-    }
+    // shouldComponentUpdate(nextProps, nextState) {
+    //     // 登录完成,切成功登录
+    //     if (nextProps.status === '登陆成功' && nextProps.isSuccess) {
+    //         const resetAction = NavigationActions.reset({
+    //             index: 0,
+    //             actions: [
+    //                 NavigationActions.navigate({routeName: 'Main'}),
+    //             ]
+    //         });
+    //         // this.props.navigation.dispatch(resetAction);
+    //         this.props.navigation.dispatch({type: 'Main'});
+    //
+    //         // nav.dispatch({ type: 'Login' })
+    //
+    //         console.log(this.props);
+    //
+    //         return false;
+    //     }
+    //     return true;
+    // }
 
     render() {
+        let {auth,} = this.props;
         return (
             <View style={{flex: 1, justifyContent: 'center'}}>
-                <Button title={'login'} onPress={
-                    () => this.props.navigation.dispatch({type: 'Login'})
-                }/>
+                <Button title={'login'} onPress={auth}/>
             </View>
         )
     }

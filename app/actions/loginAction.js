@@ -1,3 +1,4 @@
+import {NavigationActions} from 'react-navigation'
 import {LOGIN_IN_DOING, LOGIN_IN_DONE, LOGIN_IN_ERROR} from '../constants/loginTypes'; // 导入事件类型,用来做分配给各个事件
 
 // 模拟用户信息
@@ -14,11 +15,13 @@ export const login = () => {
         // 模拟用户登录
         let result = fetch('https://www.baidu.com/').then((res) => {
             dispatch(loginSuccess(true, user)); // 登录请求完成
+            dispatch(NavigationActions.navigate({routeName: 'Main'}))
         }).catch((e) => {
             dispatch(loginError(false)); // 登录请求出错
+            dispatch(NavigationActions.navigate({routeName: 'Login'}))
         })
     }
-}
+};
 
 function isLogining() {
     return {

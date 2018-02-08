@@ -1,18 +1,20 @@
 import React, {Component} from 'react';
-import {Image, StyleSheet, View} from 'react-native';
-import TouchableItem from 'react-navigation/src/views/TouchableItem';
+import {FlatList, Image, PixelRatio, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import Ionicons from "react-native-vector-icons/Ionicons";
+import {Button} from 'react-native-elements'
+import {connect} from "react-redux";
 import Search from "../Search";
-import LocalSheet from "./GridSheet";
 import TopNavigation from "../Menu";
+import ListItem from "./ListItem";
+import GridItem from "./GridItem";
 
 
-export default class Sheet extends Component<{}> {
+class Sheet extends Component<{}> {
 
     static navigationOptions = ({navigation}) => {
 
         return {
-            headerLeft: <TouchableItem
+            headerLeft: <TouchableOpacity
                 onPress={() => {
                     navigation.navigate('DrawerOpen')
                 }}
@@ -21,10 +23,10 @@ export default class Sheet extends Component<{}> {
                     source={require('../../assets/Profile_tabBar_Select_Image.png')}
                     style={styles.person}
                 />
-            </TouchableItem>,
+            </TouchableOpacity>,
             headerTitle: '书架',
             headerRight: <View style={{flexDirection: 'row'}}>
-                <TouchableItem
+                <TouchableOpacity
                     style={{padding: 10}}
                     onPress={() => {
                         navigation.navigate('Search')
@@ -33,173 +35,64 @@ export default class Sheet extends Component<{}> {
                               size={25}
                               style={{color: '#FC0D1B'}}
                     />
-                </TouchableItem>
+                </TouchableOpacity>
                 <TopNavigation style={{padding: 10}}/>
             </View>,
         };
     };
 
     render() {
-        const {goBack} = this.props.navigation;
+        let {itemWidth, columnType, dataSource,} = this.props;
+
+        let result = this.switchType();
         return (
-            <LocalSheet dataSource={this.getDataList()} style={styles.container}/>
+            <FlatList
+                key={result.keyType}
+                contentContainerStyle={styles.contentContainerStyle}
+                ListHeaderComponent={() => (<Text style={{fontWeight: 'bold', fontSize: 20}}>轮播图</Text>)}
+                data={dataSource}
+                keyExtractor={(item) => item.key}
+                renderItem={({item}) => result.renderType(item, itemWidth)}
+                {...result.separatorType}
+                {...columnType}
+            />
         );
     }
 
-    getDataList() {
-        return [
-            {
-                key: 1,
-                title: '中国毕业后医学教育（2017-2期刊）',
-                editor: '张雁灵',
-                size: '10M',
-                image: require('../../assets/cover/maga-cover.jpg')
-            },
-            {
-                key: 2,
-                title: '中国毕业后医学教育（2017-2期刊）',
-                editor: '张雁灵',
-                size: '10M',
-                image: require('../../assets/cover/maga-cover.jpg')
-            },
-            {
-                key: 3,
-                title: '中国毕业后医学教育（2017-2期刊）',
-                editor: '张雁灵',
-                size: '10M',
-                image: require('../../assets/cover/maga-cover.jpg')
-            },
-            {
-                key: 4,
-                title: '中国毕业后医学教育（2017-2期刊）',
-                editor: '张雁灵',
-                size: '10M',
-                image: require('../../assets/cover/maga-cover.jpg')
-            },
-            {
-                key: 5,
-                title: '中国毕业后医学教育（2017-2期刊）',
-                editor: '张雁灵',
-                size: '10M',
-                image: require('../../assets/cover/maga-cover.jpg')
-            },
-            {
-                key: 6,
-                title: '中国毕业后医学教育（2017-2期刊）',
-                editor: '张雁灵',
-                size: '10M',
-                image: require('../../assets/cover/maga-cover.jpg')
-            },
-            {
-                key: 7,
-                title: '中国毕业后医学教育（2017-2期刊）',
-                editor: '张雁灵',
-                size: '10M',
-                image: require('../../assets/cover/maga-cover.jpg')
-            },
-            {
-                key: 8,
-                title: '中国毕业后医学教育（2017-2期刊）',
-                editor: '张雁灵',
-                size: '10M',
-                image: require('../../assets/cover/maga-cover.jpg')
-            },
-            {
-                key: 9,
-                title: '中国毕业后医学教育（2017-2期刊）',
-                editor: '张雁灵',
-                size: '10M',
-                image: require('../../assets/cover/maga-cover.jpg')
-            },
-            {
-                key: 10,
-                title: '中国毕业后医学教育（2017-2期刊）',
-                editor: '张雁灵',
-                size: '10M',
-                image: require('../../assets/cover/maga-cover.jpg')
-            },
-            {
-                key: 11,
-                title: '中国毕业后医学教育（2017-2期刊）',
-                editor: '张雁灵',
-                size: '10M',
-                image: require('../../assets/cover/maga-cover.jpg')
-            },
-            {
-                key: 12,
-                title: '中国毕业后医学教育（2017-2期刊）',
-                editor: '张雁灵',
-                size: '10M',
-                image: require('../../assets/cover/maga-cover.jpg')
-            },
-        ]
+    switchType() {
+        let {isList, columnType,} = this.props;
+        if (isList) {
+            return {
+                keyType: 'list',
+                renderType: ListItem,
+                separatorType: {ItemSeparatorComponent: () => <View style={{height: 1, backgroundColor: 'gray'}}/>}
+            }
+        } else {
+            return {
+                keyType: 'grid',
+                renderType: GridItem,
+                separatorType: {}
+            }
+        }
     }
 }
 
+export default connect(
+    (state) => ({
+        isList: state.sheet.isList,
+        dataSource: state.sheet.dataSource,
+        columnType: state.sheet.columnType,
+        itemWidth: state.sheet.itemWidth,
+    })
+)(Sheet)
 
 const
     styles = StyleSheet.create({
-        container: {
-            flex: 1,
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: '#F5FCFF',
-        },
-        welcome: {
-            fontSize: 20,
-            textAlign: 'center',
-            margin: 10,
-        },
-        instructions: {
-            textAlign: 'center',
-            color: '#333333',
-            marginBottom: 5,
-        },
         person: {
             marginLeft: 10,
             marginRight: 10,
         },
-        headerTitle: {
-            flexDirection: 'row',
-        },
-        button: {
-            height: 30,
-            width: 80,
-            borderWidth: 1,
-            borderColor: 'red',
-            justifyContent: 'center',
-        },
-        buttonLeft: {
-            borderBottomLeftRadius: 5,
-            borderTopLeftRadius: 5,
-        },
-        buttonRight: {
-            borderBottomRightRadius: 5,
-            borderTopRightRadius: 5,
-        },
-        buttonText: {
-            textAlign: 'center',
+        contentContainerStyle: {
+            paddingVertical: 20,
         },
     });
-
-const
-    selectedStyles = StyleSheet.create({
-        button: {
-            backgroundColor: 'red',
-        },
-        buttonText: {
-            color: 'white',
-            fontWeight: '900',
-        },
-    });
-
-const
-    unSelectedStyles = StyleSheet.create({
-        button: {
-            backgroundColor: 'white',
-        },
-        buttonText: {
-            color: 'red',
-        },
-    });
-

@@ -13,6 +13,7 @@ export const AppNavigator = StackNavigator({
     Main: {screen: MainPage},
 }, {
     headerMode: 'none',
+    initialRouteName: 'Main',
 });
 
 class App extends React.Component {

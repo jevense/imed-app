@@ -1,30 +1,11 @@
 import React, {Component} from 'react';
-import {
-    DeviceEventEmitter,
-    PixelRatio,
-    FlatList,
-    Image,
-    ScrollView,
-    StyleSheet,
-    TouchableOpacity,
-    Text,
-    View,
-} from 'react-native';
+import {FlatList, Image, PixelRatio, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
 import {Button} from 'react-native-elements'
-// import linkageData from './linkage.json'
 
 export default class LocalSheet extends Component<{}> {
 
-    // static navigationOptions = {
-    //     tabBarVisible: false
-    // };
-
-    // 构造
     constructor(props) {
         super(props);
-        this.state = {
-            cell: 0  //默认选中第一行
-        };
     }
 
     render() {
@@ -61,48 +42,9 @@ export default class LocalSheet extends Component<{}> {
         );
     }
 
-    //点击某行
-    cellAction = (item) => {
-        // alert(item.index)
-        if (item.index < this.state.dataAry.length - 1) {
-            this.setState({
-                cell: item.index
-            });
-            DeviceEventEmitter.emit('left', item.index); //发监听
-        }
-
-    };
-
-    componentWillUnmount() {
-        this.listener.remove();
-    }
-
-    componentWillMount() {
-        this.listener = DeviceEventEmitter.addListener('right', (e) => {
-            this.refs.FlatList.scrollToIndex({animated: true, index: e - 1})
-            this.setState({
-                cell: e - 1
-            })
-        });
-    }
-
 };
 
 let styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#F5FCFF',
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
-    },
-    instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5,
-    },
     btnDefaultStyle: {
         padding: 8,
         paddingHorizontal: 8,
