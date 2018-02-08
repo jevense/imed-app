@@ -1,4 +1,4 @@
-import  {LOGIN_IN_DOING, LOGIN_IN_DONE, LOGIN_IN_ERROR}  from '../constants/loginTypes'; // 导入事件类别,用来做事件类别的判断
+import {LOGIN_IN_DOING, LOGIN_IN_DONE, LOGIN_IN_ERROR} from '../constants/loginTypes'; // 导入事件类别,用来做事件类别的判断
 // 初始状态
 const initialState = {
     status: '点击登录',

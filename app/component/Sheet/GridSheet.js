@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {FlatList, ListView, StyleSheet, Text, View, Dimensions, Image} from 'react-native';
+import {Dimensions, FlatList, Image, StyleSheet, Text, View} from 'react-native';
 
 const styles = StyleSheet.create({
     contentContainerStyle: {

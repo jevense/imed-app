@@ -1,6 +1,6 @@
 import React from 'react'
-import {StyleSheet, Text} from 'react-native'
-import {DrawerNavigator, StackNavigator, withNavigation} from 'react-navigation';
+import {StyleSheet} from 'react-native'
+import {DrawerNavigator} from 'react-navigation';
 import Home from "../component/TabNavigator"
 import Person from "../component/Person/index";
 import ContentComponent from '../component/ContentComponent'

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {Button, View} from "react-native";
-import {NavigationActions} from 'react-navigation'
 import {login} from '../actions/loginAction'
 import {Header} from "react-native-elements";
 

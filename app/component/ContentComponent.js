@@ -1,6 +1,5 @@
 import React from 'react';
-import {DrawerItems} from 'react-navigation';
-import {StyleSheet, Text, View} from "react-native";
+import {StyleSheet} from "react-native";
 import Person from "./Person";
 
 export default ContentComponent = (props) => {

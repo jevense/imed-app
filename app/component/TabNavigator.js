@@ -1,14 +1,11 @@
-import React, {Component} from 'react'
-import {Image, Text, View} from 'react-native'
-import {SafeAreaView, TabBarBottom, TabNavigator} from 'react-navigation'
+import React from 'react'
+import {Image} from 'react-native'
+import {TabBarBottom, TabNavigator} from 'react-navigation'
 import Home from "./Home"
 import Store from './Store'
-
-const Sheet = () => (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text>Profile Screen</Text>
-    </View>
-);
+import Database from './Database'
+import Exam from './Exam'
+import Course from './Course'
 
 export default TabNavigator(
     {
@@ -35,7 +32,7 @@ export default TabNavigator(
             }),
         },
         Database: {
-            screen: Sheet,
+            screen: Database,
             navigationOptions: ({navigation}) => ({
                 tabBarLabel: '数据库',
                 tabBarIcon: ({focused, tintColor}) => (
@@ -46,7 +43,7 @@ export default TabNavigator(
             }),
         },
         Exam: {
-            screen: Sheet,
+            screen: Exam,
             navigationOptions: ({navigation}) => ({
                 tabBarLabel: '考试',
                 tabBarIcon: ({focused, tintColor}) => (
@@ -57,7 +54,7 @@ export default TabNavigator(
             }),
         },
         Course: {
-            screen: Sheet,
+            screen: Course,
             navigationOptions: ({navigation}) => ({
                 tabBarLabel: '教程',
                 tabBarIcon: ({focused, tintColor}) => (

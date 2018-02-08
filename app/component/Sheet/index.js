@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {FlatList, Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {FlatList, Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import Ionicons from "react-native-vector-icons/Ionicons";
 import {connect} from "react-redux";
 import Search from "../Search";

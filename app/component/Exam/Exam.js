@@ -3,10 +3,10 @@ import {Button, StyleSheet} from 'react-native'
 import {connect} from "react-redux";
 
 
-class Store extends Component<{}> {
+class Exam extends Component<{}> {
 
     static navigationOptions = ({navigation, navigationOptions}) => ({
-        headerTitle: '书城',
+        headerTitle: '数据库',
     });
 
     render() {
@@ -19,7 +19,7 @@ class Store extends Component<{}> {
     }
 }
 
-export default connect()(Store)
+export default connect()(Exam)
 
 const styles = StyleSheet.create({
     drawer: {

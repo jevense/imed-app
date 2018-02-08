@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
-import {Image, Text, View} from 'react-native'
-import {SafeAreaView, TabBarBottom, TabBarTop, TabNavigator} from 'react-navigation'
+import React from 'react'
+import {Text, View} from 'react-native'
+import {TabBarTop, TabNavigator} from 'react-navigation'
 
 const Sheet1 = () => (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>

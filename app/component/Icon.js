@@ -1,8 +1,5 @@
 import React from 'react'
-import {TabNavigator} from 'react-navigation'
-import LocalSheet from './Sheet/ListSheet'
-import StoreSheet from './Sheet/StoreSheet'
-import {Button, SafeAreaView, ScrollView, Text, View} from "react-native";
+import {ScrollView, Text, View} from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import type {NavigationRoute} from "react-navigation/src/TypeDefinition";
 
