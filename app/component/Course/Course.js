@@ -6,14 +6,14 @@ import {connect} from "react-redux";
 class Course extends Component<{}> {
 
     static navigationOptions = ({navigation, navigationOptions}) => ({
-        headerTitle: '数据库',
+        headerTitle: '教程',
     });
 
     render() {
         return (
             <Button
                 onPress={() => this.props.navigation.goBack()}
-                title="书城"
+                title="教程"
             />
         );
     }

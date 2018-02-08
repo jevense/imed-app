@@ -7,6 +7,6 @@ export default StackNavigator({
         screen: Exam,
     },
 }, {
-    initialRouteName: 'Database',
+    initialRouteName: 'Exam',
 });
 

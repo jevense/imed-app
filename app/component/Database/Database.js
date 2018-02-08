@@ -13,7 +13,7 @@ class Database extends Component<{}> {
         return (
             <Button
                 onPress={() => this.props.navigation.goBack()}
-                title="书城"
+                title="数据库"
             />
         );
     }
