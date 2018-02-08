@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {Image, Text, View} from 'react-native'
 import {SafeAreaView, TabBarBottom, TabNavigator} from 'react-navigation'
 import Home from "./Home"
+import Store from './Store'
 
 const Sheet = () => (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
@@ -23,7 +24,7 @@ export default TabNavigator(
             }),
         },
         Store: {
-            screen: Sheet,
+            screen: Store,
             navigationOptions: ({navigation}) => ({
                 tabBarLabel: '书城',
                 tabBarIcon: ({focused, tintColor}) => (

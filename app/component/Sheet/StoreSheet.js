@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button} from 'react-native';
+import {Button, StyleSheet} from 'react-native';
 
 export default class StoreSheet extends React.Component {
 
@@ -17,7 +17,7 @@ export default class StoreSheet extends React.Component {
     }
 }
 
-const drawerStyles = {
+const styles = StyleSheet.create({
     drawer: {
         flex: 1,
         backgroundColor: '#000',
@@ -25,4 +25,5 @@ const drawerStyles = {
         opacity: 0.6,
         shadowRadius: 3,
     },
-};
+});
+

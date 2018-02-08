@@ -10,7 +10,9 @@ export const AppNavigator = StackNavigator({
         screen: LoginPage,
         path: 'login'
     },
-    Main: {screen: MainPage},
+    Main: {
+        screen: MainPage,
+    },
 }, {
     headerMode: 'none',
     initialRouteName: 'Main',

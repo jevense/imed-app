@@ -1,6 +1,6 @@
 import React from 'react'
-import {StyleSheet} from 'react-native'
-import {DrawerNavigator, StackNavigator} from 'react-navigation';
+import {StyleSheet, Text} from 'react-native'
+import {DrawerNavigator, StackNavigator, withNavigation} from 'react-navigation';
 import Home from "../component/TabNavigator"
 import Person from "../component/Person/index";
 import ContentComponent from '../component/ContentComponent'
@@ -11,8 +11,8 @@ const styles = StyleSheet.create({
         height: 24,
     },
 });
+const MainMenu = DrawerNavigator({
 
-const DrawerNavigatorHome = DrawerNavigator({
     Home: {
         screen: Home,
     },
@@ -33,17 +33,6 @@ const DrawerNavigatorHome = DrawerNavigator({
 
         }
     }
-});
-
-const MainMenu = StackNavigator({
-    Home: {
-        screen: DrawerNavigatorHome
-    },
-    Person: {
-        screen: Person
-    }
-}, {
-    headerMode: 'none',
 });
 
 export default MainMenu

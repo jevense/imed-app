@@ -10,17 +10,6 @@ export default ContentComponent = (props) => {
     )
 };
 
-{/*<View style={styles.container}>*/}
-{/*<View style={styles.header}>*/}
-{/*<Text style={styles.welcome}>欢迎</Text>*/}
-{/*</View>*/}
-
-{/*<DrawerItems {...props} />*/}
-{/*<View style={styles.footer}>*/}
-{/*<Text>设置</Text>*/}
-{/*</View>*/}
-{/*</View>*/}
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
