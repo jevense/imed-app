@@ -7,6 +7,7 @@ import TopNavigation from "../Menu";
 import ListItem from "./ListItem";
 import GridItem from "./GridItem";
 import {Divider} from "react-native-elements";
+import SwiperItem from "./SwiperItem";
 
 
 class Sheet extends Component<{}> {
@@ -46,16 +47,18 @@ class Sheet extends Component<{}> {
 
         let result = this.switchType();
         return (
-            <FlatList
-                key={result.keyType}
-                contentContainerStyle={styles.contentContainerStyle}
-                ListHeaderComponent={() => (<Text style={{fontWeight: 'bold', fontSize: 20}}>轮播图</Text>)}
-                data={dataSource}
-                keyExtractor={(item) => item.key}
-                renderItem={({item}) => result.renderType(item, itemWidth)}
-                {...result.separatorType}
-                {...columnType}
-            />
+            <View>
+                <FlatList
+                    key={result.keyType}
+                    contentContainerStyle={styles.contentContainerStyle}
+                    ListHeaderComponent={() => (<SwiperItem/>)}
+                    data={dataSource}
+                    keyExtractor={(item) => item.key}
+                    renderItem={({item}) => result.renderType(item, itemWidth)}
+                    {...result.separatorType}
+                    {...columnType}
+                />
+            </View>
         );
     }
 
@@ -65,13 +68,17 @@ class Sheet extends Component<{}> {
             return {
                 keyType: 'list',
                 renderType: ListItem,
-                separatorType: {ItemSeparatorComponent: () => <Divider style={{height: 1, backgroundColor: 'gray'}}/>}
+                separatorType: {
+                    ItemSeparatorComponent: () => <Divider style={{height: 1, backgroundColor: 'gray'}}/>
+                }
             }
         } else {
             return {
                 keyType: 'grid',
                 renderType: GridItem,
-                separatorType: {}
+                separatorType: {
+                    ItemSeparatorComponent: () => <Divider style={{height: 10, backgroundColor: '#E9E9EF'}}/>
+                }
             }
         }
     }
@@ -91,7 +98,5 @@ const styles = StyleSheet.create({
         marginLeft: 10,
         marginRight: 10,
     },
-    contentContainerStyle: {
-        paddingVertical: 20,
-    },
+    contentContainerStyle: {},
 });

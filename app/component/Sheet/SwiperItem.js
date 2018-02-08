@@ -1,45 +1,38 @@
 import React, {Component} from 'react';
+import {Text, View, StyleSheet} from "react-native";
 import Swiper from 'react-native-swiper';
-import {Text, View} from "react-native";
 
 
 export default class SwiperItem extends Component<{}> {
     render() {
         return (
-            <Swiper style={styles.wrapper} showsButtons={true}>
-                <View style={styles.slide1}>
-                    <Text style={styles.text}>Hello Swiper</Text>
-                </View>
-                <View style={styles.slide2}>
-                    <Text style={styles.text}>Beautiful</Text>
-                </View>
-                <View style={styles.slide3}>
-                    <Text style={styles.text}>And simple</Text>
-                </View>
-            </Swiper>
+            <View style={styles.wrapper}>
+                <Swiper autoplay showsPagination={false}>
+                    <View style={styles.slide}>
+                        <Text style={styles.text}>第一页</Text>
+                    </View>
+                    <View style={styles.slide}>
+                        <Text style={styles.text}>第二页</Text>
+                    </View>
+                    <View style={styles.slide}>
+                        <Text style={styles.text}>第三页</Text>
+                    </View>
+                </Swiper>
+            </View>
         );
     }
 }
 
 const styles = StyleSheet.create({
-    wrapper: {},
-    slide1: {
+    wrapper: {
+        margin: 10,
+        height: 100,
+    },
+    slide: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#9DD6EB',
-    },
-    slide2: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#97CAE5',
-    },
-    slide3: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#92BBD9',
     },
     text: {
         color: '#fff',
