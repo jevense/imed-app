@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import {Button, View} from "react-native";
 import {NavigationActions} from 'react-navigation'
 import {login} from '../actions/loginAction'
+import {Header} from "react-native-elements";
 
 class LoginPage extends Component<{}> {
 
@@ -37,8 +38,15 @@ class LoginPage extends Component<{}> {
     render() {
         let {auth,} = this.props;
         return (
-            <View style={{flex: 1, justifyContent: 'center'}}>
-                <Button title={'login'} onPress={auth}/>
+            <View>
+                <Header
+                    leftComponent={{icon: 'menu', color: '#fff'}}
+                    centerComponent={{text: '用户登录'}}
+                    rightComponent={{text: '注册', color: '#fff'}}
+                />
+                <View style={{flex: 1, justifyContent: 'center'}}>
+                    <Button title={'login'} onPress={auth}/>
+                </View>
             </View>
         )
     }

@@ -23,6 +23,12 @@ export const login = () => {
     }
 };
 
+export const preLogin = () => {
+    return (dispatch) => {
+        dispatch(NavigationActions.navigate({routeName: 'Login'}));
+    }
+};
+
 function isLogining() {
     return {
         type: LOGIN_IN_DOING

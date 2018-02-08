@@ -22,6 +22,12 @@ const stackNavigator = StackNavigator({
     initialRouteName: 'Sheet', // 默认显示界面
     navigationOptions: {  // 屏幕导航的默认选项, 也可以在组件内用 static navigationOptions 设置(会覆盖此处的设置)
         // gesturesEnabled: true,
+        headerStyle: {
+            backgroundColor: '#F7F7F7',
+            elevation: 0,
+            borderBottomWidth: 1,
+            borderBottomColor: '#F3F3F3',
+        },
         headerTitleStyle: {
             alignSelf: 'center',
         }

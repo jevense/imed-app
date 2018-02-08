@@ -35,6 +35,9 @@ export default TabNavigator(
         swipeEnabled: true,
         animationEnabled: true,
         tabBarOptions: {
+            headerStyle: {
+                elevation: 0,
+            },
             activeTintColor: 'red',
             inactiveTintColor: 'gray',
             indicatorStyle: {

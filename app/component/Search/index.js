@@ -24,19 +24,17 @@ class Sheet extends Component<{}> {
                 round
                 lightTheme
                 containerStyle={{backgroundColor: '#F7F7F7', borderTopWidth: 0, borderBottomWidth: 0}}
-                inputStyle={{margin: 0, backgroundColor: '#E9E9EF', width: 250}}
+                inputStyle={{margin: 0, backgroundColor: '#E9E9EF', width: 240}}
                 icon={{type: 'ionicon', name: 'ios-search', style: {top: 7.5, left: 10}}}
                 placeholder='请输入搜索关键词'
                 // placeholderTextColor={'#E9E9EF'}
             />),
-            headerRight: (<Button
-                style={{marginRight: 5}}
-                color='#FC0D1B'
-                title={'取消'}
-                onPress={() => {
+            headerRight: (
+                <TouchableOpacity onPress={() => {
                     navigation.goBack()
-                }}
-            />),
+                }}>
+                    <Text style={{color: '#FC0D1B', paddingHorizontal: 10}}>取消</Text>
+                </TouchableOpacity>),
         };
     };
 

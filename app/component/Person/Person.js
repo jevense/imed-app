@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {Image, RefreshControl, ScrollView, SectionList, StyleSheet, Text, View,} from 'react-native';
 import MineItemCell from './MineItemCell';
 import {Avatar, Divider} from "react-native-elements";
+import {connect} from "react-redux";
+import {preLogin} from "../../actions/loginAction";
 
 class MineScene extends Component<{}> {
 
@@ -58,6 +60,7 @@ class MineScene extends Component<{}> {
     }
 
     renderHeader() {
+        let {login} = this.props;
         return (
             <View style={styles.header}>
                 <View style={styles.userContainer}>
@@ -65,7 +68,7 @@ class MineScene extends Component<{}> {
                         large
                         rounded
                         source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"}}
-                        onPress={() => console.log("Works!")}
+                        onPress={login}
                         activeOpacity={0.7}
                     />
                     <View>
@@ -130,4 +133,10 @@ const styles = StyleSheet.create({
     }
 });
 
-export default MineScene;
+
+export default connect(
+    (state) => ({}),
+    (dispatch) => ({
+        login: () => dispatch(preLogin()),
+    })
+)(MineScene)
