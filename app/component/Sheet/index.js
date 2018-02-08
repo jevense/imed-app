@@ -6,6 +6,7 @@ import Search from "../Search";
 import TopNavigation from "../Menu";
 import ListItem from "./ListItem";
 import GridItem from "./GridItem";
+import {Divider} from "react-native-elements";
 
 
 class Sheet extends Component<{}> {
@@ -64,7 +65,7 @@ class Sheet extends Component<{}> {
             return {
                 keyType: 'list',
                 renderType: ListItem,
-                separatorType: {ItemSeparatorComponent: () => <View style={{height: 1, backgroundColor: 'gray'}}/>}
+                separatorType: {ItemSeparatorComponent: () => <Divider style={{height: 1, backgroundColor: 'gray'}}/>}
             }
         } else {
             return {

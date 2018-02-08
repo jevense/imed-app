@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Image, RefreshControl, ScrollView, SectionList, StyleSheet, Text, View,} from 'react-native';
 import MineItemCell from './MineItemCell';
-import {Avatar} from "react-native-elements";
+import {Avatar, Divider} from "react-native-elements";
 
 class MineScene extends Component<{}> {
 
@@ -51,6 +51,7 @@ class MineScene extends Component<{}> {
                                   key={item.title}
                     />)}
                 renderSectionHeader={({section}) => <View key={section.key} style={{height: 10}}/>}
+                ItemSeparatorComponent={() => <Divider style={{height: 1, backgroundColor: '#F3F3F3'}}/>}
                 sections={this.getDataList()}
             />
         )

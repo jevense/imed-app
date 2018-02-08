@@ -3,26 +3,18 @@ import {StyleSheet, Text, View} from 'react-native';
 import Camera from 'react-native-camera';
 
 class BarcodeScanner extends Component {
-    _render() {
+    render() {
         return (
             <View style={styles.container}>
                 <Camera
                     ref={(cam) => {
                         this.camera = cam;
                     }}
-                    onBarCodeRead={this.onBarCodeRead.bind(this)}
+                    onBarCodeRead={() => (this.onBarCodeRead)}
                     style={styles.preview}
                     aspect={Camera.constants.Aspect.fill}>
                     <Text style={styles.capture} onPress={this.takePicture.bind(this)}>[CAPTURE]</Text>
                 </Camera>
-            </View>
-        );
-    }
-
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text>测试</Text>
             </View>
         );
     }
