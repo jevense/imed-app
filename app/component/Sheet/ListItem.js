@@ -18,12 +18,20 @@ export default (item) => (
                 <Text style={{color: 'gray'}}>主编：{item.editor}</Text>
                 <Text style={{color: 'gray'}}>大小：{item.size}</Text>
             </View>
-            <Button buttonStyle={[styles.btnDefaultStyle]}
-                    backgroundColor='white'
-                    color='#FC0D1B'
-                    fontWeight={'100'}
-                    title={'在线阅读'}
-            />
+            <View>
+                <Button buttonStyle={[styles.btnDefaultStyle]}
+                        backgroundColor='white'
+                        color='#FC0D1B'
+                        fontWeight={'100'}
+                        title={'在线阅读'}
+                />
+                <Button buttonStyle={[styles.btnDefaultStyle]}
+                        backgroundColor='white'
+                        color='#FC0D1B'
+                        fontWeight={'100'}
+                        title={'下载'}
+                />
+            </View>
         </View>
     </TouchableOpacity>)
 
@@ -31,6 +39,7 @@ export default (item) => (
 const styles = StyleSheet.create({
     btnDefaultStyle: {
         padding: 8,
+        marginVertical: 4,
         paddingHorizontal: 8,
         borderColor: '#FC0D1B',
         borderRadius: 5,

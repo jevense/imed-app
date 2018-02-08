@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import {FlatList, Image, PixelRatio, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {FlatList, Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import Ionicons from "react-native-vector-icons/Ionicons";
-import {Button} from 'react-native-elements'
 import {connect} from "react-redux";
 import Search from "../Search";
 import TopNavigation from "../Menu";
@@ -86,13 +85,12 @@ export default connect(
     })
 )(Sheet)
 
-const
-    styles = StyleSheet.create({
-        person: {
-            marginLeft: 10,
-            marginRight: 10,
-        },
-        contentContainerStyle: {
-            paddingVertical: 20,
-        },
-    });
+const styles = StyleSheet.create({
+    person: {
+        marginLeft: 10,
+        marginRight: 10,
+    },
+    contentContainerStyle: {
+        paddingVertical: 20,
+    },
+});

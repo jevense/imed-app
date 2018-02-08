@@ -1,7 +1,7 @@
 import React from 'react'
 import {TabNavigator} from 'react-navigation'
-import LocalSheet from './ListSheet'
-import StoreSheet from './StoreSheet'
+import LocalSheet from './Sheet/ListSheet'
+import StoreSheet from './Sheet/StoreSheet'
 import {Button, SafeAreaView, ScrollView, Text, View} from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import type {NavigationRoute} from "react-navigation/src/TypeDefinition";
@@ -956,8 +956,8 @@ const HomeScreen = ({navigation}) => (
                               marginLeft: 50,
                               marginRight: 50,
                           }}>
-                        {/*<Ionicons size={40} name={key}/>*/}
-                        {/*<Text>{key}</Text>*/}
+                        <Ionicons size={40} name={key}/>
+                        <Text>{key}</Text>
                     </View>
                 )
             })
@@ -965,23 +965,6 @@ const HomeScreen = ({navigation}) => (
     </ScrollView>
 
 );
-
-// export default TabNavigator(
-//     {
-//         Sheet: {
-//             screen: LocalSheet,
-//
-//         },
-//         Store: {
-//             screen: StoreSheet,
-//         }
-//     },
-//     {
-//         swipeEnabled: true,
-//         animationEnabled: false,
-//         lazy: true,
-//     }
-// );
 
 export default HomeScreen
 
