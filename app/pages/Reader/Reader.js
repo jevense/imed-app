@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import {StyleSheet} from 'react-native'
 import {connect} from "react-redux";
-import DrawerComponent from './DrawerComponent'
+import Container from "./Container";
+import Drawer from "react-native-drawer";
 
 
 class Reader extends Component<{}> {
@@ -14,8 +15,17 @@ class Reader extends Component<{}> {
     render() {
         let {navigation} = this.props;
         return (
-            <DrawerComponent navigation={navigation}/>
-        );
+            <Drawer
+                openDrawerOffset={100}
+                tapToClose={true}
+                ref={(ref) => this.drawer = ref}
+                content={<Text>侧边栏</Text>}
+            >
+                <Container navigation={navigation}
+                           drawer={() => (this.drawer)}
+                />
+            </Drawer>
+        )
     }
 }
 

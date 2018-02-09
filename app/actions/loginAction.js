@@ -19,9 +19,21 @@ export const login = () => {
         }).catch((e) => {
             dispatch(loginError(false)); // 登录请求出错
             dispatch(NavigationActions.navigate({routeName: 'Login'}))
-        })
+        });
+        // return getMoviesFromApi()
     }
 };
+
+async function getMoviesFromApi() {
+    try {
+        // 注意这里的await语句，其所在的函数必须有async关键字声明
+        let response = await fetch('https://facebook.github.io/react-native/movies.json');
+        let responseJson = await response.json();
+        return responseJson.movies;
+    } catch (error) {
+        console.error(error);
+    }
+}
 
 export const preLogin = () => {
     return (dispatch) => {

@@ -1,9 +1,8 @@
 import React, {Component} from "react";
-import {Modal, StatusBar, Text, TouchableHighlight, View} from "react-native";
-import Header from "./Header";
-import Footer from "./Footer";
+import {StatusBar, Text, TouchableHighlight, View} from "react-native";
 import {connect} from "react-redux";
 import {changeModalVisible} from "../../actions/readerAction";
+import {Menu} from "./Menu";
 
 class Content extends Component<{}> {
 
@@ -16,26 +15,7 @@ class Content extends Component<{}> {
         return (
             <View>
                 <StatusBar hidden/>
-                <Modal
-                    animationType={"fade"}
-                    transparent={true}
-                    visible={modalVisible}
-                    onRequestClose={() => {
-                        // alert("Modal has been closed.")
-                    }}
-                >
-                    <View style={{flex: 1, justifyContent: 'space-between'}}>
-                        <Header navigation={navigation}/>
-                        <TouchableHighlight
-                            style={{flex: 20}}
-                            onPress={() => changeModalVisible(false)}>
-                            <View style={{flex: 1}}/>
-                        </TouchableHighlight>
-                        <Footer navigation={navigation}
-                                drawer={drawer}
-                        />
-                    </View>
-                </Modal>
+                <Menu drawer={drawer} changeModalVisible={changeModalVisible}/>
                 <TouchableHighlight onPress={() => changeModalVisible(true)}>
                     <View>
                         <Text style={{backgroundColor: 'red', height: 100}}>Show Modal</Text>
