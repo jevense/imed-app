@@ -2,7 +2,7 @@ import {Image, PixelRatio, StyleSheet, Text, TouchableOpacity, View} from "react
 import React from "react";
 import {Button} from "react-native-elements";
 
-export default (item) => (
+export default ({item, navigation}) => (
     <TouchableOpacity onPress={() => {
     }}>
         <View style={{
@@ -24,6 +24,9 @@ export default (item) => (
                         color='#FC0D1B'
                         fontWeight={'100'}
                         title={'在线阅读'}
+                        onPress={() => {
+                            navigation.navigate('Reader')
+                        }}
                 />
                 <Button buttonStyle={[styles.btnDefaultStyle]}
                         backgroundColor='white'

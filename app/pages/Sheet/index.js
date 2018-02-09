@@ -43,7 +43,7 @@ class Sheet extends Component<{}> {
     };
 
     render() {
-        let {itemWidth, columnType, dataSource,} = this.props;
+        let {itemWidth, columnType, dataSource, navigation} = this.props;
 
         let result = this.switchType();
         return (
@@ -54,7 +54,7 @@ class Sheet extends Component<{}> {
                     ListHeaderComponent={() => (<SwiperItem/>)}
                     data={dataSource}
                     keyExtractor={(item) => item.key}
-                    renderItem={({item}) => result.renderType(item, itemWidth)}
+                    renderItem={({item}) => result.renderType({item, itemWidth, navigation})}
                     {...result.separatorType}
                     {...columnType}
                 />
