@@ -1,11 +1,11 @@
 import React from 'react'
 import {Image} from 'react-native'
 import {TabBarBottom, TabNavigator} from 'react-navigation'
-import Home from "./Home"
-import Store from './Store'
-import Database from './Database'
-import Exam from './Exam'
-import Course from './Course'
+import Home from "./StackNavigator"
+import Store from '../pages/Store/index'
+import Database from '../pages/Database/index'
+import Exam from '../pages/Exam/index'
+import Course from '../pages/Course/index'
 
 export default TabNavigator(
     {

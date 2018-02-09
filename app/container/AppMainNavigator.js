@@ -2,7 +2,7 @@ import React from 'react';
 import {addNavigationHelpers, StackNavigator,} from 'react-navigation';
 import {connect} from 'react-redux';
 import LoginPage from '../pages/LoginPage'
-import MainPage from './MainPage'
+import DrawerNavigator from './DrawerNavigator'
 import {addListener} from '../store/ConfigureStore';
 
 export const AppNavigator = StackNavigator({
@@ -11,7 +11,7 @@ export const AppNavigator = StackNavigator({
         path: 'login'
     },
     Main: {
-        screen: MainPage,
+        screen: DrawerNavigator,
     },
 }, {
     headerMode: 'none',

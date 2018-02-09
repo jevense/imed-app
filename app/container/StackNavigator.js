@@ -1,9 +1,8 @@
 import {StackNavigator} from 'react-navigation';
-import Sheet from '../Sheet';
-// import Sheet from '../Icon';
-import Search from '../Search';
-import BookAdd from '../BookAdd';
-import Scanner from '../Search/BarcodeScanner';
+import Sheet from '../pages/Sheet/index';
+import Search from '../pages/Search/index';
+import BookAdd from '../pages/BookAdd/index';
+import Scanner from '../pages/Search/BarcodeScanner';
 
 const stackNavigator = StackNavigator({
     Sheet: {

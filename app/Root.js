@@ -4,7 +4,7 @@ import configureStore from './store/ConfigureStore';
 import {Platform} from 'react-native';
 
 
-import App from './container/App';
+import App from './container/AppMainNavigator';
 import {MenuContext} from "react-native-menu";
 // app的入口
 const store = configureStore();

@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet} from "react-native";
-import Person from "./Person";
+import Person from "../pages/Person";
 
 export default ContentComponent = (props) => {
     console.log(props);

@@ -1,4 +1,4 @@
-import {AppNavigator} from '../container/App'
+import {AppNavigator} from '../container/AppMainNavigator'
 import {NavigationActions} from 'react-navigation';
 
 //设定Main是初始页面,保留初始状态，第一个展示的页面是Login页面

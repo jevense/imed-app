@@ -1,9 +1,9 @@
 import React from 'react'
 import {StyleSheet} from 'react-native'
 import {DrawerNavigator} from 'react-navigation';
-import Home from "../component/TabNavigator"
-import Person from "../component/Person/index";
 import ContentComponent from '../component/ContentComponent'
+import TabNavigator from "./TabNavigator"
+import Person from "../pages/Person/index";
 
 const styles = StyleSheet.create({
     icon: {
@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
 const MainMenu = DrawerNavigator({
 
     Home: {
-        screen: Home,
+        screen: TabNavigator,
     },
     Person: {
         screen: Person,
@@ -24,7 +24,7 @@ const MainMenu = DrawerNavigator({
     drawerPosition: 'left', // 抽屉在左边还是右边
     contentComponent: ContentComponent,  // 自定义抽屉组件
     contentOptions: {
-        initialRouteName: Home, // 默认页面组件
+        initialRouteName: TabNavigator, // 默认页面组件
         activeTintColor: 'white',  // 选中文字颜色
         activeBackgroundColor: '#ff8500', // 选中背景颜色
         inactiveTintColor: '#666',  // 未选中文字颜色

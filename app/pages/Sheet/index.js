@@ -2,11 +2,11 @@ import React, {Component} from 'react';
 import {FlatList, Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import Ionicons from "react-native-vector-icons/Ionicons";
 import {connect} from "react-redux";
-import Search from "../Search";
-import TopNavigation from "../Menu";
+import {Divider} from "react-native-elements";
+import Search from "../Search/index";
+import Menu from "./Menu";
 import ListItem from "./ListItem";
 import GridItem from "./GridItem";
-import {Divider} from "react-native-elements";
 import SwiperItem from "./SwiperItem";
 
 
@@ -37,7 +37,7 @@ class Sheet extends Component<{}> {
                               style={{color: '#FC0D1B'}}
                     />
                 </TouchableOpacity>
-                <TopNavigation style={{padding: 10}}/>
+                <Menu style={{padding: 10}}/>
             </View>,
         };
     };

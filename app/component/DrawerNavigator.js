@@ -1,8 +1,8 @@
 import React from 'react'
 import {DrawerNavigator} from 'react-navigation';
 import {StyleSheet} from 'react-native'
-import Home from "./Home"
-import Person from "./Person/index";
+import Home from "../container/index"
+import Person from "../pages/Person/index";
 
 const styles = StyleSheet.create({
     icon: {

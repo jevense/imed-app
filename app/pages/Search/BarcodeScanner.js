@@ -1,8 +1,15 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import Camera from 'react-native-camera';
 
-class BarcodeScanner extends Component {
+class BarcodeScanner extends Component<{}> {
+
+    static navigationOptions = ({navigation}) => {
+        return {
+            headerTitle: '扫描二维码',
+        };
+    };
+
     render() {
         return (
             <View style={styles.container}>
