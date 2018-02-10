@@ -1,8 +1,9 @@
+import React from "react";
 import {Modal, TouchableHighlight, View} from "react-native";
 import Header from "./Header";
 import Footer from "./Footer";
 
-export const Menu = ({drawer, changeModalVisible}) => (
+export const Menu = ({drawer, modalVisible, changeModalVisible, navigation}) => (
     <Modal
         animationType={"fade"}
         transparent={true}
@@ -11,16 +12,12 @@ export const Menu = ({drawer, changeModalVisible}) => (
             // alert("Modal has been closed.")
         }}
     >
-        <View style={{flex: 1, justifyContent: 'space-between'}}>
-            <Header navigation={navigation}/>
-            <TouchableHighlight
-                style={{flex: 20}}
-                onPress={() => changeModalVisible(false)}>
-                <View style={{flex: 1}}/>
-            </TouchableHighlight>
-            <Footer navigation={navigation}
-                    drawer={drawer}
-            />
-        </View>
+        <Header {...{navigation,}}/>
+        <TouchableHighlight
+            style={{flex: 1}}
+            onPress={() => changeModalVisible(false)}>
+            <View/>
+        </TouchableHighlight>
+        <Footer {...{navigation, drawer}}/>
     </Modal>
 );

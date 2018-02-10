@@ -1,7 +1,8 @@
 import React, {Component} from "react";
-import {Button, StyleSheet, View} from "react-native";
+import {StyleSheet, TouchableOpacity, View} from "react-native";
 import {connect} from "react-redux";
 import {goBack} from "../../actions/readerAction";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 class Header extends Component<{}> {
 
@@ -13,24 +14,26 @@ class Header extends Component<{}> {
         let {navigation, goBack} = this.props;
         return (<View style={styles.container}>
             <View style={styles.left}>
-                <Button
-                    onPress={() => goBack()}
-                    title={'返回'}
-                />
+                <TouchableOpacity onPress={() => goBack()}>
+                    <Ionicons name='ios-arrow-back-outline'
+                              size={25}
+                              style={styles.itemIcon}
+                    />
+                </TouchableOpacity>
             </View>
             <View style={styles.right}>
-                <Button
-                    onPress={
-                        () => (navigation.goBack())
-                    }
-                    title={'收藏'}
-                />
-                <Button
-                    onPress={
-                        () => (navigation.goBack())
-                    }
-                    title={'目录'}
-                />
+                <TouchableOpacity onPress={() => goBack()}>
+                    <Ionicons name='ios-bookmark-outline'
+                              size={25}
+                              style={styles.itemIcon}
+                    />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => goBack()}>
+                    <Ionicons name='ios-more-outline'
+                              size={25}
+                              style={styles.itemIcon}
+                    />
+                </TouchableOpacity>
             </View>
         </View>)
     }
@@ -47,19 +50,26 @@ export default connect(
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        position: 'relative',
+        top: 0,
+        height: 50,
         flexDirection: 'row',
+        alignItems: 'center',
         backgroundColor: 'white',
     },
     left: {
-        flex: 1,
+        marginHorizontal: 10,
         flexDirection: 'row',
-        justifyContent: 'flex-start',
+        justifyContent: 'center',
     },
     right: {
         flex: 1,
+        marginHorizontal: 10,
         flexDirection: 'row',
         justifyContent: 'flex-end',
+    },
+    itemIcon: {
+        marginHorizontal: 10,
     }
 });
 

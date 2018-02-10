@@ -7,7 +7,10 @@ export default class SwiperItem extends Component<{}> {
     render() {
         return (
             <View style={styles.wrapper}>
-                <Swiper autoplay showsPagination={false}>
+                <Swiper autoplay
+                        paginationStyle={{bottom: 5}}
+                    // showsPagination={false}
+                >
                     <View style={styles.slide}>
                         <Text style={styles.text}>第一页</Text>
                     </View>

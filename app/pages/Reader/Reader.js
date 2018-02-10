@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
-import {StyleSheet} from 'react-native'
+import {StatusBar, StyleSheet} from 'react-native'
 import {connect} from "react-redux";
 import Container from "./Container";
 import Drawer from "react-native-drawer";
+import Category from "./Category";
 
 
 class Reader extends Component<{}> {
@@ -19,9 +20,10 @@ class Reader extends Component<{}> {
                 openDrawerOffset={100}
                 tapToClose={true}
                 ref={(ref) => this.drawer = ref}
-                content={<Text>侧边栏</Text>}
+                content={<Category/>}
             >
-                <Container navigation={navigation}
+                <StatusBar hidden/>
+                <Container {...{navigation}}
                            drawer={() => (this.drawer)}
                 />
             </Drawer>
@@ -31,12 +33,4 @@ class Reader extends Component<{}> {
 
 export default connect()(Reader)
 
-const styles = StyleSheet.create({
-    drawer: {
-        flex: 1,
-        backgroundColor: '#000',
-        shadowColor: '#0000ff',
-        opacity: 0.6,
-        shadowRadius: 3,
-    },
-});
+const styles = StyleSheet.create({});
