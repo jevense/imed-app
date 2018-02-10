@@ -1,4 +1,4 @@
-rootProject.name = 'imedReactNative'
+rootProject.name = '医学电子书包'
 include ':react-native-fetch-blob'
 project(':react-native-fetch-blob').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-fetch-blob/android')
 include ':react-native-pdf'

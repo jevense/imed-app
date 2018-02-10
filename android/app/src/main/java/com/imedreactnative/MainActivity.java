@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "imedReactNative";
+        return "医学电子书包";
     }
 }
