@@ -8,11 +8,6 @@ import Side from "./Side";
 
 class Reader extends Component<{}> {
 
-    static navigationOptions = ({navigation, navigationOptions}) => {
-        navigationOptions.tabBarVisible = false;
-        return ({header: null,})
-    };
-
     render() {
         let {navigation, readerOpened} = this.props;
         return (
