@@ -10,8 +10,8 @@ export default ({item, itemWidth, openReader}) => {
         >
             <View style={{width: itemWidth, alignItems: 'center'}}>
                 <Image style={{width: itemWidth * 0.8, height: itemWidth * 1}}
-                       source={item.cover}/>
-                <Text style={{padding: 5, fontSize: 12}}>{item.name}</Text>
+                       source={item.image}/>
+                <Text style={{padding: 5, fontSize: 12}}>{item.title}</Text>
             </View>
         </TouchableOpacity>
     )

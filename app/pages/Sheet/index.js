@@ -48,16 +48,23 @@ class Sheet extends Component<{}> {
         super(props);
     }
 
-    async getDataSource() {
-        let response = await fetch('http://123.56.10.21:8892/book.json');
-        let responseJson = await response.json();
-        return responseJson['books'];
+    requestDiscount() {
+        fetch('http://123.56.10.21:8892/book.json')
+            .then((response) => response.json())
+            .then((json) => {
+                this.setState({dataSource: {}})
+            })
+            .catch((error) => {
+                alert(error)
+            })
+    }
+
+    componentDidMount() {
+        this.requestDiscount();
     }
 
     render() {
         let {itemWidth, columnType, dataSource, openReader} = this.props;
-
-        dataSource = this.getDataSource();
 
         let result = this.switchType();
         return (
