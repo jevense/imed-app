@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import {StyleSheet, TouchableOpacity, View} from "react-native";
+import {Dimensions, StyleSheet, TouchableOpacity, View} from "react-native";
 import {connect} from "react-redux";
-import {goBack} from "../../actions/readerAction";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import {closeReader, goBack} from "../../actions/readerAction";
 
 class Header extends Component<{}> {
 
@@ -11,10 +11,10 @@ class Header extends Component<{}> {
     }
 
     render() {
-        let {navigation, goBack} = this.props;
+        let {navigation, closeReader} = this.props;
         return (<View style={styles.container}>
             <View style={styles.left}>
-                <TouchableOpacity onPress={() => goBack()}>
+                <TouchableOpacity onPress={() => closeReader()}>
                     <Ionicons name='ios-arrow-back-outline'
                               size={25}
                               style={styles.itemIcon}
@@ -22,13 +22,13 @@ class Header extends Component<{}> {
                 </TouchableOpacity>
             </View>
             <View style={styles.right}>
-                <TouchableOpacity onPress={() => goBack()}>
+                <TouchableOpacity onPress={() => closeReader()}>
                     <Ionicons name='ios-bookmark-outline'
                               size={25}
                               style={styles.itemIcon}
                     />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => goBack()}>
+                <TouchableOpacity onPress={() => closeReader()}>
                     <Ionicons name='ios-more-outline'
                               size={25}
                               style={styles.itemIcon}
@@ -45,17 +45,19 @@ export default connect(
     }),
     (dispatch) => ({
         goBack: (value) => dispatch(goBack(value)),
+        closeReader: () => dispatch(closeReader()),
     })
 )(Header)
 
 const styles = StyleSheet.create({
     container: {
-        position: 'relative',
+        position: 'absolute',
         top: 0,
         height: 50,
+        width: Dimensions.get('window').width,
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: 'white',
+        backgroundColor: 'gray',
     },
     left: {
         marginHorizontal: 10,

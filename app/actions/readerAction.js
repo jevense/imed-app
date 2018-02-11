@@ -13,3 +13,17 @@ export const goBack = () => {
         dispatch(NavigationActions.navigate({routeName: 'Sheet'}))
     }
 };
+
+
+export const openReader = () => {
+    return (dispatch) => {
+        dispatch({type: 'openReader'});
+    }
+};
+
+
+export const closeReader = () => {
+    return (dispatch) => {
+        dispatch({type: 'closeReader'});
+    }
+};

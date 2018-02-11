@@ -3,4 +3,4 @@ import Root from "./app/Root";
 // import Root from "./app/component/Icon";
 
 
-AppRegistry.registerComponent('imedReactNative', () => Root);
+AppRegistry.registerComponent('医学电子书包', () => Root);

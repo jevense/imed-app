@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {FlatList, Image, StyleSheet, TouchableOpacity, View} from 'react-native';
+import {FlatList, Image, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
 import Ionicons from "react-native-vector-icons/Ionicons";
 import {connect} from "react-redux";
 import {Divider} from "react-native-elements";
@@ -8,6 +8,8 @@ import Menu from "./Menu";
 import ListItem from "./ListItem";
 import GridItem from "./GridItem";
 import SwiperItem from "./SwiperItem";
+import Reader from "../Reader";
+import {openReader} from "../../actions/readerAction";
 
 
 class Sheet extends Component<{}> {
@@ -43,18 +45,21 @@ class Sheet extends Component<{}> {
     };
 
     render() {
-        let {itemWidth, columnType, dataSource, navigation} = this.props;
+        let {itemWidth, columnType, dataSource, openReader} = this.props;
 
         let result = this.switchType();
         return (
             <View>
+                <Reader/>
                 <FlatList
                     key={result.keyType}
                     contentContainerStyle={styles.contentContainerStyle}
                     ListHeaderComponent={() => (<SwiperItem/>)}
                     data={dataSource}
                     keyExtractor={(item) => item.key}
-                    renderItem={({item}) => result.renderType({item, itemWidth, navigation})}
+                    renderItem={
+                        ({item}) => result.renderType({item, itemWidth, openReader})
+                    }
                     {...result.separatorType}
                     {...columnType}
                 />
@@ -63,7 +68,7 @@ class Sheet extends Component<{}> {
     }
 
     switchType() {
-        let {isList, columnType,} = this.props;
+        let {isList, columnType, itemWidth,} = this.props;
         if (isList) {
             return {
                 keyType: 'list',
@@ -90,6 +95,9 @@ export default connect(
         dataSource: state.sheet.dataSource,
         columnType: state.sheet.columnType,
         itemWidth: state.sheet.itemWidth,
+    }),
+    (dispatch) => ({
+        openReader: () => dispatch(openReader()),
     })
 )(Sheet)
 

@@ -1,11 +1,11 @@
 import React from "react";
 import {Image, Text, TouchableOpacity, View} from "react-native";
 
-export default ({item, itemWidth, navigation}) => {
+export default ({item, itemWidth, openReader}) => {
     return (
         <TouchableOpacity
             onPress={() => {
-                navigation.navigate('Reader')
+                openReader()
             }}
         >
             <View style={{width: itemWidth, alignItems: 'center'}}>

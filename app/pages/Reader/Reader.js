@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
-import {StatusBar, StyleSheet} from 'react-native'
+import {Modal, StatusBar, StyleSheet,} from 'react-native'
 import {connect} from "react-redux";
 import Container from "./Container";
 import Drawer from "react-native-drawer";
-import Category from "./Category";
+import Side from "./Side";
 
 
 class Reader extends Component<{}> {
@@ -14,23 +14,37 @@ class Reader extends Component<{}> {
     };
 
     render() {
-        let {navigation} = this.props;
+        let {navigation, readerOpened} = this.props;
         return (
-            <Drawer
-                openDrawerOffset={100}
-                tapToClose={true}
-                ref={(ref) => this.drawer = ref}
-                content={<Category/>}
+            <Modal
+                animationType={"fade"}
+                visible={readerOpened}
+                onRequestClose={() => {
+                    // alert("Modal has been closed.")
+                }}
             >
-                <StatusBar hidden/>
-                <Container {...{navigation}}
-                           drawer={() => (this.drawer)}
-                />
-            </Drawer>
+                <Drawer
+                    acceptPan={false}
+                    openDrawerOffset={100}
+                    tapToClose={true}
+
+                    ref={(ref) => this.drawer = ref}
+                    content={<Side/>}
+                >
+                    <StatusBar hidden/>
+                    <Container {...{navigation}}
+                               drawer={() => (this.drawer)}
+                    />
+                </Drawer>
+            </Modal>
         )
     }
 }
 
-export default connect()(Reader)
+export default connect(
+    (state) => ({
+        readerOpened: state.reader.readerOpened,
+    })
+)(Reader)
 
 const styles = StyleSheet.create({});

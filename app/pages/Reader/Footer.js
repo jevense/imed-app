@@ -73,11 +73,11 @@ export default connect(
 
 const styles = StyleSheet.create({
     container: {
-        position: 'relative',
+        position: 'absolute',
         bottom: 0,
         height: 80,
         width: Dimensions.get('window').width,
-        backgroundColor: 'white',
+        backgroundColor: 'gray',
     },
     menu: {
         flexDirection: 'row',

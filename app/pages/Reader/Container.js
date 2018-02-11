@@ -1,11 +1,17 @@
 import React, {Component} from "react";
 import {
-    ScrollView, StatusBar, Text, TouchableHighlight, TouchableOpacity, TouchableWithoutFeedback,
-    View
+    ScrollView,
+    StatusBar,
+    Text,
+    TouchableHighlight,
+    TouchableOpacity,
+    TouchableWithoutFeedback,
+    View,
 } from "react-native";
 import {connect} from "react-redux";
 import {changeModalVisible} from "../../actions/readerAction";
-import {Menu} from "./Menu";
+import Header from "./Header";
+import Footer from "./Footer";
 
 class Content extends Component<{}> {
 
@@ -17,25 +23,38 @@ class Content extends Component<{}> {
         let {navigation, drawer, modalVisible, changeModalVisible,} = this.props;
         return (
             <View>
-                <Menu {...{drawer, modalVisible, changeModalVisible, navigation,}}/>
-                <TouchableOpacity onPress={() => changeModalVisible(true)}>
-                    <ScrollView>
-                        <Text style={{ height: 100}}>Show Modal</Text>
-                        <Text style={{ height: 100}}>Show Modal</Text>
-                        <Text style={{ height: 100}}>Show Modal</Text>
-                        <Text style={{ height: 100}}>Show Modal</Text>
-                        <Text style={{ height: 100}}>Show Modal</Text>
-                        <Text style={{ height: 100}}>Show Modal</Text>
-                        <Text style={{ height: 100}}>Show Modal</Text>
-                        <Text style={{ height: 100}}>Show Modal</Text>
-                        <Text style={{ height: 100}}>Show Modal</Text>
-                        <Text style={{ height: 100}}>Show Modal</Text>
-                        <Text style={{ height: 100}}>Show Modal</Text>
-                        <Text style={{ height: 100}}>Show Modal</Text>
-                        <Text style={{ height: 100}}>Show Modal</Text>
-                        <Text style={{ height: 100}}>Show Modal</Text>
-                    </ScrollView>
-                </TouchableOpacity>
+                {/*<Menu {...{drawer, modalVisible, changeModalVisible, navigation,}}/>*/}
+                <ScrollView>
+                    <TouchableOpacity onPress={() => changeModalVisible(!modalVisible)}>
+                        <View>
+                            <Text style={{height: 100}}>Show Modal</Text>
+                            <Text style={{height: 100}}>Show Modal</Text>
+                            <Text style={{height: 100}}>Show Modal</Text>
+                            <Text style={{height: 100}}>Show Modal</Text>
+                            <Text style={{height: 100}}>Show Modal</Text>
+                            <Text style={{height: 100}}>Show Modal</Text>
+                            <Text style={{height: 100}}>Show Modal</Text>
+                            <Text style={{height: 100}}>Show Modal</Text>
+                            <Text style={{height: 100}}>Show Modal</Text>
+                            <Text style={{height: 100}}>Show Modal</Text>
+                            <Text style={{height: 100}}>Show Modal</Text>
+                            <Text style={{height: 100}}>Show Modal</Text>
+                            <Text style={{height: 100}}>Show Modal</Text>
+                            <Text style={{height: 100}}>Show Modal</Text>
+                            <Text style={{height: 100}}>Show Modal</Text>
+                            <Text style={{height: 100}}>Show Modal</Text>
+                            <Text style={{height: 100}}>Show Modal</Text>
+                            <Text style={{height: 100}}>Show Modal</Text>
+                            <Text style={{height: 100}}>Show Modal</Text>
+                        </View>
+                    </TouchableOpacity>
+                </ScrollView>
+                {
+                    modalVisible && <Header {...{navigation,}}/>
+                }
+                {
+                    modalVisible && <Footer {...{navigation, drawer,}}/>
+                }
             </View>
         )
     }
