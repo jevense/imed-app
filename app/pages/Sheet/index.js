@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {FlatList, Image, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
+import {FlatList, Image, StatusBar, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
 import Ionicons from "react-native-vector-icons/Ionicons";
 import {connect} from "react-redux";
 import {Divider} from "react-native-elements";
@@ -44,12 +44,25 @@ class Sheet extends Component<{}> {
         };
     };
 
+    constructor(props) {
+        super(props);
+    }
+
+    async getDataSource() {
+        let response = await fetch('http://123.56.10.21:8892/book.json');
+        let responseJson = await response.json();
+        return responseJson['books'];
+    }
+
     render() {
         let {itemWidth, columnType, dataSource, openReader} = this.props;
+
+        dataSource = this.getDataSource();
 
         let result = this.switchType();
         return (
             <View>
+                <StatusBar backgroundColor={'black'}/>
                 <Reader/>
                 <FlatList
                     key={result.keyType}
@@ -97,6 +110,7 @@ export default connect(
         itemWidth: state.sheet.itemWidth,
     }),
     (dispatch) => ({
+        openReader: () => dispatch(openReader()),
         openReader: () => dispatch(openReader()),
     })
 )(Sheet)

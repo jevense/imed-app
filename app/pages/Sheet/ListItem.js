@@ -12,9 +12,9 @@ export default ({item, openReader}) => (
             backgroundColor: 'white',
             padding: 10,
         }}>
-            <Image style={{width: 80, height: 100}} source={item.image}/>
+            <Image style={{width: 80, height: 100}} source={item.cover}/>
             <View style={{width: 160, marginHorizontal: 5}}>
-                <Text style={{fontSize: 17}}>{item.title}</Text>
+                <Text style={{fontSize: 17}}>{item.name}</Text>
                 <Text style={{color: 'gray'}}>主编：{item.editor}</Text>
                 <Text style={{color: 'gray'}}>大小：{item.size}</Text>
             </View>

@@ -26,11 +26,12 @@ class Reader extends Component<{}> {
                     ref={(ref) => this.drawer = ref}
                     content={<Side/>}
                 >
-                    <StatusBar hidden/>
+
                     <Container {...{navigation}}
                                drawer={() => (this.drawer)}
                     />
                 </Drawer>
+                <StatusBar hidden translucent={false}/>
             </Modal>
         )
     }

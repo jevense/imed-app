@@ -9,8 +9,8 @@ import TabSwitch from "./TabSwitch";
 
 class Sheet extends Component<{}> {
 
-    static navigationOptions = ({navigation}) => {
-
+    static navigationOptions = ({navigation, navigationOptions}) => {
+        navigationOptions.tabBarVisible = false;
         return {
             headerLeft: <TouchableOpacity onPress={() => {
                 navigation.navigate('Scanner')
