@@ -27,7 +27,16 @@ class Content extends Component<{}> {
                 <ScrollView>
                     <TouchableOpacity onPress={() => changeModalVisible(!modalVisible)}>
                         <View>
-                            <Text style={{height: 100}}>Show Modal</Text>
+                            <Text selectable={true} style={{height: 100}}>Show Modal</Text>
+                            <Text selectable={true} style={{height: 100}}>Show Modal</Text>
+                            <Text selectable={true} style={{height: 100}}>Show Modal</Text>
+                            <Text selectable={true} style={{height: 100}}>Show Modal</Text>
+                            <Text selectable={true} style={{height: 100}}>Show Modal</Text>
+                            <Text selectable={true} style={{height: 100}}>Show Modal</Text>
+                            <Text selectable={true} style={{height: 100}}>Show Modal</Text>
+                            <Text selectable={true} style={{height: 100}}>Show Modal</Text>
+                            <Text selectable={true} style={{height: 100}}>Show Modal</Text>
+                            <Text selectable={true} style={{height: 100}}>Show Modal</Text>
                             <Text style={{height: 100}}>Show Modal</Text>
                             <Text style={{height: 100}}>Show Modal</Text>
                             <Text style={{height: 100}}>Show Modal</Text>

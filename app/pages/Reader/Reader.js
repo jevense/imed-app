@@ -31,7 +31,7 @@ class Reader extends Component<{}> {
                                drawer={() => (this.drawer)}
                     />
                 </Drawer>
-                <StatusBar hidden translucent={false}/>
+                {/*<StatusBar hidden translucent={false}/>*/}
             </Modal>
         )
     }

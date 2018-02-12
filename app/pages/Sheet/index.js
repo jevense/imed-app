@@ -48,25 +48,11 @@ class Sheet extends Component<{}> {
         super(props);
     }
 
-    requestDiscount() {
-        fetch('http://123.56.10.21:8892/book.json')
-            .then((response) => response.json())
-            .then((json) => {
-                this.setState({dataSource: {}})
-            })
-            .catch((error) => {
-                alert(error)
-            })
-    }
-
-    componentDidMount() {
-        this.requestDiscount();
-    }
-
     render() {
         let {itemWidth, columnType, dataSource, openReader} = this.props;
 
         let result = this.switchType();
+
         return (
             <View>
                 <StatusBar backgroundColor={'black'}/>
@@ -77,6 +63,7 @@ class Sheet extends Component<{}> {
                     ListHeaderComponent={() => (<SwiperItem/>)}
                     data={dataSource}
                     keyExtractor={(item) => item.key}
+                    // keyExtractor={(item) => item.title}
                     renderItem={
                         ({item}) => result.renderType({item, itemWidth, openReader})
                     }
@@ -117,7 +104,6 @@ export default connect(
         itemWidth: state.sheet.itemWidth,
     }),
     (dispatch) => ({
-        openReader: () => dispatch(openReader()),
         openReader: () => dispatch(openReader()),
     })
 )(Sheet)

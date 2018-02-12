@@ -3,13 +3,14 @@ import {Dimensions} from "react-native";
 let {height, width} = Dimensions.get('window');
 const numColumns = 3;
 
-let dataSource = [{
-    key: 1,
-    title: '中国毕业后医学教育（2017-2期刊）',
-    editor: '张雁灵',
-    size: '10M',
-    image: require('../assets/cover/maga-cover.jpg')
-},
+let dataSource = [
+    {
+        key: 1,
+        title: '中国毕业后医学教育（2017-2期刊）',
+        editor: '张雁灵',
+        size: '10M',
+        image: require('../assets/cover/maga-cover.jpg')
+    },
     {
         key: 2,
         title: '中国毕业后医学教育（2017-2期刊）',
@@ -88,6 +89,16 @@ let dataSource = [{
         image: require('../assets/cover/maga-cover.jpg')
     },
 ];
+
+async function getDataSource() {
+    let response = await fetch('http://123.56.10.21:8892/book.json');
+    let json = await response.json();
+    console.log('===========');
+    console.log(json['books']);
+    return json['books']
+}
+
+// dataSource = getDataSource();
 
 const initialState = {dataSource, isList: false, numColumns, columnType: {numColumns}, itemWidth: (width) / numColumns};
 
