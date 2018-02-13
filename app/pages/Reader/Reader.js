@@ -26,7 +26,6 @@ class Reader extends Component<{}> {
                     ref={(ref) => this.drawer = ref}
                     content={<Side/>}
                 >
-
                     <Container {...{navigation}}
                                drawer={() => (this.drawer)}
                     />

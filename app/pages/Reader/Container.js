@@ -8,6 +8,7 @@ import {
     TouchableOpacity,
     TouchableWithoutFeedback,
     View,
+    WebView,
 } from "react-native";
 import {connect} from "react-redux";
 import {changeModalVisible} from "../../actions/readerAction";
@@ -48,14 +49,15 @@ class Content extends Component<{}> {
         let {navigation, drawer, modalVisible, changeModalVisible,} = this.props;
         let panResponder = this.panResponder;
         return (
-            <View>
+            <View style={{flex: 1}}>
                 {/*<Menu {...{drawer, modalVisible, changeModalVisible, navigation,}}/>*/}
-                <View onStartShouldSetResponder={() => true}
+                <View style={{flex: 1}}
+                      onStartShouldSetResponder={() => true}
                       onResponderEnd={(evt, gestureState) => changeModalVisible(!modalVisible)}>
-                    <WebViewBridge
-                        ref={webview => this.WebViewBridge = webview}
-                        onMessage={this.onMessage}
-                        autoHeight={true}//如果使用自动高度
+                    <WebView
+                        // ref={webview => this.WebViewBridge = webview}
+                        // onMessage={this.onMessage}
+                        // autoHeight={false}//如果使用自动高度
                         source={{uri: 'https://www.baidu.com'}}
                     />
                 </View>
