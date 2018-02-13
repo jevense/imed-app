@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import {Modal, StatusBar, StyleSheet,} from 'react-native'
+import Drawer from "react-native-drawer";
 import {connect} from "react-redux";
 import Container from "./Container";
-import Drawer from "react-native-drawer";
 import Side from "./Side";
 
 
@@ -31,7 +31,7 @@ class Reader extends Component<{}> {
                                drawer={() => (this.drawer)}
                     />
                 </Drawer>
-                {/*<StatusBar hidden translucent={false}/>*/}
+                <StatusBar hidden translucent={false}/>
             </Modal>
         )
     }

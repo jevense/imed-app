@@ -6,7 +6,7 @@ import {Platform} from 'react-native';
 
 import App from './container/AppMainNavigator';
 import {MenuContext} from "react-native-menu";
-// app的入口
+// app的入口x
 const store = configureStore();
 
 
