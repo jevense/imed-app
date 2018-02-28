@@ -16,6 +16,7 @@ export default function reader(state = initialState, action) {
         case 'openReader':
             return {
                 ...state,
+                bookId: action.bookId,
                 readerOpened: true,
             };
         case 'closeReader':

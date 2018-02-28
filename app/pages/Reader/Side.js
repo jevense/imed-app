@@ -1,7 +1,7 @@
 import React from "react";
 import {SectionList, StyleSheet, Text, TouchableOpacity, View} from "react-native";
 
-export default () => (
+export default (dataSource) => (
     <View style={styles.container}>
         <View style={styles.title}>
             <TouchableOpacity onPress={() => {

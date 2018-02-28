@@ -1,6 +1,7 @@
 import {Image, PixelRatio, StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import React from "react";
 import {Button} from "react-native-elements";
+import {CachedImage} from "react-native-img-cache";
 
 export default ({item, openReader}) => (
     <TouchableOpacity onPress={() => {
@@ -12,7 +13,7 @@ export default ({item, openReader}) => (
             backgroundColor: 'white',
             padding: 10,
         }}>
-            <Image style={{width: 80, height: 100}} source={item.image}/>
+            <CachedImage style={{width: 72, height: 100}} source={item.image}/>
             <View style={{width: 160, marginHorizontal: 5}}>
                 <Text style={{fontSize: 17}}>{item.title}</Text>
                 <Text style={{color: 'gray'}}>主编：{item.editor}</Text>
@@ -25,7 +26,7 @@ export default ({item, openReader}) => (
                         fontWeight={'100'}
                         title={'在线阅读'}
                         onPress={() => {
-                            openReader()
+                            openReader(item.key)
                         }}
                 />
                 <Button buttonStyle={[styles.btnDefaultStyle]}

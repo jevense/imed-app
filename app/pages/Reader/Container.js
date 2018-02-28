@@ -1,20 +1,11 @@
 import React, {Component} from "react";
-import {
-    PanResponder,
-    ScrollView,
-    StatusBar,
-    Text,
-    TouchableHighlight,
-    TouchableOpacity,
-    TouchableWithoutFeedback,
-    View,
-    WebView,
-} from "react-native";
+import {Dimensions, PanResponder, ScrollView, StatusBar, Text, View, WebView,} from "react-native";
 import {connect} from "react-redux";
 import {changeModalVisible} from "../../actions/readerAction";
 import Header from "./Header";
 import Footer from "./Footer";
-import WebViewBridge from "react-native-webviewbridge";
+
+let {width} = Dimensions.get('window');
 
 class Content extends Component<{}> {
 
@@ -23,42 +14,73 @@ class Content extends Component<{}> {
     }
 
     componentWillMount() {
-        let {modalVisible, changeModalVisible,} = this.props;
-        this.panResponder = PanResponder.create({
-            onStartShouldSetResponder: () => true,
-            onMoveShouldSetResponder: () => true,
-            // onPanResponderGrant: () => {
-            //     this._top = this.state.top;
-            //     this._left = this.state.left;
-            //     this.setState({bg: 'red'})
-            // },
-            // onPanResponderMove: (evt, gs) => {
-            //     console.log(gs.dx + ' ' + gs.dy)
-            //     this.setState({
-            //         top: this._top + gs.dy,
-            //         left: this._left + gs.dx
-            //     })
-            // },
-            onResponderEnd: (evt, gestureState) => {
-                changeModalVisible(!modalVisible);
-            }
+        // let {modalVisible, changeModalVisible,} = this.props;
+        // this.panResponder = PanResponder.create({
+        //     onPanResponderGrant: (evt, gestureState) => {
+        //         console.log('onPanResponderGrant...');
+        //     }
+        // });
+
+        this.setState({
+            pre: width / 3,
+            next: width * 2 / 3,
         })
+    }
+
+    onMessage = (message) => {
+        switch (message.nativeEvent.data) {
+            case "hello from webview":
+                this.webView.postMessage("hello from react-native");
+                break;
+            case "got the message inside webview":
+                console.log("we have got a message from webview! yeah");
+                break;
+        }
     }
 
     render() {
         let {navigation, drawer, modalVisible, changeModalVisible,} = this.props;
-        let panResponder = this.panResponder;
+        let {pre, next} = this.state;
+
+        const injectScript = `
+          !function () {
+            //document.documentElement.style.webkitUserSelect='none'
+            //document.documentElement.style.webkitTouchCallout='none'
+            window.document.addEventListener('message', function (e) {
+                const message = e.data
+                if (message === "hello from react-native") {
+                  window.postMessage("got the message inside webview");
+                }
+            })
+            window.postMessage("hello from webview");
+          }();
+        `;
         return (
             <View style={{flex: 1}}>
-                {/*<Menu {...{drawer, modalVisible, changeModalVisible, navigation,}}/>*/}
                 <View style={{flex: 1}}
-                      onStartShouldSetResponder={() => true}
-                      onResponderEnd={(evt, gestureState) => changeModalVisible(!modalVisible)}>
+                      onStartShouldSetResponder={(evt) => {
+                          let {pageX, pageY, timestamp,} = evt.nativeEvent;
+                          this.setState({pageX, pageY, timestamp});
+                          return true;
+                      }}
+                      onResponderRelease={(evt) => {
+                          let {pageX, pageY, timestamp,} = evt.nativeEvent;
+                          if (this.state.pageX === pageX && this.state.pageY === pageY) {
+                              console.log(timestamp - this.state.timestamp)
+                              if (timestamp - this.state.timestamp > 383) {//大于383ms
+                                  alert('sssss')
+                              } else if (modalVisible || pageX > pre && pageX < next) {
+                                  changeModalVisible(!modalVisible)
+                              }
+                          }
+                      }}
+                >
                     <WebView
-                        // ref={webview => this.WebViewBridge = webview}
-                        // onMessage={this.onMessage}
-                        // autoHeight={false}//如果使用自动高度
-                        source={{uri: 'https://www.baidu.com'}}
+                        ref={(ref) => this.webView = ref}
+                        onMessage={this.onMessage}
+                        javaScriptEnabled={true}
+                        injectedJavaScript={injectScript}
+                        source={require('../../assets/html/TestH.html')}
                     />
                 </View>
                 {

@@ -15,9 +15,9 @@ export const goBack = () => {
 };
 
 
-export const openReader = () => {
+export const openReader = (key) => {
     return (dispatch) => {
-        dispatch({type: 'openReader'});
+        dispatch({type: 'openReader', bookId: key});
     }
 };
 

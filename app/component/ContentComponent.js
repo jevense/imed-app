@@ -3,7 +3,6 @@ import {StyleSheet} from "react-native";
 import Person from "../pages/Person";
 
 export default ContentComponent = (props) => {
-    console.log(props);
     return (
         <Person {...props}/>
     )

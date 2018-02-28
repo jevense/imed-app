@@ -90,16 +90,6 @@ let dataSource = [
     },
 ];
 
-async function getDataSource() {
-    let response = await fetch('http://123.56.10.21:8892/book.json');
-    let json = await response.json();
-    console.log('===========');
-    console.log(json['books']);
-    return json['books']
-}
-
-// dataSource = getDataSource();
-
 const initialState = {dataSource, isList: false, numColumns, columnType: {numColumns}, itemWidth: (width) / numColumns};
 
 // 不同类别的事件使用switch对应处理过程

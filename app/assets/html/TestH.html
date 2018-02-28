@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <style>
+        body {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            /*-khtml-user-select: none;*/
+            /*-moz-user-select: none;*/
+            /*-ms-user-select: none;*/
+            user-select: none;
+        }
+
+        /*禁止文字选中*/
+    </style>
+</head>
+<body>
+<div id="box" style="color:red;">
+    <div id="right" style="color:green;background: #cdeaae;">
+        <h1>
+            <a href="imed://imed/home">Android打开APP</a>
+        </h1>
+        <h1>
+            <a href="imed://home">IOS打开APP</a>
+        </h1>
+        <p id="content">
+            1. click事件
+
+            单击事件，类似于PC端的click，但在移动端中，连续click的触发有200ms ~ 300ms的延迟
+
+
+            2. touch类事件
+
+            触摸事件，有touchstart touchmove touchend touchcancel 四种之分
+
+            touchstart：手指触摸到屏幕会触发
+
+            touchmove：当手指在屏幕上移动时，会触发
+
+            touchend：当手指离开屏幕时，会触发
+
+            touchcancel：可由系统进行的触发，比如手指触摸屏幕的时候，突然alert了一下，或者系统中其他打断了touch的行为，则可以触发该事件
+
+
+            3. tap类事件
+
+            触碰事件，我目前还不知道它和touch的区别，一般用于代替click事件，有tap longTap singleTap doubleTap四种之分
+
+            tap: 手指碰一下屏幕会触发
+
+            longTap: 手指长按屏幕会触发
+
+            singleTap: 手指碰一下屏幕会触发
+
+            doubleTap: 手指双击屏幕会触发
+
+
+            4. swipe类事件
+
+            滑动事件，有swipe swipeLeft swipeRight swipeUp swipeDown 五种之分
+
+            swipe：手指在屏幕上滑动时会触发
+
+            swipeLeft：手指在屏幕上向左滑动时会触发
+
+            swipeRight：手指在屏幕上向右滑动时会触发
+
+            swipeUp：手指在屏幕上向上滑动时会触发
+
+            swipeDown：手指在屏幕上向下滑动时会触发
+        </p>
+    </div>
+    <ul id="menu" style="position: absolute;visibility: hidden;list-style: none;">
+        <li>按钮1</li>
+        <li>按钮2</li>
+        <li>按钮3</li>
+    </ul>
+</div>
+</body>
+<script type="text/javascript">
+    var EventUtil = {
+        // 添加侦听事件
+        addEventListener: function (element, type, handler) {
+            // IE9+、Firefox、Safari、chrome和Opera
+            if (element.addEventListener) {
+                element.addEventListener(type, handler, false);
+            }
+            // IE8-
+            else if (element.attachEvent) {
+                element.attachEvent("on" + type, handler);
+            }
+        },
+
+        // 移除侦听事件
+        removeEventListener: function (element, type, handler) {
+            // IE9+、Firefox、Safari、chrome和Opera
+            if (element.addEventListener) {
+                element.removeEventListener(type, handler, false);
+            }
+            // IE8-
+            else if (element.attachEvent) {
+                element.detachEvent("on" + type, handler);
+            }
+        },
+
+        // 获取事件对象
+        getEvent: function (event) {
+            if (typeof event == "undefined") {
+                event = window.event; // IE浏览器
+            }
+            return event;
+        },
+
+        // 获取触发事件的元素
+        getTarget: function (event) {
+            if (typeof event.srcElement == "undefined") {
+                return event.target;
+            } else {
+                return event.srcElement; // IE浏览器
+            }
+        },
+
+        // 获取事件类型
+        getType: function (event) {
+            return event.type;
+        },
+
+        // 获取按键键码
+        getCharCode: function (event) {
+            if (typeof event.keyCode == "number") {
+                return event.keyCode; // IE8-、Firefox和opera
+            } else {
+                return event.charCode;
+            }
+        },
+
+        // 获取鼠标相对于文档的位置,即页面坐标位置
+        getPagePosition: function (event) {
+            var pageX = event.pageX,
+                pageY = event.pageY;
+            if (pageX == undefined) {
+                pageX = event.clientX + (document.body.scrollLeft || document.documentElement.scrollLeft);
+            }
+            if (pageY == undefined) {
+                pageY = event.clientY + (document.body.scrollTop || document.documentElement.scrollTop);
+            }
+            return {
+                pageX: pageX,
+                pageY: pageY
+            };
+        },
+
+        // 阻止事件的默认行为
+        preventDefault: function (event) {
+            if (event.preventDefault) {
+                event.preventDefault();
+            } else {
+                event.returnValue = false; // IE浏览器
+            }
+        },
+
+        // 阻止事件冒泡
+        stopPropagation: function (event) {
+            if (typeof event.cancelBubble == "undefined") {
+                event.stopPropagation();
+            } else {
+                event.cancelBubble = true; // IE浏览器
+            }
+        }
+    };
+
+    var right = document.getElementById("right");
+    right.addEventListener("contextmenu", function (event) {
+        event.preventDefault();
+
+        var menu = document.getElementById("menu");
+
+        // 获取鼠标右击时的坐标，并设置上下文菜单出现位置
+        page = EventUtil.getPagePosition(event);
+        menu.style.left = page.pageX + "px";
+        menu.style.top = page.pageY + "px";
+        menu.style.visibility = "visible";
+    });
+
+    // 添加隐藏上下文菜单事件
+    document.addEventListener("click", function (event) {
+        var menu = document.getElementById("menu");
+        menu.style.visibility = "hidden";
+    });
+
+
+    // document.addEventListener('contextmenu', function (e) {
+    //     e.preventDefault();
+    // });
+    //
+    // function selectText(text) {
+    //     if (document.body.createTextRange) {//IE
+    //         let range = document.body.createTextRange();
+    //         range.moveToElementText(text);
+    //         range.select();
+    //     } else if (window.getSelection) {
+    //         let selection = window.getSelection();
+    //         let range = document.createRange();
+    //         selection.removeAllRanges();
+    //         // range.selectNodeContents(text);
+    //         let child = text.childNodes[0];
+    //         range.setStart(child, 10);
+    //         range.setEnd(child, 28);
+    //         selection.addRange(range);
+    //
+    //         // let word = window.getSelection();
+    //         /*if(selection.setBaseAndExtent){
+    //             selection.setBaseAndExtent(text, 0, text, 1);
+    //         }*/
+    //
+    //     } else {
+    //         alert("none");
+    //     }
+    // }
+    //
+    // document.addEventListener('click', function (e) {
+    //     // e.preventDefault();
+    //     console.log(e);
+    //     // selectText(e.target);
+    // });
+    // window.onload = function () {
+    //     document.documentElement.style.webkitTouchCallout = 'none';
+    // };
+    // document.documentElement.style.webkitTouchCallout='none'
+
+
+</script>
+</html>

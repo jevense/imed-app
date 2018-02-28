@@ -14,6 +14,14 @@ import {openReader} from "../../actions/readerAction";
 
 class Sheet extends Component<{}> {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            dataSource: {}
+        };
+    };
+
+
     static navigationOptions = ({navigation}) => {
 
         return {
@@ -44,14 +52,32 @@ class Sheet extends Component<{}> {
         };
     };
 
-    constructor(props) {
-        super(props);
-    }
+    componentDidMount() {
+        // async function getDataSource() {
+        //     let response = await fetch();
+        //     let json = await response.json();
+        //     // console.log(json['books']);
+        //     return json['books']
+        // }
+        fetch('http://192.168.8.144:8080/imed/book.json')
+            .then((response) => response.json())
+            .then((jsondata) => {
+                let dataSource = jsondata['books'].map(item => {
+                    let {id: key = "", name: title = "", edition: editor = "", size = "", cover} = item;
+                    let image = cover ? {url: cover.replace('http://', 'https://')} : require('../../assets/cover/maga-cover.jpg');
+                    return {key, title, editor, size, image}
+                });
+                this.setState({dataSource});
+            });
+    };
+
 
     render() {
-        let {itemWidth, columnType, dataSource, openReader} = this.props;
+        let {itemWidth, columnType, openReader, dataSource,} = this.props;
 
         let result = this.switchType();
+
+        // let dataSource = this.state.dataSource;
 
         return (
             <View>
@@ -104,7 +130,7 @@ export default connect(
         itemWidth: state.sheet.itemWidth,
     }),
     (dispatch) => ({
-        openReader: () => dispatch(openReader()),
+        openReader: (bookId) => dispatch(openReader(bookId)),
     })
 )(Sheet)
 
