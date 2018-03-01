@@ -66,9 +66,8 @@ class Content extends Component<{}> {
                       onResponderRelease={(evt) => {
                           let {pageX, pageY, timestamp,} = evt.nativeEvent;
                           if (this.state.pageX === pageX && this.state.pageY === pageY) {
-                              console.log(timestamp - this.state.timestamp)
                               if (timestamp - this.state.timestamp > 383) {//大于383ms
-                                  alert('sssss')
+                                  // alert('sssss')
                               } else if (modalVisible || pageX > pre && pageX < next) {
                                   changeModalVisible(!modalVisible)
                               }

@@ -1,7 +1,7 @@
 import React from "react";
 import {SectionList, StyleSheet, Text, TouchableOpacity, View} from "react-native";
 
-export default (dataSource) => (
+export default ({dataSource, bookName}) => (
     <View style={styles.container}>
         <View style={styles.title}>
             <TouchableOpacity onPress={() => {
@@ -18,22 +18,12 @@ export default (dataSource) => (
             </TouchableOpacity>
         </View>
         <SectionList
-            ListHeaderComponent={<Text style={{fontSize: 30}}>{'书名'}</Text>}
-            keyExtractor={(item) => item.title}
-            renderItem={({item}) => <Text style={{fontSize: 20, marginHorizontal: 20}}>{item.title}</Text>}
+            ListHeaderComponent={<Text style={{fontSize: 30}}>{bookName}</Text>}
+            keyExtractor={(item) => item.id}
+            renderItem={({item}) => <Text style={{fontSize: 20, marginHorizontal: 20}}>{item.name}</Text>}
             renderSectionHeader={({section}) => <Text
                 style={{fontSize: 25, backgroundColor: 'red'}}>{section.title}</Text>}
-            sections={[ // 不同section渲染相同类型的子组件
-                {data: [{title: '目录1'}, {title: '目录2'}, {title: '目录3'}], title: '封面1'},
-                {data: [{title: '目录1'}, {title: '目录2'}, {title: '目录3'}], title: '封面2'},
-                {data: [{title: '目录1'}, {title: '目录2'}, {title: '目录3'}], title: '封面3'},
-                {data: [{title: '目录1'}, {title: '目录2'}, {title: '目录3'}], title: '封面4'},
-                {data: [{title: '目录1'}, {title: '目录2'}, {title: '目录3'}], title: '封面5'},
-                {data: [{title: '目录1'}, {title: '目录2'}, {title: '目录3'}], title: '封面6'},
-                {data: [{title: '目录1'}, {title: '目录2'}, {title: '目录3'}], title: '封面7'},
-                {data: [{title: '目录1'}, {title: '目录2'}, {title: '目录3'}], title: '封面8'},
-                {data: [{title: '目录1'}, {title: '目录2'}, {title: '目录3'}], title: '封面9'},
-            ]}/>
+            sections={dataSource}/>
     </View>
 )
 

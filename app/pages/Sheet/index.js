@@ -52,7 +52,7 @@ class Sheet extends Component<{}> {
         };
     };
 
-    componentDidMount() {
+    componentWillMount() {
         // async function getDataSource() {
         //     let response = await fetch();
         //     let json = await response.json();
@@ -71,13 +71,12 @@ class Sheet extends Component<{}> {
             });
     };
 
-
     render() {
-        let {itemWidth, columnType, openReader, dataSource,} = this.props;
+        let {itemWidth, columnType, openReader,} = this.props;
 
         let result = this.switchType();
 
-        // let dataSource = this.state.dataSource;
+        let dataSource = this.state.dataSource;
 
         return (
             <View>
@@ -125,7 +124,6 @@ class Sheet extends Component<{}> {
 export default connect(
     (state) => ({
         isList: state.sheet.isList,
-        dataSource: state.sheet.dataSource,
         columnType: state.sheet.columnType,
         itemWidth: state.sheet.itemWidth,
     }),
