@@ -1,9 +1,10 @@
 import React, {Component} from "react";
-import {Dimensions, PanResponder, ScrollView, StatusBar, Text, View, WebView,} from "react-native";
+import {Dimensions, PanResponder, ScrollView, StatusBar, Text, View,WebView,} from "react-native";
 import {connect} from "react-redux";
 import {changeModalVisible} from "../../actions/readerAction";
 import Header from "./Header";
 import Footer from "./Footer";
+// import BookWebView from '../../component/BookWebView'
 
 let {width} = Dimensions.get('window');
 

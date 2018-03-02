@@ -72,11 +72,11 @@ class Sheet extends Component<{}> {
     };
 
     render() {
-        let {itemWidth, columnType, openReader,} = this.props;
+        let {itemWidth, columnType, openReader, dataSource,} = this.props;
 
         let result = this.switchType();
 
-        let dataSource = this.state.dataSource;
+        // let dataSource = this.state.dataSource;
 
         return (
             <View>
@@ -126,6 +126,7 @@ export default connect(
         isList: state.sheet.isList,
         columnType: state.sheet.columnType,
         itemWidth: state.sheet.itemWidth,
+        dataSource: state.sheet.dataSource,
     }),
     (dispatch) => ({
         openReader: (bookId) => dispatch(openReader(bookId)),

@@ -16,17 +16,17 @@ class Reader extends Component<{}> {
     };
 
     componentWillReceiveProps(nextProps) {
-        let {bookId} = nextProps;
-        fetch(`http://192.168.8.144:8080/imed/book/${bookId}/chapter.json`)
-            .then((response) => response.json())
-            .then((jsondata) => {
-                this.setState({bookName: jsondata['chapters']['name']});
-                let dataSource = jsondata['chapters']['chapters'].map(item => {
-                    let {id = "", name: title = "", icon = "", sections: data = []} = item;
-                    return {id, title, data,}
-                });
-                // this.setState({dataSource});
-            });
+        // let {bookId} = nextProps;
+        // fetch(`http://192.168.8.144:8080/imed/book/${bookId}/chapter.json`)
+        //     .then((response) => response.json())
+        //     .then((jsondata) => {
+        //         this.setState({bookName: jsondata['chapters']['name']});
+        //         let dataSource = jsondata['chapters']['chapters'].map(item => {
+        //             let {id = "", name: title = "", icon = "", sections: data = []} = item;
+        //             return {id, title, data,}
+        //         });
+        //         // this.setState({dataSource});
+        //     });
     }
 
     render() {

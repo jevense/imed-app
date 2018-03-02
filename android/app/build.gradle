@@ -77,7 +77,6 @@ project.ext.react = [
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
-apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -95,13 +94,13 @@ def enableSeparateBuildPerCPUArchitecture = false
 def enableProguardInReleaseBuilds = false
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "26.0.2"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId "com.imedreactnative"
-        minSdkVersion 19
-        targetSdkVersion 25
+        applicationId "com.imed"
+        minSdkVersion 16
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
         ndk {
@@ -138,13 +137,8 @@ android {
 }
 
 dependencies {
-    compile project(':react-native-fetch-blob')
-    compile project(':react-native-pdf')
-    compile project(':realm')
-    compile project(':react-native-camera')
-    compile project(':react-native-vector-icons')
     compile fileTree(dir: "libs", include: ["*.jar"])
-    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:+"  // From node_modules
 }
 
