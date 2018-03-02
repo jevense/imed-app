@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {FlatList, Image, StatusBar, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
+import {FlatList, Image, StatusBar, StyleSheet, TouchableOpacity, View,} from 'react-native';
 import Ionicons from "react-native-vector-icons/Ionicons";
 import {connect} from "react-redux";
 import {Divider} from "react-native-elements";
@@ -17,7 +17,7 @@ class Sheet extends Component<{}> {
     constructor(props) {
         super(props);
         this.state = {
-            dataSource: {}
+            dataSource: []
         };
     };
 
@@ -59,16 +59,18 @@ class Sheet extends Component<{}> {
         //     // console.log(json['books']);
         //     return json['books']
         // }
-        fetch('http://192.168.8.144:8080/imed/book.json')
-            .then((response) => response.json())
-            .then((jsondata) => {
-                let dataSource = jsondata['books'].map(item => {
-                    let {id: key = "", name: title = "", edition: editor = "", size = "", cover} = item;
-                    let image = cover ? {url: cover.replace('http://', 'https://')} : require('../../assets/cover/maga-cover.jpg');
-                    return {key, title, editor, size, image}
-                });
-                this.setState({dataSource});
-            });
+        // fetch('http://192.168.8.144:8080/imed/book.json')
+        //     .then((response) => response.json())
+        //     .then((jsondata) => {
+        //         let dataSource = jsondata['books'].map(item => {
+        //             let {id: key = "", name: title = "", edition: editor = "", size = "", cover} = item;
+        //             let image = cover ? {url: cover.replace('http://', 'https://')} : require('../../assets/cover/maga-cover.jpg');
+        //             return {key, title, editor, size, image}
+        //         });
+        //         this.setState({dataSource});
+        //     }).catch((error) => {
+        //     console.error(error)
+        // });
     };
 
     render() {
