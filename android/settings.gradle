@@ -1,4 +1,8 @@
 rootProject.name = 'imed'
+include ':app'
+
+include ':camera'
+project(':camera').projectDir = new File('/Users/lujiewen/Android/cameraview/library')
 include ':realm'
 project(':realm').projectDir = new File(rootProject.projectDir, '../node_modules/realm/android')
 include ':react-native-vector-icons'
@@ -10,4 +14,3 @@ project(':react-native-fetch-blob').projectDir = new File(rootProject.projectDir
 include ':react-native-camera'
 project(':react-native-camera').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-camera/android')
 
-include ':app'

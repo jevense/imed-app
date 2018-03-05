@@ -37,7 +37,7 @@ class Content extends Component<{}> {
                 console.log("we have got a message from webview! yeah");
                 break;
         }
-    }
+    };
 
     render() {
         let {navigation, drawer, modalVisible, changeModalVisible,} = this.props;
