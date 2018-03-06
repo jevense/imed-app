@@ -4,6 +4,7 @@ import Drawer from "react-native-drawer";
 import {connect} from "react-redux";
 import Container from "./Container";
 import Side from "./Side";
+import {storage} from "../../storage";
 
 
 class Reader extends Component<{}> {
@@ -27,6 +28,11 @@ class Reader extends Component<{}> {
         //         });
         //         // this.setState({dataSource});
         //     });
+        storage.load({
+            key: 'chapters',
+        }).then(dataSource => {
+            this.setState({dataSource});
+        });
     }
 
     render() {

@@ -10,6 +10,7 @@ import GridItem from "./GridItem";
 import SwiperItem from "./SwiperItem";
 import Reader from "../Reader";
 import {openReader} from "../../actions/readerAction";
+import {storage} from '../../storage'
 
 
 class Sheet extends Component<{}> {
@@ -71,14 +72,19 @@ class Sheet extends Component<{}> {
         //     }).catch((error) => {
         //     console.error(error)
         // });
+        storage.load({
+            key: 'books',
+        }).then(dataSource => {
+            this.setState({dataSource});
+        });
     };
 
     render() {
-        let {itemWidth, columnType, openReader, dataSource,} = this.props;
+        let {itemWidth, columnType, openReader,} = this.props;
 
         let result = this.switchType();
 
-        // let dataSource = this.state.dataSource;
+        let dataSource = this.state.dataSource;
 
         return (
             <View>
