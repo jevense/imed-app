@@ -17,7 +17,7 @@ class Reader extends Component<{}> {
     };
 
     componentWillReceiveProps(nextProps) {
-        // let {bookId} = nextProps;
+        let {bookId} = nextProps;
         // fetch(`http://192.168.8.144:8080/imed/book/${bookId}/chapter.json`)
         //     .then((response) => response.json())
         //     .then((jsondata) => {
@@ -28,17 +28,22 @@ class Reader extends Component<{}> {
         //         });
         //         // this.setState({dataSource});
         //     });
+
         storage.load({
-            key: 'chapters',
+            key: 'chapter',
+            id: bookId,
         }).then(dataSource => {
-            this.setState({dataSource});
+            this.setState({
+                dataSource,
+            });
+        }).catch(err => {
+            console.log(err)
         });
     }
 
     render() {
-        let {navigation, readerOpened,} = this.props;
+        let {navigation, readerOpened, bookId,} = this.props;
         let dataSource = this.state.dataSource;
-        let bookName = this.state.bookName;
         return (
             <Modal
                 animationType={"fade"}
@@ -52,9 +57,9 @@ class Reader extends Component<{}> {
                     openDrawerOffset={100}
                     tapToClose={true}
                     ref={(ref) => this.drawer = ref}
-                    content={<Side {...{dataSource, bookName}}/>}
+                    content={<Side {...{dataSource}}/>}
                 >
-                    <Container {...{navigation}}
+                    <Container {...{navigation, bookId,}}
                                drawer={() => (this.drawer)}
                     />
                 </Drawer>

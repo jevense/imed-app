@@ -10,7 +10,7 @@ import GridItem from "./GridItem";
 import SwiperItem from "./SwiperItem";
 import Reader from "../Reader";
 import {openReader} from "../../actions/readerAction";
-import {storage} from '../../storage'
+import {storage,SectionLocation} from '../../storage'
 
 
 class Sheet extends Component<{}> {

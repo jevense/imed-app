@@ -191,6 +191,12 @@
         menu.style.visibility = "hidden";
     });
 
+    window.document.addEventListener('message', function (e) {
+        const message = e.data
+
+        // window.postMessage('hi! RN')
+    })
+
 
     // document.addEventListener('contextmenu', function (e) {
     //     e.preventDefault();

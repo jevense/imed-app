@@ -5,6 +5,7 @@ import {changeModalVisible} from "../../actions/readerAction";
 import Header from "./Header";
 import Footer from "./Footer";
 import WebView from '../../component/BookWebView'
+import {SectionLocation, storage} from "../../storage";
 
 let {width} = Dimensions.get('window');
 
@@ -21,11 +22,32 @@ class Content extends Component<{}> {
         //         console.log('onPanResponderGrant...');
         //     }
         // });
-
         this.setState({
             pre: width / 3,
             next: width * 2 / 3,
-        })
+        });
+    }
+
+    componentWillReceiveProps(nextProps) {
+        let {bookId} = nextProps;
+
+        // storage.clearMap();
+
+        SectionLocation.load({
+            key: 'SectionLocation',
+            id: bookId,
+        }).then(dataSource => {
+            console.log(dataSource);
+            storage.load({
+                key: 'section',
+                id: dataSource.current,
+                syncParams: {bookId,},
+            }).then(dataSource => {
+                this.setState({dataSource});
+            });
+        }).catch(err=>{
+            console.log(err);
+        });
     }
 
     onMessage = (message) => {
@@ -41,19 +63,18 @@ class Content extends Component<{}> {
 
     render() {
         let {navigation, drawer, modalVisible, changeModalVisible,} = this.props;
-        let {pre, next} = this.state;
+        let {pre, next, dataSource} = this.state;
 
         const injectScript = `
           !function () {
-            //document.documentElement.style.webkitUserSelect='none'
-            //document.documentElement.style.webkitTouchCallout='none'
             window.document.addEventListener('message', function (e) {
                 const message = e.data
                 if (message === "hello from react-native") {
                   window.postMessage("got the message inside webview");
                 }
             })
-            window.postMessage("hello from webview");
+            // window.postMessage("hello from webview");
+            localStorage.setItem('section', JSON.stringify(${dataSource}));
           }();
         `;
         return (
@@ -76,6 +97,7 @@ class Content extends Component<{}> {
                       }}
                 >
                     <WebView
+                        domStorageEnabled={true}
                         ref={(ref) => this.webView = ref}
                         onMessage={this.onMessage}
                         javaScriptEnabled={true}
