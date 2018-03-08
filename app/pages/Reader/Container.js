@@ -30,14 +30,10 @@ class Content extends Component<{}> {
 
     componentWillReceiveProps(nextProps) {
         let {bookId} = nextProps;
-
-        // storage.clearMap();
-
         SectionLocation.load({
             key: 'SectionLocation',
             id: bookId,
         }).then(dataSource => {
-            console.log(dataSource);
             storage.load({
                 key: 'section',
                 id: dataSource.current,

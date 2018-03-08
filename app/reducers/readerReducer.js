@@ -3,6 +3,10 @@ const initialState = {
     modalVisible: false,
     readerOpened: false,
     bookId: 1,
+    chapter: {
+        chapterData: [],
+        bookName: '',
+    },
 };
 
 // 不同类别的事件使用switch对应处理过程
@@ -17,6 +21,7 @@ export default function reader(state = initialState, action) {
             return {
                 ...state,
                 bookId: action.bookId,
+                chapter: action.chapter,
                 readerOpened: true,
             };
         case 'closeReader':

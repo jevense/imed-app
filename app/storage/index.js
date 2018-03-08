@@ -1,6 +1,7 @@
 import Storage from 'react-native-storage';
 import {AsyncStorage} from 'react-native';
 import SectionLocation from './SectionLocation'
+import {NotFoundError} from "react-native-storage/error";
 
 const host = 'http://192.168.8.144:8080/imed';
 
@@ -34,7 +35,6 @@ const storage = new Storage({
             fetch(`${host}/book.json`).then(response => {
                 return response.json();
             }).then(json => {
-                console.log(json);
                 if (json && json.books) {
                     let books = json.books.map(item => {
                         let {id: key = "", name: title = "", edition: editor = "", size = "", cover} = item;
@@ -64,35 +64,37 @@ const storage = new Storage({
             }).then(json => {
                 if (json && json['chapters'] && json['chapters']['chapters']) {
                     let bookName = json['chapters']['name'];
-                    let chapter = json['chapters']['chapters'].map(item => {
+                    let chapterData = json['chapters']['chapters'].map(item => {
                         let {id = "", name: title = "", icon = "", sections: data = []} = item;
                         return {id, title, data,}
                     });
-                    let data = {bookName, chapter};
+                    let data = {bookName, chapterData};
                     storage.save({
                         key: 'chapter',
                         id: id,
                         data: data,
                     });
                     //初始化章节位置
-                    if (chapter && chapter[0] && chapter[0]['data'] && chapter[0]['data'][0] && chapter[0]['data'][0]['id']) {
+                    if (chapterData && chapterData[0] && chapterData[0]['data'] && chapterData[0]['data'][0] && chapterData[0]['data'][0]['id']) {
                         SectionLocation.load({
                             key: 'SectionLocation',
                             id: id
                         }).catch(err => {
                             // 如果没有找到数据且没有sync方法，
                             // 或者有其他异常，则在catch中返回
-                            SectionLocation.save({//TODO 更新数值
-                                key: 'SectionLocation',
-                                id: id,
-                                data: {current: chapter[0]['data'][0]['id']},
-                            });
-                            console.log(chapter[0]['data'][0]['id']);
-                            console.log(err);
+                            if (err instanceof NotFoundError) {
+                                SectionLocation.save({//TODO 更新数值
+                                    key: 'SectionLocation',
+                                    id: id,
+                                    data: {current: chapterData[0]['data'][0]['id']},
+                                });
+                            } else {
+                                console.log(err);
+                            }
                         });
                         storage.load({
                             key: 'section',
-                            id: chapter[0]['data'][0]['id'],
+                            id: chapterData[0]['data'][0]['id'],
                             syncParams: {bookId: id},
                         });
                     }
@@ -120,7 +122,6 @@ const storage = new Storage({
                         id: id,
                         data: section,
                     });
-
                     SectionLocation.save({//TODO 更新数值
                         key: 'SectionLocation',
                         id: bookId,

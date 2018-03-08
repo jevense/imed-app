@@ -1,7 +1,7 @@
 import React from "react";
 import {SectionList, StyleSheet, Text, TouchableOpacity, View} from "react-native";
 
-export default ({chapter = [], bookName = ''}) => (
+export default ({chapterData = [], bookName = ''}) => (
     <View style={styles.container}>
         <View style={styles.title}>
             <TouchableOpacity onPress={() => {
@@ -23,7 +23,7 @@ export default ({chapter = [], bookName = ''}) => (
             renderItem={({item}) => <Text style={{fontSize: 20, marginHorizontal: 20}}>{item.name}</Text>}
             renderSectionHeader={({section}) => <Text
                 style={{fontSize: 25, backgroundColor: 'red'}}>{section.title}</Text>}
-            sections={chapter}/>
+            sections={chapterData}/>
     </View>
 )
 

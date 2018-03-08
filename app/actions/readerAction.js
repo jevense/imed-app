@@ -1,4 +1,5 @@
 import {NavigationActions} from "react-navigation";
+import {storage} from "../storage";
 
 export const changeModalVisible = (value) => {
     return (dispatch) => {
@@ -15,9 +16,16 @@ export const goBack = () => {
 };
 
 
-export const openReader = (key) => {
+export const openReader = (bookId) => {
     return (dispatch) => {
-        dispatch({type: 'openReader', bookId: key});
+        storage.load({
+            key: 'chapter',
+            id: bookId,
+        }).then(dataSource => {
+            dispatch({type: 'openReader', bookId: bookId, chapter: dataSource});
+        }).catch(err => {
+            console.log(err)
+        });
     }
 };
 
