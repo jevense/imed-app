@@ -10,7 +10,7 @@ export const changeModalVisible = (value) => {
 
 export const goBack = () => {
     return (dispatch) => {
-        dispatch({type: 'changeVisible', modalVisible: false});
+        dispatch({type: 'changeVisible', modalVisible: false})
         dispatch(NavigationActions.navigate({routeName: 'Sheet'}))
     }
 };
@@ -22,7 +22,7 @@ export const openReader = (bookId) => {
             key: 'chapter',
             id: bookId,
         }).then(dataSource => {
-            dispatch({type: 'openReader', bookId: bookId, chapter: dataSource});
+            dispatch({type: 'openReader', bookId: bookId, chapter: dataSource})
         }).catch(err => {
             console.log(err)
         });

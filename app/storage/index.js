@@ -1,9 +1,9 @@
 import Storage from 'react-native-storage';
 import {AsyncStorage} from 'react-native';
 import SectionLocation from './SectionLocation'
-import {NotFoundError} from "react-native-storage/error";
 
-const host = 'http://192.168.8.144:8080/imed';
+// const host = 'http://192.168.8.144:8093/imed';
+const host = 'http://123.56.10.21:8892';
 
 const storage = new Storage({
     // 最大容量，默认值1000条数据循环存储
@@ -76,22 +76,12 @@ const storage = new Storage({
                     });
                     //初始化章节位置
                     if (chapterData && chapterData[0] && chapterData[0]['data'] && chapterData[0]['data'][0] && chapterData[0]['data'][0]['id']) {
-                        SectionLocation.load({
+                        SectionLocation.save({
                             key: 'SectionLocation',
-                            id: id
-                        }).catch(err => {
-                            // 如果没有找到数据且没有sync方法，
-                            // 或者有其他异常，则在catch中返回
-                            if (err instanceof NotFoundError) {
-                                SectionLocation.save({//TODO 更新数值
-                                    key: 'SectionLocation',
-                                    id: id,
-                                    data: {current: chapterData[0]['data'][0]['id']},
-                                });
-                            } else {
-                                console.log(err);
-                            }
-                        });
+                            id: id,
+                            data: {current: chapterData[0]['data'][0]['id']},
+                        })
+
                         storage.load({
                             key: 'section',
                             id: chapterData[0]['data'][0]['id'],

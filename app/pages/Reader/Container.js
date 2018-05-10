@@ -16,20 +16,18 @@ class Content extends Component<{}> {
     }
 
     componentWillMount() {
-        // let {modalVisible, changeModalVisible,} = this.props;
-        // this.panResponder = PanResponder.create({
-        //     onPanResponderGrant: (evt, gestureState) => {
-        //         console.log('onPanResponderGrant...');
-        //     }
-        // });
         this.setState({
             pre: width / 3,
             next: width * 2 / 3,
         });
+        this.getContent(this.props.bookId)
     }
 
     componentWillReceiveProps(nextProps) {
-        let {bookId} = nextProps;
+        this.getContent(nextProps)
+    }
+
+    getContent(bookId) {
         SectionLocation.load({
             key: 'SectionLocation',
             id: bookId,
@@ -40,39 +38,38 @@ class Content extends Component<{}> {
                 syncParams: {bookId,},
             }).then(dataSource => {
                 this.setState({dataSource});
+                // this.webView.postMessage(JSON.stringify(dataSource))
+                console.log(JSON.stringify(dataSource))
             });
-        }).catch(err=>{
+        }).catch(err => {
             console.log(err);
         });
     }
 
     onMessage = (message) => {
-        switch (message.nativeEvent.data) {
-            case "hello from webview":
-                this.webView.postMessage("hello from react-native");
+        console.log(message.nativeEvent.data)
+        let {command, data} = JSON.parse(message.nativeEvent.data);
+        switch (command) {
+            case "test":
+                console.log(data);
                 break;
             case "got the message inside webview":
                 console.log("we have got a message from webview! yeah");
                 break;
         }
-    };
+    }
+
+    injectedJavaScript = () => {
+        let {dataSource} = this.state;
+        // const script = `vmroot.section = ${dataSource};console.log(JSON.stringify(${dataSource}))`;  // eslint-disable-line quotes
+        const script = `console.log('=====')`;  // eslint-disable-line quotes
+        this.webView.injectJavaScript(script);
+    }
 
     render() {
         let {navigation, drawer, modalVisible, changeModalVisible,} = this.props;
         let {pre, next, dataSource} = this.state;
 
-        const injectScript = `
-          !function () {
-            window.document.addEventListener('message', function (e) {
-                const message = e.data
-                if (message === "hello from react-native") {
-                  window.postMessage("got the message inside webview");
-                }
-            })
-            // window.postMessage("hello from webview");
-            localStorage.setItem('section', JSON.stringify(${dataSource}));
-          }();
-        `;
         return (
             <View style={{flex: 1}}>
                 <View style={{flex: 1}}
@@ -97,8 +94,8 @@ class Content extends Component<{}> {
                         ref={(ref) => this.webView = ref}
                         onMessage={this.onMessage}
                         javaScriptEnabled={true}
-                        injectedJavaScript={injectScript}
-                        source={require('../../assets/html/TestH.html')}
+                        injectJavaScript={this.injectedJavaScript}
+                        source={require('../../assets/html/index.html')}
                     />
                 </View>
                 {
