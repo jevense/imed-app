@@ -1,7 +1,9 @@
 import React from "react";
 import {SectionList, StyleSheet, Text, TouchableOpacity, View} from "react-native";
+import {connect} from "react-redux"
+import {changeSection} from "../../actions/readerAction"
 
-export default ({chapterData = [], bookName = ''}) => (
+const Side = ({chapter, changeSection,}) => (
     <View style={styles.container}>
         <View style={styles.title}>
             <TouchableOpacity onPress={() => {
@@ -18,14 +20,27 @@ export default ({chapterData = [], bookName = ''}) => (
             </TouchableOpacity>
         </View>
         <SectionList
-            ListHeaderComponent={<Text style={{fontSize: 30}}>{bookName}</Text>}
+            ListHeaderComponent={<Text style={{fontSize: 30}}>{chapter.bookName}</Text>}
             keyExtractor={(item) => item.id}
-            renderItem={({item}) => <Text style={{fontSize: 20, marginHorizontal: 20}}>{item.name}</Text>}
+            renderItem={({item}) =>
+                <TouchableOpacity onPress={() => changeSection(item.id)}>
+                    <Text style={{fontSize: 20, marginHorizontal: 20}}>{item.name}</Text>
+                </TouchableOpacity>
+            }
             renderSectionHeader={({section}) => <Text
                 style={{fontSize: 25, backgroundColor: 'red'}}>{section.title}</Text>}
-            sections={chapterData}/>
+            sections={chapter.chapterData}/>
     </View>
 )
+
+export default connect(
+    (state) => ({
+        chapter: state.reader.chapter,
+    }),
+    (dispatch) => ({
+        changeSection: (value) => dispatch(changeSection(value)),
+    })
+)(Side);
 
 const styles = StyleSheet.create({
     container: {

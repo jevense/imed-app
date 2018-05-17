@@ -1,10 +1,49 @@
-import Storage from 'react-native-storage';
-import {AsyncStorage} from 'react-native';
+import React, {AsyncStorage} from 'react-native';
 
-const SectionLocation = new Storage({
-    storageBackend: AsyncStorage,
-    // 数据过期时间，默认一整天（1000 * 3600 * 24 毫秒），设为null则永不过期
-    defaultExpires: null,
-});
+class SectionLocation {
+    /**
+     * 获取
+     * @param key
+     * @returns {Promise<T>}
+     */
+    static get(key) {
+        return AsyncStorage.getItem(`${key}`).then(value => {
+            return parseInt(value)
+        });
+    }
 
-export default SectionLocation;
+
+    /**
+     * 保存
+     * @param key
+     * @param value
+     * @returns {*}
+     */
+    static save(key, value) {
+        return AsyncStorage.setItem(`${key}`, `${value}`)
+    }
+
+
+    /**
+     * 更新
+     * @param key
+     * @param value
+     * @returns {Promise<T>}
+     */
+    static update(key, value) {
+        return SectionLocation.get(`${key}`).then(item => {
+            return AsyncStorage.setItem(`${key}`, `${item}`);
+        });
+    }
+
+    /**
+     * 更新
+     * @param key
+     * @returns {*}
+     */
+    static delete(key) {
+        return AsyncStorage.removeItem(`${key}`);
+    }
+}
+
+export default SectionLocation

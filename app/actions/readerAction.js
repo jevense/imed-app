@@ -1,5 +1,5 @@
 import {NavigationActions} from "react-navigation";
-import {storage} from "../storage";
+import {SectionLocation, storage} from "../storage";
 
 export const changeModalVisible = (value) => {
     return (dispatch) => {
@@ -15,17 +15,36 @@ export const goBack = () => {
     }
 };
 
+export const fillData = (sectionId, bookId) => {
+    return (dispatch) => {
+
+    }
+};
 
 export const openReader = (bookId) => {
     return (dispatch) => {
         storage.load({
             key: 'chapter',
             id: bookId,
-        }).then(dataSource => {
-            dispatch({type: 'openReader', bookId: bookId, chapter: dataSource})
+        }).then(chapterDataSource => {
+            SectionLocation.get(bookId).then(sectionId => {
+                dispatch({
+                    type: 'openReader',
+                    bookId: bookId,
+                    chapter: chapterDataSource,
+                    sectionId: sectionId,
+                })
+            })
         }).catch(err => {
             console.log(err)
         });
+    }
+};
+
+export const changeSection = (value) => {
+    return (dispatch) => {
+        console.log(value)
+        dispatch({type: 'changeSection', sectionId: value})
     }
 };
 

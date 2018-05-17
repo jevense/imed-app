@@ -1,1 +1,22 @@
-<!doctype html><html><head><title>基础页面</title><meta charset=utf-8><meta http-equiv=x-ua-compatible content="ie=edge"><meta name=viewport content="width=device-width,user-scalable=no,initial-scale=1"><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><link rel="shortcut icon" href=""></head><body><div id=app></div><script type=text/javascript src=imed-section.min.js></script></body></html>
+<!doctype html>
+<html>
+<head><title>基础页面</title>
+    <meta charset=utf-8>
+    <meta http-equiv=x-ua-compatible content="ie=edge">
+    <meta name=viewport content="width=device-width,user-scalable=no,initial-scale=1">
+    <meta name=apple-mobile-web-app-capable content=yes>
+    <meta name=apple-mobile-web-app-status-bar-style content=black>
+    <link rel="shortcut icon" href="">
+    <script src="https://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/3.0.0/vconsole.min.js"></script>
+</head>
+<body>
+<div id=app></div>
+<script type=text/javascript src=imed-section.min.js></script>
+<script>
+    new VConsole();
+    window.document.addEventListener('message', function (e) {
+        vmroot.section = JSON.parse(e.data)
+    })
+</script>
+</body>
+</html>

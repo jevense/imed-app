@@ -2,8 +2,8 @@ import Storage from 'react-native-storage';
 import {AsyncStorage} from 'react-native';
 import SectionLocation from './SectionLocation'
 
-// const host = 'http://192.168.8.144:8093/imed';
-const host = 'http://123.56.10.21:8892';
+const host = 'http://192.168.8.144:8093/imed';
+// const host = 'http://123.56.10.21:8892';
 
 const storage = new Storage({
     // 最大容量，默认值1000条数据循环存储
@@ -74,13 +74,11 @@ const storage = new Storage({
                         id: id,
                         data: data,
                     });
+                    console.log(id)
+                    console.log(chapterData[0]['data'][0]['id'])
                     //初始化章节位置
                     if (chapterData && chapterData[0] && chapterData[0]['data'] && chapterData[0]['data'][0] && chapterData[0]['data'][0]['id']) {
-                        SectionLocation.save({
-                            key: 'SectionLocation',
-                            id: id,
-                            data: {current: chapterData[0]['data'][0]['id']},
-                        })
+                        SectionLocation.save(id, chapterData[0]['data'][0]['id'])
 
                         storage.load({
                             key: 'section',
@@ -112,11 +110,7 @@ const storage = new Storage({
                         id: id,
                         data: section,
                     });
-                    SectionLocation.save({//TODO 更新数值
-                        key: 'SectionLocation',
-                        id: bookId,
-                        data: {current: id},
-                    });
+                    SectionLocation.save(bookId, id)
                     // 成功则调用resolve
                     resolve && resolve(section);
                 } else {

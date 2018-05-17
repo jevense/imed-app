@@ -17,3 +17,7 @@ onPageChanged	function(page,numberOfPages)	null	callback when page changed ,retu
 onError	function(error)	null	callback when error happened	✔	✔	<3.0
 onPageSingleTap	function(page)	null	callback when page was single tapped	✔	✔	3.0
 onScaleChanged	function(scale)	null	callback when scale page
+
+ <TouchableOpacity onPress={changeSection(item.id)}>
+
+                </TouchableOpacity>

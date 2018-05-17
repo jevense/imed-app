@@ -3,7 +3,6 @@ import Sheet from '../pages/Sheet/index';
 import Search from '../pages/Search/index';
 import BookAdd from '../pages/BookAdd/index';
 import Scanner from '../pages/Search/BarcodeScanner';
-import Reader from "../pages/Reader";
 
 const stackNavigator = StackNavigator({
     Sheet: {

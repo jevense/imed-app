@@ -7,6 +7,7 @@ const initialState = {
         chapterData: [],
         bookName: '',
     },
+    sectionId: 1,
 };
 
 // 不同类别的事件使用switch对应处理过程
@@ -22,7 +23,13 @@ export default function reader(state = initialState, action) {
                 ...state,
                 bookId: action.bookId,
                 chapter: action.chapter,
+                sectionId: action.sectionId,
                 readerOpened: true,
+            };
+        case 'changeSection':
+            return {
+                ...state,
+                sectionId: action.sectionId,
             };
         case 'closeReader':
             return {

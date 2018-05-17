@@ -1,19 +1,19 @@
 import React, {Component} from 'react'
 import {Modal, StatusBar, StyleSheet,} from 'react-native'
-import Drawer from "react-native-drawer";
 import {connect} from "react-redux";
-import Container from "./Container";
-import Side from "./Side";
+import Drawer from "react-native-drawer"
+import Side from "./Side"
+import Container from "./Container"
 
 
 class Reader extends Component<{}> {
 
     constructor(props) {
-        super(props);
+        super(props)
     };
 
     render() {
-        let {navigation, readerOpened, bookId, chapter: {chapterData, bookName},} = this.props;
+        let {navigation, readerOpened} = this.props;
         return (
             <Modal
                 animationType={"fade"}
@@ -27,11 +27,12 @@ class Reader extends Component<{}> {
                     openDrawerOffset={100}
                     tapToClose={true}
                     ref={(ref) => this.drawer = ref}
-                    content={<Side {...{chapterData, bookName}}/>}
+                    content={<Side/>}
                 >
-                    <Container {...{navigation, bookId,}}
+                    <Container {...{navigation,}}
                                drawer={() => (this.drawer)}
                     />
+
                 </Drawer>
                 <StatusBar hidden translucent={false}/>
             </Modal>
@@ -42,8 +43,6 @@ class Reader extends Component<{}> {
 export default connect(
     (state) => ({
         readerOpened: state.reader.readerOpened,
-        bookId: state.reader.bookId,
-        chapter: state.reader.chapter,
     })
 )(Reader)
 

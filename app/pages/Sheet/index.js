@@ -10,16 +10,13 @@ import GridItem from "./GridItem";
 import SwiperItem from "./SwiperItem";
 import Reader from "../Reader";
 import {openReader} from "../../actions/readerAction";
-import {storage,SectionLocation} from '../../storage'
+import {init} from "../../actions/sheetAction"
 
 
 class Sheet extends Component<{}> {
 
     constructor(props) {
         super(props);
-        this.state = {
-            dataSource: []
-        };
     };
 
 
@@ -54,6 +51,7 @@ class Sheet extends Component<{}> {
     };
 
     componentWillMount() {
+        this.props.init()
         // async function getDataSource() {
         //     let response = await fetch();
         //     let json = await response.json();
@@ -72,20 +70,11 @@ class Sheet extends Component<{}> {
         //     }).catch((error) => {
         //     console.error(error)
         // });
-        storage.load({
-            key: 'books',
-        }).then(dataSource => {
-            this.setState({dataSource});
-        });
     };
 
     render() {
-        let {itemWidth, columnType, openReader,} = this.props;
-
-        let result = this.switchType();
-
-        let dataSource = this.state.dataSource;
-
+        let {itemWidth, columnType, openReader, dataSource,} = this.props
+        let result = this.switchType()
         return (
             <View>
                 <StatusBar backgroundColor={'black'}/>
@@ -137,6 +126,7 @@ export default connect(
         dataSource: state.sheet.dataSource,
     }),
     (dispatch) => ({
+        init: () => dispatch(init()),
         openReader: (bookId) => dispatch(openReader(bookId)),
     })
 )(Sheet)

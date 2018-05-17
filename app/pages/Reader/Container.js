@@ -1,48 +1,36 @@
-import React, {Component} from "react";
-import {Dimensions, View,} from "react-native";
-import {connect} from "react-redux";
-import {changeModalVisible} from "../../actions/readerAction";
-import Header from "./Header";
-import Footer from "./Footer";
+import React, {Component} from "react"
+import {Dimensions, View,} from "react-native"
+import {connect} from "react-redux"
+import {changeModalVisible} from "../../actions/readerAction"
+import Header from "./Header"
+import Footer from "./Footer"
 import WebView from '../../component/BookWebView'
-import {SectionLocation, storage} from "../../storage";
+import {storage} from "../../storage"
 
 let {width} = Dimensions.get('window');
 
 class Content extends Component<{}> {
 
     constructor(props) {
-        super(props);
-    }
-
-    componentWillMount() {
-        this.setState({
+        super(props)
+        this.state = {
             pre: width / 3,
             next: width * 2 / 3,
-        });
-        this.getContent(this.props.bookId)
+        }
     }
 
-    componentWillReceiveProps(nextProps) {
-        this.getContent(nextProps)
+    componentWillReceiveProps(nextProps){
+        this.injectJavaScript(nextProps.sectionId, nextProps.bookId)
     }
 
-    getContent(bookId) {
-        SectionLocation.load({
-            key: 'SectionLocation',
-            id: bookId,
+    injectJavaScript = (sectionId, bookId) => {
+        console.log(sectionId)
+        storage.load({
+            key: 'section',
+            id: sectionId,
+            syncParams: {bookId,},
         }).then(dataSource => {
-            storage.load({
-                key: 'section',
-                id: dataSource.current,
-                syncParams: {bookId,},
-            }).then(dataSource => {
-                this.setState({dataSource});
-                // this.webView.postMessage(JSON.stringify(dataSource))
-                console.log(JSON.stringify(dataSource))
-            });
-        }).catch(err => {
-            console.log(err);
+            this.webView.postMessage(JSON.stringify(dataSource))
         });
     }
 
@@ -59,16 +47,9 @@ class Content extends Component<{}> {
         }
     }
 
-    injectedJavaScript = () => {
-        let {dataSource} = this.state;
-        // const script = `vmroot.section = ${dataSource};console.log(JSON.stringify(${dataSource}))`;  // eslint-disable-line quotes
-        const script = `console.log('=====')`;  // eslint-disable-line quotes
-        this.webView.injectJavaScript(script);
-    }
-
     render() {
-        let {navigation, drawer, modalVisible, changeModalVisible,} = this.props;
-        let {pre, next, dataSource} = this.state;
+        let {navigation, drawer, modalVisible, changeModalVisible, sectionId, bookId,} = this.props;
+        let {pre, next,} = this.state;
 
         return (
             <View style={{flex: 1}}>
@@ -94,7 +75,8 @@ class Content extends Component<{}> {
                         ref={(ref) => this.webView = ref}
                         onMessage={this.onMessage}
                         javaScriptEnabled={true}
-                        injectJavaScript={this.injectedJavaScript}
+                        // injectedJavaScript="console.log('=====')"
+                        injectJavaScript={this.injectJavaScript(sectionId, bookId)}
                         source={require('../../assets/html/index.html')}
                     />
                 </View>
@@ -111,7 +93,9 @@ class Content extends Component<{}> {
 
 export default connect(
     (state) => ({
-        modalVisible: state.reader.modalVisible
+        modalVisible: state.reader.modalVisible,
+        bookId: state.reader.bookId,
+        sectionId: state.reader.sectionId,
     }),
     (dispatch) => ({
         changeModalVisible: (value) => dispatch(changeModalVisible(value)),
