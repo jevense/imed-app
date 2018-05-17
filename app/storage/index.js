@@ -74,8 +74,6 @@ const storage = new Storage({
                         id: id,
                         data: data,
                     });
-                    console.log(id)
-                    console.log(chapterData[0]['data'][0]['id'])
                     //初始化章节位置
                     if (chapterData && chapterData[0] && chapterData[0]['data'] && chapterData[0]['data'][0] && chapterData[0]['data'][0]['id']) {
                         SectionLocation.save(id, chapterData[0]['data'][0]['id'])

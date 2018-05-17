@@ -16,14 +16,23 @@ class Content extends Component<{}> {
         this.state = {
             pre: width / 3,
             next: width * 2 / 3,
+            section: {},
         }
     }
 
-    componentWillReceiveProps(nextProps){
-        this.injectJavaScript(nextProps.sectionId, nextProps.bookId)
+    componentWillMount() {
+        let {sectionId, bookId,} = this.props
+        storage.load({
+            key: 'section',
+            id: sectionId,
+            syncParams: {bookId,},
+        }).then(dataSource => {
+            this.setState({dataSource,})
+        });
     }
 
-    injectJavaScript = (sectionId, bookId) => {
+    componentWillReceiveProps(nextProps) {
+        let {sectionId, bookId,} = nextProps
         storage.load({
             key: 'section',
             id: sectionId,
@@ -48,7 +57,7 @@ class Content extends Component<{}> {
 
     render() {
         let {navigation, drawer, modalVisible, changeModalVisible, sectionId, bookId,} = this.props;
-        let {pre, next,} = this.state;
+        let {pre, next, dataSource,} = this.state;
 
         return (
             <View style={{flex: 1}}>
@@ -74,8 +83,8 @@ class Content extends Component<{}> {
                         ref={(ref) => this.webView = ref}
                         onMessage={this.onMessage}
                         javaScriptEnabled={true}
-                        // injectedJavaScript="console.log('=====')"
-                        injectJavaScript={this.injectJavaScript(sectionId, bookId)}
+                        // injectJavaScript={this.injectJavaScript(sectionId, bookId)}
+                        injectedJavaScript={`window.section=${dataSource}`}
                         source={require('../../assets/html/index.html')}
                     />
                 </View>
