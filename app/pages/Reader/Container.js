@@ -24,7 +24,6 @@ class Content extends Component<{}> {
     }
 
     injectJavaScript = (sectionId, bookId) => {
-        console.log(sectionId)
         storage.load({
             key: 'section',
             id: sectionId,

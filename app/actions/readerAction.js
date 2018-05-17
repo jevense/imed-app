@@ -43,7 +43,6 @@ export const openReader = (bookId) => {
 
 export const changeSection = (value) => {
     return (dispatch) => {
-        console.log(value)
         dispatch({type: 'changeSection', sectionId: value})
     }
 };
