@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {Button, StyleSheet} from 'react-native'
-import {connect} from "react-redux";
+import {connect} from "react-redux"
 
 
 class Course extends Component<{}> {

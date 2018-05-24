@@ -1,5 +1,5 @@
 import React from 'react'
-import {StackNavigator} from "react-navigation";
+import {StackNavigator} from "react-navigation"
 import Exam from './Exam';
 
 export default StackNavigator({

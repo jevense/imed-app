@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import {FlatList, Image, StatusBar, StyleSheet, TouchableOpacity, View,} from 'react-native';
-import Ionicons from "react-native-vector-icons/Ionicons";
-import {connect} from "react-redux";
-import {Divider} from "react-native-elements";
-import Search from "../Search/index";
-import Menu from "./Menu";
-import ListItem from "./ListItem";
-import GridItem from "./GridItem";
-import SwiperItem from "./SwiperItem";
-import Reader from "../Reader";
-import {openReader} from "../../actions/readerAction";
+import Ionicons from "react-native-vector-icons/Ionicons"
+import {connect} from "react-redux"
+import {Divider} from "react-native-elements"
+import Search from "../Search/index"
+import Menu from "./Menu"
+import ListItem from "./ListItem"
+import GridItem from "./GridItem"
+import SwiperItem from "./SwiperItem"
+import Reader from "../Reader"
+import {openReader} from "../../actions/readerAction"
 import {init} from "../../actions/sheetAction"
 
 

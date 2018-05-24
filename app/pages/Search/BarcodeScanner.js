@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import Camera from 'react-native-camera';
+import React, {Component} from 'react'
+import {StyleSheet, Text, View} from 'react-native'
+import Camera from 'react-native-camera'
 
 class BarcodeScanner extends Component<{}> {
 

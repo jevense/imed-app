@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import {Dimensions, StyleSheet, View} from 'react-native';
+import React, {Component} from 'react'
+import {Dimensions, StyleSheet, View} from 'react-native'
 
-import Pdf from 'react-native-pdf';
+import Pdf from 'react-native-pdf'
 
 
 // https://github.com/wonday/react-native-pdf

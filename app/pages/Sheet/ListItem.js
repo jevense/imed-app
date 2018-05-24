@@ -1,7 +1,7 @@
-import {Image, PixelRatio, StyleSheet, Text, TouchableOpacity, View} from "react-native";
-import React from "react";
-import {Button} from "react-native-elements";
-import {CachedImage} from "react-native-img-cache";
+import {Image, PixelRatio, StyleSheet, Text, TouchableOpacity, View} from "react-native"
+import React from "react"
+import {Button} from "react-native-elements"
+import {CachedImage} from "react-native-img-cache"
 
 export default ({item, openReader}) => (
     <TouchableOpacity onPress={() => {

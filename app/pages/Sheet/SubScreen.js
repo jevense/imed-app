@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Drawer from 'react-native-drawer'
 import {Button, Image, Text, View} from 'react-native';
-import TouchableItem from "react-navigation/src/views/TouchableItem";
+import TouchableItem from "react-navigation/src/views/TouchableItem"
 
 export default class SubScreen extends Component<{}> {
 

@@ -1,7 +1,7 @@
-import React from "react";
-import {Modal, TouchableHighlight, View} from "react-native";
-import Header from "./Header";
-import Footer from "./Footer";
+import React from "react"
+import {Modal, TouchableHighlight, View} from "react-native"
+import Header from "./Header"
+import Footer from "./Footer"
 
 export const Menu = ({drawer, modalVisible, changeModalVisible, navigation}) => (
     <Modal

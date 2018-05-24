@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import {connect} from "react-redux";
-import {Button, View} from "react-native";
+import {connect} from "react-redux"
+import {Button, View} from "react-native"
 import {login} from '../actions/loginAction'
-import {Header} from "react-native-elements";
+import {Header} from "react-native-elements"
 
 class LoginPage extends Component<{}> {
 

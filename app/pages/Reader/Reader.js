@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {Modal, StatusBar, StyleSheet,} from 'react-native'
-import {connect} from "react-redux";
+import {connect} from "react-redux"
 import Drawer from "react-native-drawer"
 import Side from "./Side"
 import Container from "./Container"

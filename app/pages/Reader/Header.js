@@ -1,8 +1,8 @@
-import React, {Component} from "react";
-import {Dimensions, StyleSheet, TouchableOpacity, View} from "react-native";
-import {connect} from "react-redux";
-import Ionicons from "react-native-vector-icons/Ionicons";
-import {closeReader, goBack} from "../../actions/readerAction";
+import React, {Component} from "react"
+import {Dimensions, StyleSheet, TouchableOpacity, View} from "react-native"
+import {connect} from "react-redux"
+import Ionicons from "react-native-vector-icons/Ionicons"
+import {closeReader, goBack} from "../../actions/readerAction"
 
 class Header extends Component<{}> {
 

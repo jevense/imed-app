@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import React, {Component} from 'react'
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native'
 
 class MineItemCell extends Component<{}> {
     render() {

@@ -1,6 +1,6 @@
-import React from "react";
-import {Image, Text, TouchableOpacity, View} from "react-native";
-import {CachedImage} from "react-native-img-cache";
+import React from "react"
+import {Image, Text, TouchableOpacity, View} from "react-native"
+import {CachedImage} from "react-native-img-cache"
 
 export default ({item, itemWidth, openReader}) => {
     return (

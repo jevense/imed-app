@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
-import {Image, RefreshControl, ScrollView, SectionList, StyleSheet, Text, View,} from 'react-native';
-import MineItemCell from './MineItemCell';
-import {Avatar, Divider} from "react-native-elements";
-import {connect} from "react-redux";
-import {preLogin} from "../../actions/loginAction";
+import React, {Component} from 'react'
+import {Image, RefreshControl, ScrollView, SectionList, StyleSheet, Text, View,} from 'react-native'
+import MineItemCell from './MineItemCell'
+import {Avatar, Divider} from "react-native-elements"
+import {connect} from "react-redux"
+import {preLogin} from "../../actions/loginAction"
 
 class MineScene extends Component<{}> {
 

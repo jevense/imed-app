@@ -1,9 +1,9 @@
 import React from 'react'
 import {StyleSheet, Text, View} from 'react-native';
 import Menu, {MenuOption, MenuOptions, MenuTrigger} from 'react-native-menu';
-import Ionicons from "react-native-vector-icons/Ionicons";
-import {connect} from "react-redux";
-import {view} from "../../actions/sheetAction";
+import Ionicons from "react-native-vector-icons/Ionicons"
+import {connect} from "react-redux"
+import {view} from "../../actions/sheetAction"
 
 const TopNavigation = ({style, isList, changeView}) => (
     <View style={style}>

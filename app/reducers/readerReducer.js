@@ -26,6 +26,11 @@ export default function reader(state = initialState, action) {
                 sectionId: action.sectionId,
                 readerOpened: true,
             };
+        case 'fillData':
+            return {
+                ...state,
+                dataSource: action.dataSource,
+            };
         case 'changeSection':
             return {
                 ...state,

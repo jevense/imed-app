@@ -1,8 +1,8 @@
-import React, {Component} from "react";
-import {Button, Dimensions, Slider, StyleSheet, TouchableOpacity, View} from "react-native";
-import Ionicons from "react-native-vector-icons/Ionicons";
-import {connect} from "react-redux";
-import {changeModalVisible} from "../../actions/readerAction";
+import React, {Component} from "react"
+import {Button, Dimensions, Slider, StyleSheet, TouchableOpacity, View} from "react-native"
+import Ionicons from "react-native-vector-icons/Ionicons"
+import {connect} from "react-redux"
+import {changeModalVisible} from "../../actions/readerAction"
 
 class Footer extends Component<{}> {
 

@@ -1,7 +1,7 @@
 import {applyMiddleware, createStore} from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import rootReducer from '../reducers/index';
-import {createReactNavigationReduxMiddleware, createReduxBoundAddListener} from "react-navigation-redux-helpers";
+import {createReactNavigationReduxMiddleware, createReduxBoundAddListener} from "react-navigation-redux-helpers"
 
 
 // Note: createReactNavigationReduxMiddleware must be run before createReduxBoundAddListener

@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
-import {StyleSheet, Text, TouchableOpacity} from 'react-native';
-import {connect} from "react-redux";
+import React, {Component} from 'react'
+import {StyleSheet, Text, TouchableOpacity} from 'react-native'
+import {connect} from "react-redux"
 import {SearchBar} from 'react-native-elements'
-import Ionicons from "react-native-vector-icons/Ionicons";
-import Scanner from "./BarcodeScanner";
-import TabSwitch from "./TabSwitch";
+import Ionicons from "react-native-vector-icons/Ionicons"
+import Scanner from "./BarcodeScanner"
+import TabSwitch from "./TabSwitch"
 
 
 class Sheet extends Component<{}> {

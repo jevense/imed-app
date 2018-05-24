@@ -1,5 +1,5 @@
-import React from "react";
-import {SectionList, StyleSheet, Text, TouchableOpacity, View} from "react-native";
+import React from "react"
+import {SectionList, StyleSheet, Text, TouchableOpacity, View} from "react-native"
 import {connect} from "react-redux"
 import {changeSection} from "../../actions/readerAction"
 
