@@ -19,7 +19,7 @@ class Content extends Component<{}> {
         }
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.webView.postMessage(JSON.stringify(this.props.dataSource))
     }
 
@@ -77,7 +77,7 @@ class Content extends Component<{}> {
                         javaScriptEnabled={true}
                         // injectJavaScript={this.injectJavaScript(sectionId, bookId)}
                         injectedJavaScript={`let section=${dataSource}`}
-                        source={require('../../assets/html/TestH.html')}
+                        source={require('../../assets/html/index.html')}
                     />
                 </View>
                 {
