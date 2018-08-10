@@ -1,0 +1,3833 @@
+{
+  "id": 1,
+  "name": "内科学",
+  "chapters": [
+    {
+      "id": 10,
+      "sections": [
+        {
+          "id": 140,
+          "name": "封面"
+        },
+        {
+          "id": 141,
+          "name": "扉页"
+        },
+        {
+          "id": 142,
+          "name": "版权页"
+        },
+        {
+          "id": 143,
+          "name": "教材总目录"
+        },
+        {
+          "id": 144,
+          "name": "顾问委员会"
+        },
+        {
+          "id": 145,
+          "name": "编写委员会"
+        },
+        {
+          "id": 146,
+          "name": "委员院校单位"
+        },
+        {
+          "id": 147,
+          "name": "总序-1"
+        },
+        {
+          "id": 148,
+          "name": "总序-2"
+        },
+        {
+          "id": 149,
+          "name": "序"
+        },
+        {
+          "id": 150,
+          "name": "前　言"
+        }
+      ],
+      "chapterId": null,
+      "name": "封面",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/54bc7739843f55bc"
+    },
+    {
+      "id": 1,
+      "sections": [
+        {
+          "id": 1,
+          "name": "要点"
+        },
+        {
+          "id": 2,
+          "sectionId": "第一节",
+          "name": "循环系统结构和功能特点",
+          "catalogShow": true
+        },
+        {
+          "id": 4,
+          "sectionId": "第二节",
+          "name": "心血管疾病的诊断",
+          "catalogShow": true
+        },
+        {
+          "id": 11,
+          "sectionId": "第三节",
+          "name": "心血管系统疾病的防治",
+          "catalogShow": true
+        },
+        {
+          "id": 13,
+          "sectionId": "第四节",
+          "name": "心血管系统疾病的进展和展望",
+          "catalogShow": true
+        },
+        {
+          "id": 14,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第一章",
+      "name": "总论",
+      "pieceId": "第一篇",
+      "piece": "循环系统疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/f0268775c646e844"
+    },
+    {
+      "id": 2,
+      "sections": [
+        {
+          "id": 17,
+          "name": "要点"
+        },
+        {
+          "id": 19,
+          "sectionId": "第一节",
+          "name": "慢性心力衰竭",
+          "catalogShow": true
+        },
+        {
+          "id": 26,
+          "sectionId": "第二节",
+          "name": "急性心力衰竭",
+          "catalogShow": true
+        },
+        {
+          "id": 27,
+          "name": "病例分析"
+        },
+        {
+          "id": 28,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第二章",
+      "name": "心力衰竭",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/4ead74cebd62effb"
+    },
+    {
+      "id": 3,
+      "sections": [
+        {
+          "id": 31,
+          "sectionId": "第一节",
+          "name": "概述",
+          "catalogShow": true
+        },
+        {
+          "id": 32,
+          "sectionId": "第二节",
+          "name": "窦性心律失常",
+          "catalogShow": true
+        },
+        {
+          "id": 38,
+          "sectionId": "第三节",
+          "name": "房性心律失常",
+          "catalogShow": true
+        },
+        {
+          "id": 43,
+          "sectionId": "第四节",
+          "name": "房室交界性心律失常",
+          "catalogShow": true
+        },
+        {
+          "id": 49,
+          "sectionId": "第五节",
+          "name": "室性心律失常",
+          "catalogShow": true
+        },
+        {
+          "id": 52,
+          "sectionId": "第六节",
+          "name": "心脏传导阻滞",
+          "catalogShow": true
+        },
+        {
+          "id": 54,
+          "sectionId": "第七节",
+          "name": "抗心律失常药物的合理应用",
+          "catalogShow": true
+        },
+        {
+          "id": 56,
+          "sectionId": "第八节",
+          "name": "心律失常的非药物治疗",
+          "catalogShow": true
+        },
+        {
+          "id": 61,
+          "name": "病例分析"
+        },
+        {
+          "id": 62,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第三章",
+      "name": "心律失常",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/2c2eea7c331011b0"
+    },
+    {
+      "id": 4,
+      "sections": [
+        {
+          "id": 65,
+          "name": "要点"
+        },
+        {
+          "id": 66,
+          "sectionId": "第一节",
+          "name": "原发性高血压",
+          "catalogShow": true
+        },
+        {
+          "id": 70,
+          "sectionId": "第二节",
+          "name": "继发性高血压",
+          "catalogShow": true
+        },
+        {
+          "id": 72,
+          "name": "病例分析"
+        },
+        {
+          "id": 73,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第四章",
+      "name": "高血压",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/34145d7b1a68d3dd"
+    },
+    {
+      "id": 5,
+      "sections": [
+        {
+          "id": 76,
+          "name": "要点"
+        },
+        {
+          "id": 77,
+          "sectionId": "第一节",
+          "name": "冠状动脉粥样硬化性心脏病概述",
+          "catalogShow": true
+        },
+        {
+          "id": 80,
+          "sectionId": "第二节",
+          "name": "稳定型冠心病",
+          "catalogShow": true
+        },
+        {
+          "id": 82,
+          "sectionId": "第三节",
+          "name": "急性冠状动脉综合征",
+          "catalogShow": true
+        },
+        {
+          "id": 83,
+          "sectionId": "第四节",
+          "name": "冠状动脉疾病的其他表现形式",
+          "catalogShow": true
+        },
+        {
+          "id": 84,
+          "sectionId": "第五节",
+          "name": "冠心病的介入治疗",
+          "catalogShow": true
+        },
+        {
+          "id": 86,
+          "name": "病例分析"
+        },
+        {
+          "id": 87,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第五章",
+      "name": "动脉粥样硬化和冠状动脉粥样",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/1996ede84d98442f"
+    },
+    {
+      "id": 6,
+      "sections": [
+        {
+          "id": 90,
+          "name": "要点"
+        },
+        {
+          "id": 91,
+          "sectionId": "第一节",
+          "name": "二尖瓣狭窄",
+          "catalogShow": true
+        },
+        {
+          "id": 93,
+          "sectionId": "第二节",
+          "name": "二尖瓣关闭不全",
+          "catalogShow": true
+        },
+        {
+          "id": 94,
+          "sectionId": "第三节",
+          "name": "主动脉瓣狭窄",
+          "catalogShow": true
+        },
+        {
+          "id": 97,
+          "sectionId": "第四节",
+          "name": "主动脉瓣关闭不全",
+          "catalogShow": true
+        },
+        {
+          "id": 98,
+          "sectionId": "第五节",
+          "name": "多瓣膜病",
+          "catalogShow": true
+        },
+        {
+          "id": 99,
+          "name": "病例分析"
+        },
+        {
+          "id": 100,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第六章",
+      "name": "心脏瓣膜病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/0213c331c1055946"
+    },
+    {
+      "id": 7,
+      "sections": [
+        {
+          "id": 103,
+          "name": "要点"
+        },
+        {
+          "id": 104,
+          "sectionId": "第一节",
+          "name": "自体瓣膜心内膜炎",
+          "catalogShow": true
+        },
+        {
+          "id": 110,
+          "sectionId": "第二节",
+          "name": "人工瓣膜和静脉药瘾者心内膜炎",
+          "catalogShow": true
+        },
+        {
+          "id": 112,
+          "name": "病例分析"
+        },
+        {
+          "id": 113,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第七章",
+      "name": "感染性心内膜炎",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/0f2d9785d7bcd30c"
+    },
+    {
+      "id": 8,
+      "sections": [
+        {
+          "id": 116,
+          "name": "要点"
+        },
+        {
+          "id": 117,
+          "sectionId": "第一节",
+          "name": "原发性心肌病",
+          "catalogShow": true
+        },
+        {
+          "id": 123,
+          "sectionId": "第二节",
+          "name": "特异性心肌病",
+          "catalogShow": true
+        },
+        {
+          "id": 124,
+          "sectionId": "第三节",
+          "name": "心肌炎",
+          "catalogShow": true
+        },
+        {
+          "id": 127,
+          "name": "病例分析"
+        },
+        {
+          "id": 128,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第八章",
+      "name": "心肌疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/812098b352cdeefc"
+    },
+    {
+      "id": 9,
+      "sections": [
+        {
+          "id": 131,
+          "name": "要点"
+        },
+        {
+          "id": 132,
+          "sectionId": "第一节",
+          "name": "急性心包炎",
+          "catalogShow": true
+        },
+        {
+          "id": 135,
+          "sectionId": "第二节",
+          "name": "缩窄性心包炎",
+          "catalogShow": true
+        },
+        {
+          "id": 136,
+          "name": "病例分析"
+        },
+        {
+          "id": 137,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第九章",
+      "name": "心包疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/9366f0cdb434c397"
+    },
+    {
+      "id": 11,
+      "sections": [
+        {
+          "id": 151,
+          "name": "要点"
+        },
+        {
+          "id": 152,
+          "sectionId": "第十章",
+          "name": "心脏骤停与心脏性猝死",
+          "catalogShow": false
+        },
+        {
+          "id": 157,
+          "name": "病例分析"
+        },
+        {
+          "id": 158,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第十章",
+      "name": "心脏骤停与心脏性猝死",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/161f26ce94633729"
+    },
+    {
+      "id": 12,
+      "sections": [
+        {
+          "id": 161,
+          "name": "要点"
+        },
+        {
+          "id": 162,
+          "sectionId": "第一节",
+          "name": "概述",
+          "catalogShow": true
+        },
+        {
+          "id": 164,
+          "sectionId": "第二节",
+          "name": "常见先天性心血管病",
+          "catalogShow": true
+        },
+        {
+          "id": 168,
+          "name": "病例分析"
+        },
+        {
+          "id": 169,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第十一章",
+      "name": "先天性心血管疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/a03cb2182a51cdb5"
+    },
+    {
+      "id": 13,
+      "sections": [
+        {
+          "id": 172,
+          "name": "要点"
+        },
+        {
+          "id": 173,
+          "sectionId": "第一节",
+          "name": "主动脉夹层",
+          "catalogShow": true
+        },
+        {
+          "id": 174,
+          "sectionId": "第二节",
+          "name": "闭塞性周围动脉粥样硬化",
+          "catalogShow": true
+        },
+        {
+          "id": 176,
+          "sectionId": "第三节",
+          "name": "静脉血栓症",
+          "catalogShow": true
+        },
+        {
+          "id": 178,
+          "name": "病例分析"
+        },
+        {
+          "id": 179,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第十二章",
+      "name": "主动脉和周围血管疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/bf2b004e4db7d1cc"
+    },
+    {
+      "id": 14,
+      "sections": [
+        {
+          "id": 182,
+          "name": "要点"
+        },
+        {
+          "id": 183,
+          "sectionId": "第十三章",
+          "name": "心血管神经症",
+          "catalogShow": false
+        },
+        {
+          "id": 186,
+          "name": "病例分析"
+        },
+        {
+          "id": 187,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第十三章",
+      "name": "心血管神经症",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/7743e709b8b96933"
+    },
+    {
+      "id": 15,
+      "sections": [
+        {
+          "id": 190,
+          "name": "要点"
+        },
+        {
+          "id": 191,
+          "sectionId": "第一节",
+          "name": "呼吸系统疾病的诊查",
+          "catalogShow": true
+        },
+        {
+          "id": 194,
+          "sectionId": "第二节",
+          "name": "呼吸系统疾病的防治",
+          "catalogShow": true
+        },
+        {
+          "id": 198,
+          "sectionId": "第三节",
+          "name": "呼吸系统疾病进展和展望",
+          "catalogShow": true
+        },
+        {
+          "id": 199,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第十四章",
+      "name": "呼吸系统疾病总论",
+      "nameEn": null,
+      "order": null,
+      "pieceId": "第二篇",
+      "piece": "呼吸系统",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/592d356e087a0f10"
+    },
+    {
+      "id": 16,
+      "sections": [
+        {
+          "id": 202,
+          "name": "要点"
+        },
+        {
+          "id": 203,
+          "sectionId": "第一节",
+          "name": "急性上呼吸道感染",
+          "catalogShow": true
+        },
+        {
+          "id": 205,
+          "sectionId": "第二节",
+          "name": "急性气管——支气管炎",
+          "catalogShow": true
+        },
+        {
+          "id": 207,
+          "name": "病例分析"
+        },
+        {
+          "id": 208,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第十五章",
+      "name": "急性上呼吸道感染及急性气管",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/d2d6c1ab174d170d"
+    },
+    {
+      "id": 17,
+      "sections": [
+        {
+          "id": 211,
+          "name": "要点"
+        },
+        {
+          "id": 212,
+          "sectionId": "第一节",
+          "name": "概述",
+          "catalogShow": true
+        },
+        {
+          "id": 215,
+          "sectionId": "第二节",
+          "name": "社区获得性肺炎",
+          "catalogShow": true
+        },
+        {
+          "id": 217,
+          "sectionId": "第三节",
+          "name": "医院获得性肺炎",
+          "catalogShow": true
+        },
+        {
+          "id": 219,
+          "sectionId": "第四节",
+          "name": "免疫低下宿主肺炎",
+          "catalogShow": true
+        },
+        {
+          "id": 220,
+          "sectionId": "第五节",
+          "name": "按病原学分类常见肺炎的临床要点",
+          "catalogShow": true
+        },
+        {
+          "id": 223,
+          "name": "病例分析"
+        },
+        {
+          "id": 224,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第十六章",
+      "name": "肺炎",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/122065c25107eade"
+    },
+    {
+      "id": 18,
+      "sections": [
+        {
+          "id": 227,
+          "name": "要点"
+        },
+        {
+          "id": 228,
+          "sectionId": "第十七章",
+          "name": "肺脓肿",
+          "catalogShow": false
+        },
+        {
+          "id": 231,
+          "name": "病例分析"
+        },
+        {
+          "id": 232,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第十七章",
+      "name": "肺脓肿",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/da1c39194c04fe21"
+    },
+    {
+      "id": 19,
+      "sections": [
+        {
+          "id": 235,
+          "name": "要点"
+        },
+        {
+          "id": 236,
+          "sectionId": "第十八章",
+          "name": "支气管扩张症",
+          "catalogShow": false
+        },
+        {
+          "id": 238,
+          "name": "病例分析"
+        },
+        {
+          "id": 239,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第十八章",
+      "name": "支气管扩张症",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/f82e54c15ebbaabe"
+    },
+    {
+      "id": 20,
+      "sections": [
+        {
+          "id": 242,
+          "name": "要点"
+        },
+        {
+          "id": 243,
+          "sectionId": "第十九章",
+          "name": "肺结核病",
+          "catalogShow": false
+        },
+        {
+          "id": 248,
+          "name": "病例分析"
+        },
+        {
+          "id": 249,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第十九章",
+      "name": "肺结核病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/e28ef0a97d7a0a03"
+    },
+    {
+      "id": 21,
+      "sections": [
+        {
+          "id": 252,
+          "name": "要点"
+        },
+        {
+          "id": 253,
+          "sectionId": "第二十章",
+          "name": "慢性阻塞性肺疾病",
+          "catalogShow": false
+        },
+        {
+          "id": 257,
+          "name": "病例分析"
+        },
+        {
+          "id": 258,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第二十章",
+      "name": "慢性阻塞性肺疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/5b755f6f198bee97"
+    },
+    {
+      "id": 22,
+      "sections": [
+        {
+          "id": 261,
+          "name": "要点"
+        },
+        {
+          "id": 264,
+          "sectionId": "第二十一章",
+          "name": "支气管哮喘",
+          "catalogShow": false
+        },
+        {
+          "id": 268,
+          "name": "病例分析"
+        },
+        {
+          "id": 269,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第二十一章",
+      "name": "支气管哮喘",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/aced525d1c11d229"
+    },
+    {
+      "id": 23,
+      "sections": [
+        {
+          "id": 272,
+          "name": "要点"
+        },
+        {
+          "id": 273,
+          "sectionId": "第二十二章",
+          "name": "肺血栓栓塞症",
+          "catalogShow": false
+        },
+        {
+          "id": 276,
+          "name": "病例分析"
+        },
+        {
+          "id": 277,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第二十二章",
+      "name": "肺血栓栓塞症",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/71d4ce827fca2390"
+    },
+    {
+      "id": 24,
+      "sections": [
+        {
+          "id": 280,
+          "name": "要点"
+        },
+        {
+          "id": 281,
+          "sectionId": "第一节",
+          "name": "肺动脉高压",
+          "catalogShow": true
+        },
+        {
+          "id": 284,
+          "sectionId": "第二节",
+          "name": "肺心病",
+          "catalogShow": true
+        },
+        {
+          "id": 286,
+          "name": "病例分析"
+        },
+        {
+          "id": 287,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第二十三章",
+      "name": "肺动脉高压与肺源性心脏病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/8c2f19cd25f44313"
+    },
+    {
+      "id": 25,
+      "sections": [
+        {
+          "id": 290,
+          "name": "要点"
+        },
+        {
+          "id": 291,
+          "sectionId": "第一节",
+          "name": "急性呼吸衰竭与急性呼吸窘迫综合征",
+          "catalogShow": true
+        },
+        {
+          "id": 294,
+          "sectionId": "第二节",
+          "name": "慢性呼吸衰竭",
+          "catalogShow": true
+        },
+        {
+          "id": 296,
+          "sectionId": "第三节",
+          "name": "呼吸支持技术",
+          "catalogShow": true
+        },
+        {
+          "id": 297,
+          "name": "病例分析"
+        },
+        {
+          "id": 298,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第二十四章",
+      "name": "呼吸衰竭",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/36877a14689574ee"
+    },
+    {
+      "id": 26,
+      "sections": [
+        {
+          "id": 301,
+          "name": "要点"
+        },
+        {
+          "id": 302,
+          "sectionId": "第二十五章",
+          "name": "原发性支气管肺癌",
+          "catalogShow": false
+        },
+        {
+          "id": 307,
+          "name": "病例分析"
+        },
+        {
+          "id": 308,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第二十五章",
+      "name": "原发性支气管肺癌",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/995e4aaddbfe5fc3"
+    },
+    {
+      "id": 27,
+      "sections": [
+        {
+          "id": 311,
+          "name": "要点"
+        },
+        {
+          "id": 312,
+          "sectionId": "第一节",
+          "name": "概述",
+          "catalogShow": true
+        },
+        {
+          "id": 314,
+          "sectionId": "第二节",
+          "name": "特发性肺纤维化",
+          "catalogShow": true
+        },
+        {
+          "id": 318,
+          "sectionId": "第三节",
+          "name": "结节病",
+          "catalogShow": true
+        },
+        {
+          "id": 320,
+          "sectionId": "第四节",
+          "name": "其他弥漫性间质性肺病",
+          "catalogShow": true
+        },
+        {
+          "id": 321,
+          "name": "病例分析"
+        },
+        {
+          "id": 322,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第二十六章",
+      "name": "弥漫性间质性肺疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/448490d648948081"
+    },
+    {
+      "id": 28,
+      "sections": [
+        {
+          "id": 325,
+          "name": "要点"
+        },
+        {
+          "id": 326,
+          "sectionId": "第一节",
+          "name": "胸腔积液",
+          "catalogShow": true
+        },
+        {
+          "id": 330,
+          "sectionId": "第二节",
+          "name": "自发性气胸",
+          "catalogShow": true
+        },
+        {
+          "id": 336,
+          "name": "病例分析"
+        },
+        {
+          "id": 337,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第二十七章",
+      "name": "胸膜疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/4ca1543a72b64bf5"
+    },
+    {
+      "id": 29,
+      "sections": [
+        {
+          "id": 340,
+          "name": "要点"
+        },
+        {
+          "id": 341,
+          "sectionId": "第二十八章",
+          "name": "睡眠呼吸暂停综合征",
+          "catalogShow": false
+        },
+        {
+          "id": 347,
+          "name": "病例分析"
+        },
+        {
+          "id": 348,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第二十八章",
+      "name": "睡眠呼吸暂停综合征",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/449b3690d1c2c596"
+    },
+    {
+      "id": 30,
+      "sections": [
+        {
+          "id": 351,
+          "name": "要点"
+        },
+        {
+          "id": 352,
+          "sectionId": "第二十九章",
+          "name": "消化系统总论",
+          "catalogShow": false
+        },
+        {
+          "id": 358,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第二十九章",
+      "name": "消化系统总论",
+      "nameEn": null,
+      "order": null,
+      "pieceId": "第三篇",
+      "piece": "消化系统疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/ca35d7d745207c2f"
+    },
+    {
+      "id": 31,
+      "sections": [
+        {
+          "id": 361,
+          "name": "要点"
+        },
+        {
+          "id": 362,
+          "sectionId": "第三十章",
+          "name": "胃食管反流病",
+          "catalogShow": false
+        },
+        {
+          "id": 365,
+          "name": "病例分析"
+        },
+        {
+          "id": 366,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第三十章",
+      "name": "胃食管反流病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/0229aae4b91567bf"
+    },
+    {
+      "id": 32,
+      "sections": [
+        {
+          "id": 369,
+          "name": "要点"
+        },
+        {
+          "id": 370,
+          "sectionId": "第三十一章",
+          "name": "食管癌",
+          "catalogShow": false
+        },
+        {
+          "id": 373,
+          "name": "病例分析"
+        },
+        {
+          "id": 374,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第三十一章",
+      "name": "食管癌",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/f6e5418b752005ee"
+    },
+    {
+      "id": 33,
+      "sections": [
+        {
+          "id": 377,
+          "name": "要点"
+        },
+        {
+          "id": 378,
+          "sectionId": "第三十二章",
+          "name": "消化性溃疡",
+          "catalogShow": false
+        },
+        {
+          "id": 385,
+          "name": "病例分析"
+        },
+        {
+          "id": 386,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第三十二章",
+      "name": "消化性溃疡",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/60d101b0e63b350f"
+    },
+    {
+      "id": 34,
+      "sections": [
+        {
+          "id": 389,
+          "name": "要点"
+        },
+        {
+          "id": 390,
+          "sectionId": "第一节",
+          "name": "急性胃炎",
+          "catalogShow": true
+        },
+        {
+          "id": 391,
+          "sectionId": "第二节",
+          "name": "慢性胃炎",
+          "catalogShow": true
+        },
+        {
+          "id": 394,
+          "name": "病例分析"
+        },
+        {
+          "id": 395,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第三十三章",
+      "name": "胃炎",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/30a12260a6d0bbbc"
+    },
+    {
+      "id": 35,
+      "sections": [
+        {
+          "id": 398,
+          "name": "要点"
+        },
+        {
+          "id": 399,
+          "sectionId": "第三十四章",
+          "name": "胃癌",
+          "catalogShow": false
+        },
+        {
+          "id": 405,
+          "name": "病例分析"
+        },
+        {
+          "id": 406,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第三十四章",
+      "name": "胃癌",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/9252258b6e7c0821"
+    },
+    {
+      "id": 36,
+      "sections": [
+        {
+          "id": 409,
+          "name": "要点"
+        },
+        {
+          "id": 410,
+          "sectionId": "第三十五章",
+          "name": "消化不良",
+          "catalogShow": false
+        },
+        {
+          "id": 413,
+          "name": "病例分析"
+        },
+        {
+          "id": 414,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第三十五章",
+      "name": "消化不良",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/bddcafcb27f283da"
+    },
+    {
+      "id": 37,
+      "sections": [
+        {
+          "id": 417,
+          "name": "要点"
+        },
+        {
+          "id": 418,
+          "sectionId": "第三十六章",
+          "name": "炎症性肠病",
+          "catalogShow": false
+        },
+        {
+          "id": 424,
+          "name": "病例分析"
+        },
+        {
+          "id": 425,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第三十六章",
+      "name": "炎症性肠病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/aae68f8f30591b65"
+    },
+    {
+      "id": 38,
+      "sections": [
+        {
+          "id": 428,
+          "name": "要点"
+        },
+        {
+          "id": 429,
+          "sectionId": "第三十七章",
+          "name": "大肠癌",
+          "catalogShow": false
+        },
+        {
+          "id": 432,
+          "name": "病例分析"
+        },
+        {
+          "id": 433,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第三十七章",
+      "name": "大肠癌",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/016bde338e41fca2"
+    },
+    {
+      "id": 39,
+      "sections": [
+        {
+          "id": 436,
+          "name": "要点"
+        },
+        {
+          "id": 437,
+          "sectionId": "第三十八章",
+          "name": "肠易激综合征",
+          "catalogShow": false
+        },
+        {
+          "id": 441,
+          "name": "病例分析"
+        },
+        {
+          "id": 442,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第三十八章",
+      "name": "肠易激综合征",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/bdeda9d836fe70ea"
+    },
+    {
+      "id": 40,
+      "sections": [
+        {
+          "id": 445,
+          "name": "要点"
+        },
+        {
+          "id": 446,
+          "sectionId": "第一节",
+          "name": "肠结核",
+          "catalogShow": true
+        },
+        {
+          "id": 449,
+          "sectionId": "第二节",
+          "name": "结核性腹膜炎",
+          "catalogShow": true
+        },
+        {
+          "id": 450,
+          "name": "案例分析"
+        },
+        {
+          "id": 451,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第三十九章",
+      "name": "肠结核和结核性腹膜炎",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/a2309c47ef0ecd99"
+    },
+    {
+      "id": 41,
+      "sections": [
+        {
+          "id": 454,
+          "name": "要点"
+        },
+        {
+          "id": 455,
+          "sectionId": "第四十章",
+          "name": "慢性腹泻",
+          "catalogShow": false
+        },
+        {
+          "id": 459,
+          "name": "病例分析"
+        },
+        {
+          "id": 460,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第四十章",
+      "name": "慢性腹泻",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/1ce1b2963d460b50"
+    },
+    {
+      "id": 42,
+      "sections": [
+        {
+          "id": 463,
+          "name": "要点"
+        },
+        {
+          "id": 464,
+          "sectionId": "第四十一章",
+          "name": "慢性病毒性肝炎",
+          "catalogShow": false
+        },
+        {
+          "id": 470,
+          "name": "病例分析"
+        },
+        {
+          "id": 471,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第四十一章",
+      "name": "慢性病毒性肝炎",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/e2f046f2a2df93f0"
+    },
+    {
+      "id": 43,
+      "sections": [
+        {
+          "id": 474,
+          "name": "要点"
+        },
+        {
+          "id": 475,
+          "sectionId": "第四十二章",
+          "name": "酒精性肝病",
+          "catalogShow": false
+        },
+        {
+          "id": 481,
+          "name": "病例分析"
+        },
+        {
+          "id": 482,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第四十二章",
+      "name": "酒精性肝病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/81dc929806effc1a"
+    },
+    {
+      "id": 44,
+      "sections": [
+        {
+          "id": 485,
+          "name": "要点"
+        },
+        {
+          "id": 486,
+          "sectionId": "第四十三章",
+          "name": "非酒精性脂肪性肝病",
+          "catalogShow": false
+        },
+        {
+          "id": 488,
+          "name": "病例分析"
+        },
+        {
+          "id": 489,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第四十三章",
+      "name": "非酒精性脂肪性肝病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/567a0dc2cceee661"
+    },
+    {
+      "id": 45,
+      "sections": [
+        {
+          "id": 492,
+          "name": "要点"
+        },
+        {
+          "id": 493,
+          "sectionId": "第四十四章",
+          "name": "药物性肝病",
+          "catalogShow": false
+        },
+        {
+          "id": 498,
+          "name": "病例分析"
+        },
+        {
+          "id": 499,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第四十四章",
+      "name": "药物性肝病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/d5b3ea99cdab4f29"
+    },
+    {
+      "id": 46,
+      "sections": [
+        {
+          "id": 502,
+          "name": "要点"
+        },
+        {
+          "id": 504,
+          "sectionId": "第一节",
+          "name": "自身免疫性肝炎",
+          "catalogShow": true
+        },
+        {
+          "id": 509,
+          "sectionId": "第二节",
+          "name": "原发性胆汁性肝硬化",
+          "catalogShow": true
+        },
+        {
+          "id": 511,
+          "sectionId": "第三节",
+          "name": "原发性硬化性胆管炎",
+          "catalogShow": true
+        },
+        {
+          "id": 513,
+          "name": "病例分析"
+        },
+        {
+          "id": 514,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第四十五章",
+      "name": "自身免疫性肝病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/a9d637558ffa5347"
+    },
+    {
+      "id": 47,
+      "sections": [
+        {
+          "id": 517,
+          "name": "要点"
+        },
+        {
+          "id": 518,
+          "sectionId": "第四十六章",
+          "name": "肝硬化",
+          "catalogShow": false
+        },
+        {
+          "id": 523,
+          "name": "病例分析"
+        },
+        {
+          "id": 524,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第四十六章",
+      "name": "肝硬化",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/cfb66ffef8028e46"
+    },
+    {
+      "id": 48,
+      "sections": [
+        {
+          "id": 527,
+          "name": "要点"
+        },
+        {
+          "id": 528,
+          "sectionId": "第四十七章",
+          "name": "肝性脑病",
+          "catalogShow": false
+        },
+        {
+          "id": 533,
+          "name": "病例分析"
+        },
+        {
+          "id": 534,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第四十七章",
+      "name": "肝性脑病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/7a3af2e585f45363"
+    },
+    {
+      "id": 49,
+      "sections": [
+        {
+          "id": 537,
+          "name": "要点"
+        },
+        {
+          "id": 538,
+          "sectionId": "第四十八章",
+          "name": "原发性肝癌",
+          "catalogShow": false
+        },
+        {
+          "id": 548,
+          "name": "病例分析"
+        },
+        {
+          "id": 549,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第四十八章",
+      "name": "原发性肝癌",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/bd90a92f3ac21ba8"
+    },
+    {
+      "id": 50,
+      "sections": [
+        {
+          "id": 552,
+          "name": "要点"
+        },
+        {
+          "id": 553,
+          "sectionId": "第一节",
+          "name": "急性胰腺炎",
+          "catalogShow": true
+        },
+        {
+          "id": 556,
+          "sectionId": "第二节",
+          "name": "慢性胰腺炎",
+          "catalogShow": true
+        },
+        {
+          "id": 560,
+          "sectionId": "第三节",
+          "name": "自身免疫性胰腺炎",
+          "catalogShow": true
+        },
+        {
+          "id": 562,
+          "name": "病例分析"
+        },
+        {
+          "id": 563,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第四十九章",
+      "name": "胰腺炎",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/89e51f6bb3414131"
+    },
+    {
+      "id": 51,
+      "sections": [
+        {
+          "id": 566,
+          "name": "要点"
+        },
+        {
+          "id": 567,
+          "sectionId": "第五十章",
+          "name": "胰腺癌",
+          "catalogShow": false
+        },
+        {
+          "id": 571,
+          "name": "病例分析"
+        },
+        {
+          "id": 572,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第五十章",
+      "name": "胰腺癌",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/228622a1f2b0a4f4"
+    },
+    {
+      "id": 52,
+      "sections": [
+        {
+          "id": 575,
+          "name": "要点"
+        },
+        {
+          "id": 576,
+          "sectionId": "第五十一章",
+          "name": "消化道出血",
+          "catalogShow": false
+        },
+        {
+          "id": 581,
+          "name": "病例分析"
+        },
+        {
+          "id": 582,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第五十一章",
+      "name": "消化道出血",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/4379e7cde1af4a51"
+    },
+    {
+      "id": 53,
+      "sections": [
+        {
+          "id": 585,
+          "name": "要点"
+        },
+        {
+          "id": 586,
+          "sectionId": "第五十二章",
+          "name": "黄疸",
+          "catalogShow": false
+        },
+        {
+          "id": 592,
+          "name": "病例分析"
+        },
+        {
+          "id": 593,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第五十二章",
+      "name": "黄疸",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/a71eaeaaaa14b4f8"
+    },
+    {
+      "id": 54,
+      "sections": [
+        {
+          "id": 596,
+          "name": "要点"
+        },
+        {
+          "id": 597,
+          "sectionId": "第五十三章",
+          "name": "内镜在消化系统疾病中的应用",
+          "catalogShow": false
+        },
+        {
+          "id": 601,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第五十三章",
+      "name": "内镜在消化系统疾病中的应用",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/e803b881697237c1"
+    },
+    {
+      "id": 55,
+      "sections": [
+        {
+          "id": 604,
+          "name": "要点"
+        },
+        {
+          "id": 605,
+          "sectionId": "第一节",
+          "name": "血液系统的结构与功能特点",
+          "catalogShow": true
+        },
+        {
+          "id": 606,
+          "sectionId": "第二节",
+          "name": "血液病的常见症状和体征",
+          "catalogShow": true
+        },
+        {
+          "id": 608,
+          "sectionId": "第三节",
+          "name": "血液病的实验室检查",
+          "catalogShow": true
+        },
+        {
+          "id": 609,
+          "sectionId": "第四节",
+          "name": "血液病的防治",
+          "catalogShow": true
+        },
+        {
+          "id": 610,
+          "sectionId": "第五节",
+          "name": "血液学的进展与展望",
+          "catalogShow": true
+        },
+        {
+          "id": 611,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第五十四章",
+      "name": "血液学总论",
+      "nameEn": null,
+      "order": null,
+      "pieceId": "第四篇",
+      "piece": "血液和造血系统疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/04e01b678f75910b"
+    },
+    {
+      "id": 56,
+      "sections": [
+        {
+          "id": 614,
+          "name": "要点"
+        },
+        {
+          "id": 615,
+          "sectionId": "第五十五章",
+          "name": "贫血",
+          "catalogShow": false
+        },
+        {
+          "id": 616,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第五十五章",
+      "name": "贫血",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/f748e970c216c89e"
+    },
+    {
+      "id": 57,
+      "sections": [
+        {
+          "id": 619,
+          "name": "要点"
+        },
+        {
+          "id": 620,
+          "sectionId": "第五十六章",
+          "name": "缺铁性贫血",
+          "catalogShow": false
+        },
+        {
+          "id": 621,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第五十六章",
+      "name": "缺铁性贫血",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/3bcd6728af35a798"
+    },
+    {
+      "id": 58,
+      "sections": [
+        {
+          "id": 624,
+          "name": "要点"
+        },
+        {
+          "id": 625,
+          "sectionId": "第五十七章",
+          "name": "再生障碍性贫血",
+          "catalogShow": false
+        },
+        {
+          "id": 626,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第五十七章",
+      "name": "再生障碍性贫血",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/31f57da18ea24bc8"
+    },
+    {
+      "id": 59,
+      "sections": [
+        {
+          "id": 629,
+          "name": "要点"
+        },
+        {
+          "id": 630,
+          "sectionId": "第五十八章",
+          "name": "巨幼细胞贫血",
+          "catalogShow": false
+        },
+        {
+          "id": 631,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第五十八章",
+      "name": "巨幼细胞贫血",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/fd261ea2bab1c8d3"
+    },
+    {
+      "id": 60,
+      "sections": [
+        {
+          "id": 634,
+          "sectionId": "第一节",
+          "name": "概述",
+          "catalogShow": true
+        },
+        {
+          "id": 635,
+          "sectionId": "第二节",
+          "name": "遗传性球形红细胞增多症",
+          "catalogShow": true
+        },
+        {
+          "id": 636,
+          "sectionId": "第三节",
+          "name": "自身免疫性溶血性贫血",
+          "catalogShow": true
+        },
+        {
+          "id": 637,
+          "sectionId": "第四节",
+          "name": "阵发性睡眠性血红蛋白尿症",
+          "catalogShow": true
+        },
+        {
+          "id": 638,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第五十九章",
+      "name": "溶血性贫血",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/a3f9fd2e902df5a2"
+    },
+    {
+      "id": 61,
+      "sections": [
+        {
+          "id": 641,
+          "name": "要点"
+        },
+        {
+          "id": 642,
+          "sectionId": "第一节",
+          "name": "概述",
+          "catalogShow": true
+        },
+        {
+          "id": 643,
+          "sectionId": "第二节",
+          "name": "急性白血病",
+          "catalogShow": true
+        },
+        {
+          "id": 645,
+          "sectionId": "第三节",
+          "name": "慢性髓系白血病",
+          "catalogShow": true
+        },
+        {
+          "id": 646,
+          "sectionId": "第四节",
+          "name": "慢性淋巴细胞白血病",
+          "catalogShow": true
+        },
+        {
+          "id": 647,
+          "sectionId": "第五节",
+          "name": "少见类型的白血病",
+          "catalogShow": true
+        },
+        {
+          "id": 648,
+          "name": "病例分析"
+        },
+        {
+          "id": 649,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第六十章",
+      "name": "白血病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/065f130f0957b837"
+    },
+    {
+      "id": 62,
+      "sections": [
+        {
+          "id": 652,
+          "name": "要点"
+        },
+        {
+          "id": 653,
+          "sectionId": "第六十一章",
+          "name": "骨髓增生异常综合征",
+          "catalogShow": false
+        },
+        {
+          "id": 656,
+          "name": "病例分析"
+        },
+        {
+          "id": 657,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第六十一章",
+      "name": "骨髓增生异常综合征",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/8a41c1678474d8b7"
+    },
+    {
+      "id": 63,
+      "sections": [
+        {
+          "id": 660,
+          "name": "要点"
+        },
+        {
+          "id": 661,
+          "sectionId": "第一节",
+          "name": "特发性血小板增多症",
+          "catalogShow": true
+        },
+        {
+          "id": 663,
+          "sectionId": "第二节",
+          "name": "真性红细胞增多症",
+          "catalogShow": true
+        },
+        {
+          "id": 664,
+          "sectionId": "第三节",
+          "name": "原发性骨髓纤维化",
+          "catalogShow": true
+        },
+        {
+          "id": 668,
+          "name": "病例分析"
+        },
+        {
+          "id": 669,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第六十二章",
+      "name": "骨髓增殖性疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/48fa18c1f790f127"
+    },
+    {
+      "id": 64,
+      "sections": [
+        {
+          "id": 672,
+          "name": "要点"
+        },
+        {
+          "id": 673,
+          "sectionId": "第六十三章",
+          "name": "骨髓增生异常骨髓增殖性疾病",
+          "catalogShow": false
+        },
+        {
+          "id": 677,
+          "name": "病例分析"
+        },
+        {
+          "id": 678,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第六十三章",
+      "name": "骨髓增生异常—骨髓增殖性疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/45e9094cefbd6c91"
+    },
+    {
+      "id": 65,
+      "sections": [
+        {
+          "id": 681,
+          "name": "要点"
+        },
+        {
+          "id": 682,
+          "sectionId": "第一节",
+          "name": "概述",
+          "catalogShow": true
+        },
+        {
+          "id": 683,
+          "sectionId": "第二节",
+          "name": "霍奇金淋巴瘤",
+          "catalogShow": true
+        },
+        {
+          "id": 684,
+          "sectionId": "第三节",
+          "name": "非霍奇金淋巴瘤",
+          "catalogShow": true
+        },
+        {
+          "id": 685,
+          "name": "病例分析"
+        },
+        {
+          "id": 686,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第六十四章",
+      "name": "淋巴瘤",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/a3060d721b849aa1"
+    },
+    {
+      "id": 66,
+      "sections": [
+        {
+          "id": 689,
+          "name": "要点"
+        },
+        {
+          "id": 690,
+          "sectionId": "第一节",
+          "name": "意义未明单克隆球蛋白血症",
+          "catalogShow": true
+        },
+        {
+          "id": 691,
+          "sectionId": "第二节",
+          "name": "多发性骨髓瘤",
+          "catalogShow": true
+        },
+        {
+          "id": 692,
+          "sectionId": "第三节",
+          "name": "Waldenstrőm巨球蛋白血症",
+          "catalogShow": true
+        },
+        {
+          "id": 693,
+          "sectionId": "第四节",
+          "name": "POEMS综合征",
+          "catalogShow": true
+        },
+        {
+          "id": 694,
+          "sectionId": "第五节",
+          "name": "免疫球蛋白轻链淀粉样变性",
+          "catalogShow": true
+        },
+        {
+          "id": 695,
+          "name": "病例分析"
+        },
+        {
+          "id": 696,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第六十五章",
+      "name": "浆细胞病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/e28fbca55cd8c243"
+    },
+    {
+      "id": 67,
+      "sections": [
+        {
+          "id": 699,
+          "name": "要点"
+        },
+        {
+          "id": 700,
+          "sectionId": "第六十六章",
+          "name": "出血性疾病",
+          "catalogShow": false
+        },
+        {
+          "id": 703,
+          "name": "病例分析"
+        },
+        {
+          "id": 704,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第六十六章",
+      "name": "出血性疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/7c0bb5e2112ff11b"
+    },
+    {
+      "id": 68,
+      "sections": [
+        {
+          "id": 707,
+          "name": "要点"
+        },
+        {
+          "id": 708,
+          "sectionId": "第一节",
+          "name": "过敏性紫癜",
+          "catalogShow": true
+        },
+        {
+          "id": 709,
+          "sectionId": "第二节",
+          "name": "单纯性紫癜",
+          "catalogShow": true
+        },
+        {
+          "id": 710,
+          "sectionId": "第三节",
+          "name": "特发性血小板减少性紫癜",
+          "catalogShow": true
+        },
+        {
+          "id": 711,
+          "sectionId": "第四节",
+          "name": "血栓性血小板减少性紫癜",
+          "catalogShow": true
+        },
+        {
+          "id": 714,
+          "sectionId": "第五节",
+          "name": "遗传性出血性毛细血管扩张症",
+          "catalogShow": true
+        },
+        {
+          "id": 715,
+          "name": "病例分析"
+        },
+        {
+          "id": 716,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第六十七章",
+      "name": "紫癜性疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/d27c7f39b1cbb11e"
+    },
+    {
+      "id": 69,
+      "sections": [
+        {
+          "id": 719,
+          "sectionId": "第一节",
+          "name": "血友病A和B",
+          "catalogShow": true
+        },
+        {
+          "id": 722,
+          "sectionId": "第二节",
+          "name": "血管性血友病",
+          "catalogShow": true
+        },
+        {
+          "id": 723,
+          "sectionId": "第三节",
+          "name": "维生素K缺乏症",
+          "catalogShow": true
+        },
+        {
+          "id": 724,
+          "name": "病例分析"
+        },
+        {
+          "id": 725,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第六十八章",
+      "name": "凝血功能障碍性疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/749fc6ca6d357694"
+    },
+    {
+      "id": 70,
+      "sections": [
+        {
+          "id": 728,
+          "name": "要点"
+        },
+        {
+          "id": 729,
+          "sectionId": "第六十九章",
+          "name": "弥散性血管内凝血",
+          "catalogShow": false
+        },
+        {
+          "id": 732,
+          "name": "病例分析"
+        },
+        {
+          "id": 733,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第六十九章",
+      "name": "弥散性血管内凝血",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/ce751fd55c3a80e9"
+    },
+    {
+      "id": 71,
+      "sections": [
+        {
+          "id": 736,
+          "name": "要点"
+        },
+        {
+          "id": 737,
+          "sectionId": "第七十章",
+          "name": "易栓症",
+          "catalogShow": false
+        },
+        {
+          "id": 740,
+          "name": "病例分析"
+        },
+        {
+          "id": 741,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第七十章",
+      "name": "易栓症",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/d57287155c223931"
+    },
+    {
+      "id": 72,
+      "sections": [
+        {
+          "id": 744,
+          "name": "要点"
+        },
+        {
+          "id": 745,
+          "sectionId": "第七十一章",
+          "name": "噬血细胞性淋巴组织细胞增生症",
+          "catalogShow": false
+        },
+        {
+          "id": 748,
+          "name": "病例分析"
+        },
+        {
+          "id": 749,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第七十一章",
+      "name": "噬血细胞性淋巴组织细胞增生症",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/ba9c948fe6f9a61d"
+    },
+    {
+      "id": 73,
+      "sections": [
+        {
+          "id": 752,
+          "name": "要点"
+        },
+        {
+          "id": 753,
+          "sectionId": "第七十二章",
+          "name": "中性粒细胞减少和粒细胞缺乏",
+          "catalogShow": false
+        },
+        {
+          "id": 757,
+          "name": "病例分析"
+        },
+        {
+          "id": 758,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第七十二章",
+      "name": "中性粒细胞减少和粒细胞缺乏",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/d23182e4ba777f78"
+    },
+    {
+      "id": 74,
+      "sections": [
+        {
+          "id": 761,
+          "name": "要点"
+        },
+        {
+          "id": 762,
+          "sectionId": "第七十三章",
+          "name": "脾功能亢进症",
+          "catalogShow": false
+        },
+        {
+          "id": 765,
+          "name": "病例分析"
+        },
+        {
+          "id": 766,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第七十三章",
+      "name": "脾功能亢进症",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/8c5f9a003f9fe26f"
+    },
+    {
+      "id": 75,
+      "sections": [
+        {
+          "id": 769,
+          "name": "要点"
+        },
+        {
+          "id": 770,
+          "sectionId": "第七十四章",
+          "name": "成分输血及输血反应",
+          "catalogShow": false
+        },
+        {
+          "id": 774,
+          "name": "病例分析"
+        },
+        {
+          "id": 775,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第七十四章",
+      "name": "成分输血及输血反应",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/af8452eacd7bb67a"
+    },
+    {
+      "id": 76,
+      "sections": [
+        {
+          "id": 778,
+          "name": "要点"
+        },
+        {
+          "id": 779,
+          "sectionId": "第一节",
+          "name": "概述",
+          "catalogShow": true
+        },
+        {
+          "id": 780,
+          "sectionId": "第二节",
+          "name": "造血干细胞移植的分类和基本原理",
+          "catalogShow": true
+        },
+        {
+          "id": 781,
+          "sectionId": "第三节",
+          "name": "造血干细胞移植的适应证",
+          "catalogShow": true
+        },
+        {
+          "id": 782,
+          "sectionId": "第四节",
+          "name": "造血干细胞移植的供者选择",
+          "catalogShow": true
+        },
+        {
+          "id": 783,
+          "sectionId": "第五节",
+          "name": "造血干细胞移植的过程",
+          "catalogShow": true
+        },
+        {
+          "id": 784,
+          "sectionId": "第六节",
+          "name": "造血干细胞移植的移植相关并发症",
+          "catalogShow": true
+        },
+        {
+          "id": 785,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第七十五章",
+      "name": "造血干细胞移植",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/f8a3b7a1050eb2ad"
+    },
+    {
+      "id": 77,
+      "sections": [
+        {
+          "id": 788,
+          "name": "要点"
+        },
+        {
+          "id": 791,
+          "sectionId": "第一节",
+          "name": "肾解剖和生理功能",
+          "catalogShow": true
+        },
+        {
+          "id": 792,
+          "sectionId": "第二节",
+          "name": "肾疾病症状学",
+          "catalogShow": true
+        },
+        {
+          "id": 794,
+          "sectionId": "第三节",
+          "name": "常见肾疾病的分类",
+          "catalogShow": true
+        },
+        {
+          "id": 795,
+          "sectionId": "第四节",
+          "name": "肾疾病的临床常用检查方法",
+          "catalogShow": true
+        },
+        {
+          "id": 799,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第七十六章",
+      "name": "泌尿系统总论",
+      "nameEn": null,
+      "order": null,
+      "pieceId": "第五篇",
+      "piece": "泌尿系统疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/4749bb4f41f18c18"
+    },
+    {
+      "id": 78,
+      "sections": [
+        {
+          "id": 802,
+          "sectionId": "第一节",
+          "name": "原发性肾小球疾病概述",
+          "catalogShow": true
+        },
+        {
+          "id": 804,
+          "sectionId": "第二节",
+          "name": "急性肾小球肾炎",
+          "catalogShow": true
+        },
+        {
+          "id": 805,
+          "sectionId": "第三节",
+          "name": "快速进展性肾小球肾炎",
+          "catalogShow": true
+        },
+        {
+          "id": 810,
+          "sectionId": "第四节",
+          "name": "慢性肾小球肾炎",
+          "catalogShow": true
+        },
+        {
+          "id": 816,
+          "sectionId": "第五节",
+          "name": "无症状性血尿和（或）蛋白尿",
+          "catalogShow": true
+        },
+        {
+          "id": 819,
+          "sectionId": "第六节",
+          "name": "肾病综合征",
+          "catalogShow": true
+        },
+        {
+          "id": 822,
+          "sectionId": "第七节",
+          "name": "IgA肾病",
+          "catalogShow": true
+        },
+        {
+          "id": 826,
+          "name": "病例分析"
+        },
+        {
+          "id": 827,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第七十七章",
+      "name": "原发性肾小球疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/8370c80b87cecd9d"
+    },
+    {
+      "id": 79,
+      "sections": [
+        {
+          "id": 830,
+          "sectionId": "第一节",
+          "name": "概述",
+          "catalogShow": true
+        },
+        {
+          "id": 831,
+          "sectionId": "第二节",
+          "name": "糖尿病肾病",
+          "catalogShow": true
+        },
+        {
+          "id": 833,
+          "sectionId": "第三节",
+          "name": "狼疮性肾炎",
+          "catalogShow": true
+        },
+        {
+          "id": 835,
+          "sectionId": "第四节",
+          "name": "系统性小血管炎肾损害",
+          "catalogShow": true
+        },
+        {
+          "id": 840,
+          "sectionId": "第五节",
+          "name": "尿酸性肾病",
+          "catalogShow": true
+        },
+        {
+          "id": 841,
+          "sectionId": "第六节",
+          "name": "乙型肝炎病毒相关肾炎",
+          "catalogShow": true
+        },
+        {
+          "id": 843,
+          "name": "病例分析"
+        },
+        {
+          "id": 844,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第七十八章",
+      "name": "继发性肾小球疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/7f1b5d0ffa2ccdcd"
+    },
+    {
+      "id": 80,
+      "sections": [
+        {
+          "id": 847,
+          "name": "要点"
+        },
+        {
+          "id": 848,
+          "sectionId": "第一节",
+          "name": "肾动脉狭窄",
+          "catalogShow": true
+        },
+        {
+          "id": 849,
+          "sectionId": "第二节",
+          "name": "肾动脉栓塞和血栓",
+          "catalogShow": true
+        },
+        {
+          "id": 850,
+          "sectionId": "第三节",
+          "name": "肾静脉血栓",
+          "catalogShow": true
+        },
+        {
+          "id": 851,
+          "sectionId": "第四节",
+          "name": "高血压肾损害",
+          "catalogShow": true
+        },
+        {
+          "id": 852,
+          "name": "病例分析"
+        },
+        {
+          "id": 853,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第七十九章",
+      "name": "肾血管疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/85a94f690b61787b"
+    },
+    {
+      "id": 81,
+      "sections": [
+        {
+          "id": 856,
+          "name": "要点"
+        },
+        {
+          "id": 857,
+          "sectionId": "第一节",
+          "name": "急性间质性肾炎",
+          "catalogShow": true
+        },
+        {
+          "id": 859,
+          "sectionId": "第二节",
+          "name": "慢性间质性肾炎",
+          "catalogShow": true
+        },
+        {
+          "id": 861,
+          "name": "病例分析"
+        },
+        {
+          "id": 862,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第八十章",
+      "name": "间质性肾炎",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/a80aaa0d54549c51"
+    },
+    {
+      "id": 82,
+      "sections": [
+        {
+          "id": 865,
+          "name": "要点"
+        },
+        {
+          "id": 866,
+          "sectionId": "第一节",
+          "name": "概述",
+          "catalogShow": true
+        },
+        {
+          "id": 867,
+          "sectionId": "第二节",
+          "name": "肾小管酸中毒",
+          "catalogShow": true
+        },
+        {
+          "id": 868,
+          "sectionId": "第三节",
+          "name": "Fanconi综合征",
+          "catalogShow": true
+        },
+        {
+          "id": 870,
+          "name": "病例分析"
+        },
+        {
+          "id": 871,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第八十一章",
+      "name": "肾小管疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/dfae9f3d0c13e787"
+    },
+    {
+      "id": 83,
+      "sections": [
+        {
+          "id": 874,
+          "name": "要点"
+        },
+        {
+          "id": 875,
+          "sectionId": "第八十二章",
+          "name": "尿路感染",
+          "catalogShow": false
+        },
+        {
+          "id": 881,
+          "name": "病例分析"
+        },
+        {
+          "id": 882,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第八十二章",
+      "name": "尿路感染",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/54e0039954a1067c"
+    },
+    {
+      "id": 84,
+      "sections": [
+        {
+          "id": 885,
+          "sectionId": "第一节",
+          "name": "概述",
+          "catalogShow": true
+        },
+        {
+          "id": 887,
+          "sectionId": "第二节",
+          "name": "Alport综合征与薄基底膜肾病",
+          "catalogShow": true
+        },
+        {
+          "id": 889,
+          "sectionId": "第三节",
+          "name": "多囊肾",
+          "catalogShow": true
+        },
+        {
+          "id": 890,
+          "name": "病例分析"
+        },
+        {
+          "id": 891,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第八十三章",
+      "name": "遗传性肾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/6c9cb7c8d5a55eb0"
+    },
+    {
+      "id": 85,
+      "sections": [
+        {
+          "id": 894,
+          "name": "要点"
+        },
+        {
+          "id": 895,
+          "sectionId": "第八十四章",
+          "name": "肾结石的内科问题",
+          "catalogShow": false
+        },
+        {
+          "id": 900,
+          "name": "病例分析"
+        },
+        {
+          "id": 901,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第八十四章",
+      "name": "肾结石的内科问题",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/db1e2002250f4148"
+    },
+    {
+      "id": 86,
+      "sections": [
+        {
+          "id": 904,
+          "name": "要点"
+        },
+        {
+          "id": 905,
+          "sectionId": "第八十五章",
+          "name": "急性肾损伤",
+          "catalogShow": false
+        },
+        {
+          "id": 907,
+          "name": "病例分析"
+        },
+        {
+          "id": 908,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第八十五章",
+      "name": "急性肾损伤",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/1a257017fdea69ca"
+    },
+    {
+      "id": 87,
+      "sections": [
+        {
+          "id": 911,
+          "name": "要点"
+        },
+        {
+          "id": 912,
+          "sectionId": "第八十六章",
+          "name": "慢性肾衰竭",
+          "catalogShow": false
+        },
+        {
+          "id": 921,
+          "name": "病例分析"
+        },
+        {
+          "id": 922,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第八十六章",
+      "name": "慢性肾衰竭",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/352a37a3dc6dedcb"
+    },
+    {
+      "id": 88,
+      "sections": [
+        {
+          "id": 925,
+          "name": "要点"
+        },
+        {
+          "id": 926,
+          "sectionId": "第一节",
+          "name": "水、钠平衡紊乱",
+          "catalogShow": true
+        },
+        {
+          "id": 927,
+          "sectionId": "第二节",
+          "name": "钾平衡紊乱",
+          "catalogShow": true
+        },
+        {
+          "id": 928,
+          "sectionId": "第三节",
+          "name": "酸碱平衡紊乱",
+          "catalogShow": true
+        },
+        {
+          "id": 930,
+          "name": "病例分析"
+        },
+        {
+          "id": 931,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第八十七章",
+      "name": "水、电解质和酸碱平衡紊乱",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/3667a22b9d9850af"
+    },
+    {
+      "id": 89,
+      "sections": [
+        {
+          "id": 934,
+          "name": "要点"
+        },
+        {
+          "id": 935,
+          "sectionId": "第一节",
+          "name": "水和溶质清除的原理",
+          "catalogShow": true
+        },
+        {
+          "id": 936,
+          "sectionId": "第二节",
+          "name": "血液透析",
+          "catalogShow": true
+        },
+        {
+          "id": 937,
+          "sectionId": "第三节",
+          "name": "血液滤过",
+          "catalogShow": true
+        },
+        {
+          "id": 938,
+          "sectionId": "第四节",
+          "name": "连续性肾替代疗法",
+          "catalogShow": true
+        },
+        {
+          "id": 939,
+          "sectionId": "第五节",
+          "name": "其他血液净化疗法",
+          "catalogShow": true
+        },
+        {
+          "id": 941,
+          "name": "病例分析"
+        },
+        {
+          "id": 942,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第八十八章",
+      "name": "血液净化疗法",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/7ec92ac3647f31d8"
+    },
+    {
+      "id": 90,
+      "sections": [
+        {
+          "id": 945,
+          "name": "要点"
+        },
+        {
+          "id": 946,
+          "sectionId": "第八十九章",
+          "name": "腹膜透析",
+          "catalogShow": false
+        },
+        {
+          "id": 955,
+          "name": "病例分析"
+        },
+        {
+          "id": 956,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第八十九章",
+      "name": "腹膜透析",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/706d4cae7bf605f2"
+    },
+    {
+      "id": 91,
+      "sections": [
+        {
+          "id": 959,
+          "name": "要点"
+        },
+        {
+          "id": 960,
+          "sectionId": "第九十章",
+          "name": "同种异体肾移植的内科问题",
+          "catalogShow": false
+        },
+        {
+          "id": 961,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第九十章",
+      "name": "同种异体肾移植的内科问题",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/3dda65ec4f3519bc"
+    },
+    {
+      "id": 92,
+      "sections": [
+        {
+          "id": 964,
+          "name": "要点"
+        },
+        {
+          "id": 965,
+          "sectionId": "第一节",
+          "name": "内分泌系统的结构与功能特点",
+          "catalogShow": true
+        },
+        {
+          "id": 972,
+          "sectionId": "第二节",
+          "name": "内分泌代谢疾病的诊断",
+          "catalogShow": true
+        },
+        {
+          "id": 973,
+          "sectionId": "第三节",
+          "name": "内分泌代谢疾病的治疗",
+          "catalogShow": true
+        },
+        {
+          "id": 974,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第九十一章",
+      "name": "总论",
+      "nameEn": null,
+      "order": null,
+      "pieceId": "第六篇",
+      "piece": "内分泌和代谢疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/c6aa712cb7d06263"
+    },
+    {
+      "id": 93,
+      "sections": [
+        {
+          "id": 977,
+          "sectionId": "第一节",
+          "name": "低促性腺激素性性腺功能减退症",
+          "catalogShow": true
+        },
+        {
+          "id": 978,
+          "sectionId": "第二节",
+          "name": "腺垂体功能减退症",
+          "catalogShow": true
+        },
+        {
+          "id": 980,
+          "sectionId": "第三节",
+          "name": "泌乳素瘤与高泌乳素血症",
+          "catalogShow": true
+        },
+        {
+          "id": 981,
+          "sectionId": "第四节",
+          "name": "巨人症与肢端肥大症",
+          "catalogShow": true
+        },
+        {
+          "id": 983,
+          "sectionId": "第五节",
+          "name": "尿崩症",
+          "catalogShow": true
+        },
+        {
+          "id": 984,
+          "sectionId": "第六节",
+          "name": "抗利尿激素分泌不适当综合征",
+          "catalogShow": true
+        },
+        {
+          "id": 985,
+          "name": "病例分析"
+        },
+        {
+          "id": 986,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第九十二章",
+      "name": "下丘脑-垂体疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/1f0ef01904644586"
+    },
+    {
+      "id": 94,
+      "sections": [
+        {
+          "id": 989,
+          "sectionId": "第一节",
+          "name": "甲状腺肿",
+          "catalogShow": true
+        },
+        {
+          "id": 991,
+          "sectionId": "第二节",
+          "name": "Graves病与甲状腺功能亢进症",
+          "catalogShow": true
+        },
+        {
+          "id": 992,
+          "sectionId": "第三节",
+          "name": "甲状腺功能减退症",
+          "catalogShow": true
+        },
+        {
+          "id": 994,
+          "sectionId": "第四节",
+          "name": "甲状腺炎",
+          "catalogShow": true
+        },
+        {
+          "id": 996,
+          "sectionId": "第五节",
+          "name": "甲状腺结节",
+          "catalogShow": true
+        },
+        {
+          "id": 998,
+          "name": "病例分析"
+        },
+        {
+          "id": 999,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第九十三章",
+      "name": "甲状腺疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/812a03627f6958cb"
+    },
+    {
+      "id": 95,
+      "sections": [
+        {
+          "id": 1002,
+          "sectionId": "第一节",
+          "name": "甲状旁腺功能亢进症",
+          "catalogShow": true
+        },
+        {
+          "id": 1008,
+          "sectionId": "第二节",
+          "name": "甲状旁腺功能减退症",
+          "catalogShow": true
+        },
+        {
+          "id": 1010,
+          "name": "病例分析"
+        },
+        {
+          "id": 1011,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第九十四章",
+      "name": "甲状旁腺疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/f18d9d8b49944375"
+    },
+    {
+      "id": 96,
+      "sections": [
+        {
+          "id": 1014,
+          "sectionId": "第一节",
+          "name": "库欣综合征",
+          "catalogShow": true
+        },
+        {
+          "id": 1016,
+          "sectionId": "第二节",
+          "name": "先天性肾上腺增生症",
+          "catalogShow": true
+        },
+        {
+          "id": 1021,
+          "sectionId": "第三节",
+          "name": "肾上腺皮质功能减退",
+          "catalogShow": true
+        },
+        {
+          "id": 1023,
+          "sectionId": "第四节",
+          "name": "原发性醛固酮增多症",
+          "catalogShow": true
+        },
+        {
+          "id": 1024,
+          "sectionId": "第五节",
+          "name": "嗜铬细胞瘤和副神经节瘤",
+          "catalogShow": true
+        },
+        {
+          "id": 1025,
+          "name": "病例分析"
+        },
+        {
+          "id": 1026,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第九十五章",
+      "name": "肾上腺疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/02525903a58b5c44"
+    },
+    {
+      "id": 97,
+      "sections": [
+        {
+          "id": 1029,
+          "sectionId": "第一节",
+          "name": "性腺功能减退症",
+          "catalogShow": true
+        },
+        {
+          "id": 1030,
+          "sectionId": "第二节",
+          "name": "性早熟",
+          "catalogShow": true
+        },
+        {
+          "id": 1031,
+          "sectionId": "第三节",
+          "name": "多囊卵巢综合征",
+          "catalogShow": true
+        },
+        {
+          "id": 1038,
+          "name": "病例分析"
+        },
+        {
+          "id": 1039,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第九十六章",
+      "name": "性腺疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/fcd8559b37fb866c"
+    },
+    {
+      "id": 98,
+      "sections": [
+        {
+          "id": 1042,
+          "sectionId": "第一节",
+          "name": "1型多发性内分泌腺肿瘤综合征",
+          "catalogShow": true
+        },
+        {
+          "id": 1043,
+          "sectionId": "第二节",
+          "name": "2型多发性内分泌腺肿瘤综合征",
+          "catalogShow": true
+        },
+        {
+          "id": 1044,
+          "sectionId": "第三节",
+          "name": "异源性ACTH分泌综合征",
+          "catalogShow": true
+        },
+        {
+          "id": 1046,
+          "sectionId": "第四节",
+          "name": "恶性肿瘤相关性高钙血症",
+          "catalogShow": true
+        },
+        {
+          "id": 1047,
+          "name": "病例分析"
+        },
+        {
+          "id": 1048,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第九十七章",
+      "name": "内分泌腺肿瘤综合征",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/13002e4205cfbadc"
+    },
+    {
+      "id": 99,
+      "sections": [
+        {
+          "id": 1051,
+          "name": "要点"
+        },
+        {
+          "id": 1052,
+          "sectionId": "第一节",
+          "name": "1型自身免疫性多内分泌腺病综合征",
+          "catalogShow": true
+        },
+        {
+          "id": 1053,
+          "sectionId": "第二节",
+          "name": "2型自身免疫性多内分泌腺病综合征",
+          "catalogShow": true
+        },
+        {
+          "id": 1054,
+          "name": "病例分析"
+        },
+        {
+          "id": 1055,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第九十八章",
+      "name": "自身免疫性多内分泌腺病综合征",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/6e28ebfa9adda70f"
+    },
+    {
+      "id": 100,
+      "sections": [
+        {
+          "id": 1058,
+          "sectionId": "第一节",
+          "name": "肥胖与代谢综合征",
+          "catalogShow": true
+        },
+        {
+          "id": 1060,
+          "sectionId": "第二节",
+          "name": "糖尿病",
+          "catalogShow": true
+        },
+        {
+          "id": 1063,
+          "sectionId": "第三节",
+          "name": "糖尿病酮症酸中毒",
+          "catalogShow": true
+        },
+        {
+          "id": 1064,
+          "sectionId": "第四节",
+          "name": "高血糖高渗综合征",
+          "catalogShow": true
+        },
+        {
+          "id": 1065,
+          "sectionId": "第五节",
+          "name": "糖尿病乳酸性酸中毒",
+          "catalogShow": true
+        },
+        {
+          "id": 1066,
+          "sectionId": "第六节",
+          "name": "糖尿病慢性并发症",
+          "catalogShow": true
+        },
+        {
+          "id": 1067,
+          "sectionId": "第七节",
+          "name": "低血糖症",
+          "catalogShow": true
+        },
+        {
+          "id": 1068,
+          "sectionId": "第八节",
+          "name": "血脂谱异常症",
+          "catalogShow": true
+        },
+        {
+          "id": 1069,
+          "sectionId": "第九节",
+          "name": "蛋白质—热能营养不良症",
+          "catalogShow": true
+        },
+        {
+          "id": 1070,
+          "name": "病例分析"
+        },
+        {
+          "id": 1071,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第九十九章",
+      "name": "能量代谢性疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/8d8fabf6c78b64fc"
+    },
+    {
+      "id": 101,
+      "sections": [
+        {
+          "id": 1074,
+          "sectionId": "第一节",
+          "name": "骨质疏松症",
+          "catalogShow": true
+        },
+        {
+          "id": 1077,
+          "sectionId": "第二节",
+          "name": "佝偻病/骨质软化症",
+          "catalogShow": true
+        },
+        {
+          "id": 1082,
+          "sectionId": "第三节",
+          "name": "高尿酸血症与痛风",
+          "catalogShow": true
+        },
+        {
+          "id": 1083,
+          "name": "病例分析"
+        },
+        {
+          "id": 1084,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第一百章",
+      "name": "代谢性骨病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/6876716ccf0e706d"
+    },
+    {
+      "id": 102,
+      "sections": [
+        {
+          "id": 1087,
+          "name": "要点"
+        },
+        {
+          "id": 1088,
+          "sectionId": "第一百零一章",
+          "name": "风湿性疾病总论",
+          "catalogShow": false
+        },
+        {
+          "id": 1089,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第一百零一章",
+      "name": "风湿性疾病总论",
+      "nameEn": null,
+      "order": null,
+      "pieceId": "第七篇",
+      "piece": "风湿性疾病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/84d769399ad1be74"
+    },
+    {
+      "id": 103,
+      "sections": [
+        {
+          "id": 1092,
+          "name": "要点"
+        },
+        {
+          "id": 1093,
+          "sectionId": "第一百零二章",
+          "name": "系统性红斑狼疮",
+          "catalogShow": false
+        },
+        {
+          "id": 1094,
+          "name": "病例分析"
+        },
+        {
+          "id": 1095,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第一百零二章",
+      "name": "系统性红斑狼疮",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/3002e825b428c0e6"
+    },
+    {
+      "id": 104,
+      "sections": [
+        {
+          "id": 1098,
+          "name": "要点"
+        },
+        {
+          "id": 1099,
+          "sectionId": "第一百零三章",
+          "name": "干燥综合征",
+          "catalogShow": false
+        },
+        {
+          "id": 1100,
+          "name": "病例分析"
+        },
+        {
+          "id": 1101,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第一百零三章",
+      "name": "干燥综合征",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/1077a4900f42c47e"
+    },
+    {
+      "id": 105,
+      "sections": [
+        {
+          "id": 1104,
+          "name": "要点"
+        },
+        {
+          "id": 1105,
+          "sectionId": "第一百零四章",
+          "name": "系统性硬化",
+          "catalogShow": false
+        },
+        {
+          "id": 1106,
+          "name": "病例分析"
+        },
+        {
+          "id": 1107,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第一百零四章",
+      "name": "系统性硬化",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/ce1abb26b5756ad0"
+    },
+    {
+      "id": 106,
+      "sections": [
+        {
+          "id": 1110,
+          "name": "要点"
+        },
+        {
+          "id": 1111,
+          "sectionId": "第一百零五章",
+          "name": "特发性炎性肌病",
+          "catalogShow": false
+        },
+        {
+          "id": 1112,
+          "name": "病例分析"
+        },
+        {
+          "id": 1113,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第一百零五章",
+      "name": "特发性炎性肌病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/3945ba0fd64a3927"
+    },
+    {
+      "id": 107,
+      "sections": [
+        {
+          "id": 1116,
+          "name": "要点"
+        },
+        {
+          "id": 1117,
+          "sectionId": "第一百零六章",
+          "name": "类风湿关节炎",
+          "catalogShow": false
+        },
+        {
+          "id": 1118,
+          "name": "病例分析"
+        },
+        {
+          "id": 1119,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第一百零六章",
+      "name": "类风湿关节炎",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/e285f735b6aa5537"
+    },
+    {
+      "id": 108,
+      "sections": [
+        {
+          "id": 1122,
+          "name": "要点"
+        },
+        {
+          "id": 1123,
+          "sectionId": "第一节",
+          "name": "总论",
+          "catalogShow": true
+        },
+        {
+          "id": 1124,
+          "sectionId": "第二节",
+          "name": "强直性脊柱炎",
+          "catalogShow": true
+        },
+        {
+          "id": 1127,
+          "name": "病例分析"
+        },
+        {
+          "id": 1128,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第一百零七章",
+      "name": "血清阴性脊柱关节病",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/3d89b1db5b924366"
+    },
+    {
+      "id": 109,
+      "sections": [
+        {
+          "id": 1131,
+          "sectionId": "第一节",
+          "name": "大动脉炎",
+          "catalogShow": true
+        },
+        {
+          "id": 1133,
+          "sectionId": "第二节",
+          "name": "巨细胞动脉炎",
+          "catalogShow": true
+        },
+        {
+          "id": 1134,
+          "sectionId": "第三节",
+          "name": "结节性多动脉炎",
+          "catalogShow": true
+        },
+        {
+          "id": 1136,
+          "sectionId": "第四节",
+          "name": "ANCA相关性血管炎",
+          "catalogShow": true
+        },
+        {
+          "id": 1138,
+          "sectionId": "第五节",
+          "name": "白塞病",
+          "catalogShow": true
+        },
+        {
+          "id": 1139,
+          "name": "病例分析"
+        },
+        {
+          "id": 1140,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第一百零八章",
+      "name": "系统性血管炎",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/7a03008353b246e1"
+    },
+    {
+      "id": 110,
+      "sections": [
+        {
+          "id": 1143,
+          "name": "要点"
+        },
+        {
+          "id": 1144,
+          "sectionId": "第一节",
+          "name": "概述",
+          "catalogShow": true
+        },
+        {
+          "id": 1145,
+          "sectionId": "第二节",
+          "name": "重症监护与治疗",
+          "catalogShow": true
+        },
+        {
+          "id": 1146,
+          "sectionId": "第三节",
+          "name": "治疗与管理",
+          "catalogShow": true
+        },
+        {
+          "id": 1147,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第一百零九章",
+      "name": "重症医学总论",
+      "nameEn": null,
+      "order": null,
+      "pieceId": "第八篇",
+      "piece": "重症与急救医学",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/241f52b04fb30666"
+    },
+    {
+      "id": 111,
+      "sections": [
+        {
+          "id": 1150,
+          "name": "要点"
+        },
+        {
+          "id": 1151,
+          "sectionId": "第一百一十章",
+          "name": "休克总论",
+          "catalogShow": false
+        },
+        {
+          "id": 1152,
+          "name": "病例分析"
+        },
+        {
+          "id": 1153,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第一百一十章",
+      "name": "休克总论",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/2ed7f2c38470a577"
+    },
+    {
+      "id": 112,
+      "sections": [
+        {
+          "id": 1156,
+          "sectionId": "第一节",
+          "name": "中毒总论",
+          "catalogShow": true
+        },
+        {
+          "id": 1160,
+          "sectionId": "第二节",
+          "name": "急性有机磷农药中毒",
+          "catalogShow": true
+        },
+        {
+          "id": 1164,
+          "sectionId": "第三节",
+          "name": "急性镇静催眠药物中毒",
+          "catalogShow": true
+        },
+        {
+          "id": 1165,
+          "sectionId": "第四节",
+          "name": "急性一氧化碳中毒",
+          "catalogShow": true
+        },
+        {
+          "id": 1167,
+          "sectionId": "第五节",
+          "name": "急性酒精中毒",
+          "catalogShow": true
+        },
+        {
+          "id": 1173,
+          "sectionId": "第六节",
+          "name": "急性杀鼠剂中毒",
+          "catalogShow": true
+        },
+        {
+          "id": 1174,
+          "sectionId": "第七节",
+          "name": "急性百草枯中毒",
+          "catalogShow": true
+        },
+        {
+          "id": 1177,
+          "sectionId": "第八节",
+          "name": "急性强酸强碱中毒",
+          "catalogShow": true
+        },
+        {
+          "id": 1178,
+          "sectionId": "第九节",
+          "name": "常见毒品中毒",
+          "catalogShow": true
+        },
+        {
+          "id": 1180,
+          "name": "病例分析"
+        },
+        {
+          "id": 1181,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第一百一十一章",
+      "name": "常见中毒的诊断与治疗",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/dd7f8ba760b50d8a"
+    },
+    {
+      "id": 113,
+      "sections": [
+        {
+          "id": 1184,
+          "sectionId": "第一节",
+          "name": "心脏骤停",
+          "catalogShow": true
+        },
+        {
+          "id": 1185,
+          "sectionId": "第二节",
+          "name": "心肺脑复苏",
+          "catalogShow": true
+        },
+        {
+          "id": 1187,
+          "sectionId": "第三节",
+          "name": "复苏后监测与处理",
+          "catalogShow": true
+        },
+        {
+          "id": 1188,
+          "name": "学习园地"
+        }
+      ],
+      "chapterId": "第一百一十二章",
+      "name": "心脏骤停与心肺脑复苏",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/69172f09da32d9b9"
+    },
+    {
+      "id": 114,
+      "sections": [
+        {
+          "id": 1191,
+          "name": "主要参考文献"
+        }
+      ],
+      "chapterId": null,
+      "name": "主要参考文献",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/50361ab2f952b19a"
+    },
+    {
+      "id": 115,
+      "sections": [
+        {
+          "id": 1192,
+          "name": "中英文名词对照索引"
+        },
+        {
+          "id": 1193,
+          "name": "英中文名词对照索引"
+        }
+      ],
+      "chapterId": null,
+      "name": "名词对照索引",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/cd0541e8df657a24"
+    },
+    {
+      "id": 116,
+      "sections": [
+        {
+          "id": 1194,
+          "name": "致谢页"
+        },
+        {
+          "id": 1195,
+          "name": "封底"
+        }
+      ],
+      "chapterId": null,
+      "name": "封底",
+      "icon": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/95cf2471c220af3b"
+    }
+  ]
+}
+

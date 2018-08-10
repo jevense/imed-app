@@ -1,8 +1,10 @@
 import Storage from 'react-native-storage';
 import {AsyncStorage} from 'react-native';
 import SectionLocation from './SectionLocation'
+import {bookList, chapterList} from "../pages/Store/mongodb"
+import resource from '../resource'
 
-const host = 'http://192.168.8.144:8093/imed';
+const host = 'http://192.168.9.9:8080/imed';
 // const host = 'http://123.56.10.21:8892';
 
 const storage = new Storage({
@@ -32,68 +34,107 @@ const storage = new Storage({
         // 这里可以使用promise。或是使用普通回调函数，但需要调用resolve或reject。
         books(params) {
             let {id, resolve, reject} = params;
-            fetch(`${host}/book.json`).then(response => {
-                return response.json();
-            }).then(json => {
-                if (json && json.books) {
-                    let books = json.books.map(item => {
-                        let {id: key = "", name: title = "", edition: editor = "", size = "", cover} = item;
-                        let image = cover ? {url: cover.replace('http://', 'https://')} : require('../assets/cover/maga-cover.jpg');
-                        return {key, title, editor, size, image}
-                    });
-                    storage.save({
-                        key: 'books',
-                        data: books,
-                    });
-                    // 成功则调用resolve
-                    resolve && resolve(books);
-                } else {
-                    // 失败则调用reject
-                    reject && reject(new Error('data parse error'));
-                }
-            }).catch(err => {
-                console.warn(err);
-                reject && reject(err);
+
+            bookList.find({}, function (err, docs) {
+                let books = docs.map(item => {
+                    let {id: key = "", name: title = "", edition: editor = "", size = "", cover, textbook} = item;
+                    let image = textbook ? resource[key] : {url: cover};
+                    return {key, title, editor, size, image}
+                });
+                storage.save({
+                    key: 'books',
+                    data: books,
+                });
             });
+
+            // fetch(`${host}/book.json`).then(response => {
+            //     return response.json();
+            // }).then(json => {
+            //     if (json && json.books) {
+            //         let books = json.books.map(item => {
+            //             let {id: key = "", name: title = "", edition: editor = "", size = "", cover} = item;
+            //             let image = cover ? {url: cover.replace('http://', 'https://')} : require('../assets/cover/maga-cover.jpg');
+            //             return {key, title, editor, size, image}
+            //         });
+            //         storage.save({
+            //             key: 'books',
+            //             data: books,
+            //         });
+            //         // 成功则调用resolve
+            //         resolve && resolve(books);
+            //     } else {
+            //         // 失败则调用reject
+            //         reject && reject(new Error('data parse error'));
+            //     }
+            // }).catch(err => {
+            //     console.warn(err);
+            //     reject && reject(err);
+            // });
         },
 
         chapter(params) {
             let {id, resolve, reject} = params;
-            fetch(`${host}/book/${id}/chapter.json`).then(response => {
-                return response.json();
-            }).then(json => {
-                if (json && json['chapters'] && json['chapters']['chapters']) {
-                    let bookName = json['chapters']['name'];
-                    let chapterData = json['chapters']['chapters'].map(item => {
-                        let {id = "", name: title = "", icon = "", sections: data = []} = item;
-                        return {id, title, data,}
-                    });
-                    let data = {bookName, chapterData};
-                    storage.save({
-                        key: 'chapter',
-                        id: id,
-                        data: data,
-                    });
-                    //初始化章节位置
-                    if (chapterData && chapterData[0] && chapterData[0]['data'] && chapterData[0]['data'][0] && chapterData[0]['data'][0]['id']) {
-                        SectionLocation.save(id, chapterData[0]['data'][0]['id'])
 
-                        storage.load({
-                            key: 'section',
-                            id: chapterData[0]['data'][0]['id'],
-                            syncParams: {bookId: id},
-                        });
-                    }
-                    // 成功则调用resolve
-                    resolve && resolve(data);
-                } else {
-                    // 失败则调用reject
-                    reject && reject(new Error('data parse error'));
+            id = 1//测试
+
+            chapterList.find({id}, function (err, docs) {
+                let bookName = docs['name'];
+                let chapterData = docs['chapters'].map(item => {
+                    let {id = "", name: title = "", icon = "", sections: data = []} = item;
+                    return {id, title, data,}
+                });
+                let data = {bookName, chapterData};
+                storage.save({
+                    key: 'chapter',
+                    id: id,
+                    data: data,
+                });
+                //初始化章节位置
+                if (chapterData && chapterData[0] && chapterData[0]['data'] && chapterData[0]['data'][0] && chapterData[0]['data'][0]['id']) {
+                    SectionLocation.save(id, chapterData[0]['data'][0]['id'])
+                    storage.load({
+                        key: 'section',
+                        id: chapterData[0]['data'][0]['id'],
+                        syncParams: {bookId: id},
+                    });
                 }
-            }).catch(err => {
-                console.warn(err);
-                reject && reject(err);
             });
+
+            // fetch(`${host}/book/${id}/chapter.json`).then(response => {
+            //     return response.json();
+            // }).then(json => {
+            //     if (json && json['chapters'] && json['chapters']['chapters']) {
+            //         let bookName = json['chapters']['name'];
+            //         let chapterData = json['chapters']['chapters'].map(item => {
+            //             let {id = "", name: title = "", icon = "", sections: data = []} = item;
+            //             return {id, title, data,}
+            //         });
+            //         let data = {bookName, chapterData};
+            //         storage.save({
+            //             key: 'chapter',
+            //             id: id,
+            //             data: data,
+            //         });
+            //         //初始化章节位置
+            //         if (chapterData && chapterData[0] && chapterData[0]['data'] && chapterData[0]['data'][0] && chapterData[0]['data'][0]['id']) {
+            //             SectionLocation.save(id, chapterData[0]['data'][0]['id'])
+            //
+            //             storage.load({
+            //                 key: 'section',
+            //                 id: chapterData[0]['data'][0]['id'],
+            //                 syncParams: {bookId: id},
+            //             });
+            //         }
+            //         // 成功则调用resolve
+            //         resolve && resolve(data);
+            //     } else {
+            //         // 失败则调用reject
+            //         reject && reject(new Error('data parse error'));
+            //     }
+            // }).catch(err => {
+            //     console.warn(err);
+            //     reject && reject(err);
+            // });
         },
 
         section(params) {

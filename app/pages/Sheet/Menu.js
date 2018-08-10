@@ -36,7 +36,7 @@ const TopNavigation = ({style, isList, changeView}) => (
                         </Text>
                     </View>
                 </MenuOption>
-                <MenuOption value={1}>
+                <MenuOption value={'clear'}>
                     <View style={{flexDirection: 'row'}}>
                         <Ionicons name='ios-build-outline'
                                   size={25}
