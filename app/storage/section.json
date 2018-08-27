@@ -1,0 +1,1812 @@
+{
+  "id": 80,
+  "sectionId": "第二节",
+  "name": "稳定型冠心病",
+  "template": "index",
+  "topImage": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/d202b1ecab674978",
+  "catalogShow": true,
+  "section": [
+    {
+      "id": 2452,
+      "section": [
+        {
+          "id": 2453,
+          "text": "稳定型冠心病（stable coronary heart disease, SCAD），包括稳定型心绞痛、缺血性心肌病、隐匿性心绞痛；同时还包括，既往已有冠心病或者低危不稳定型心绞痛、变异型心绞痛等，经治疗后症状消失或稳定的情况。在上述情况中，稳定型心绞痛最为多见。本病多在冠状动脉固定性严重狭窄的基础上，由于心肌耗氧增加而引起心肌急剧的、暂时的缺血缺氧的临床综合征。其产生是由于在一定情况下，冠状动脉所供应的血液和氧不能满足心肌耗氧的需求。主动脉瓣严重狭窄、梗阻性肥厚型心肌病、冠状动脉瘘、心肌桥、冠状动脉炎等原因，也可诱发心绞痛的发作。",
+          "typeEnum": "Common",
+          "sectionExtend": {
+            "LONG_EXTEND": 81
+          },
+          "keyWord": [
+            {
+              "id": 130,
+              "type": 16,
+              "word": "stable coronary heart disease, SCAD",
+              "readAudio": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/c007544fb06d827e"
+            }
+          ]
+        },
+        {
+          "id": 2479,
+          "text": "<span class='fang'>【病因和发病机制】</span>",
+          "typeEnum": "HF",
+          "section": [
+            {
+              "id": 2480,
+              "text": "稳定型心绞痛的发病机制主要是冠状动脉存在固定狭窄或部分闭塞的基础上发生需氧量的增加。当冠状动脉狭窄或部分闭塞时，其扩张性减弱，血流量减少，对心肌的供血量相对地比较固定，如心肌的血液供应减低到尚能应付心脏平时的需要，则休息时可无症状。在劳力、情绪激动、饱食、受寒等情况下，一旦心脏负荷突然增加，使心率增快、心肌张力和心肌收缩力增加等而致心肌氧耗量增加，而冠状动脉的供血却不能相应地增加以满足心肌对血液的需求时，即可引起心绞痛。心肌血供和氧供不足，还可由冠状动脉痉挛、冠状动脉循环的小动脉病变、血红蛋白和氧的离解异常、交感神经过度活动、儿茶酚胺分泌过多或心肌代谢异常等因素引发。",
+              "typeEnum": "Common"
+            }
+          ]
+        },
+        {
+          "id": 2481,
+          "text": "<span class='fang'>【临床表现】</span>",
+          "typeEnum": "HF",
+          "section": [
+            {
+              "id": 2482,
+              "section": [
+                {
+                  "id": 2483,
+                  "text": "    心绞痛的主要临床特点见表5-2-1。",
+                  "title": "1. 症状",
+                  "typeEnum": "HT"
+                }
+              ]
+            },
+            {
+              "id": 2484,
+              "section": [
+                {
+                  "id": 2485,
+                  "text": "    根据心绞痛的严重程度及其对体力活动的影响，加拿大心血管学会（CCS）将稳定型心绞痛分为四级（表5-2-2）。",
+                  "title": "2. 分级",
+                  "typeEnum": "HT",
+                  "tableViews": [
+                    {
+                      "id": 20,
+                      "rowNum": 6,
+                      "colNum": 2,
+                      "tableIndex": "表5-2-1",
+                      "tableName": "稳定型心绞痛的临床特点",
+                      "extend": false,
+                      "explanation": "",
+                      "tbCss": "",
+                      "trViews": [
+                        {
+                          "id": 223,
+                          "tdViewList": [
+                            {
+                              "id": 801,
+                              "text": "诱因",
+                              "type": "text",
+                              "tdCss": "width:20%;"
+                            },
+                            {
+                              "id": 802,
+                              "text": "多存在诱因，如劳力负荷、饱餐、情绪激动、寒冷、吸烟、心动过速",
+                              "type": "text",
+                              "tdCss": "width:80%;"
+                            }
+                          ],
+                          "tableClass": "blue1"
+                        },
+                        {
+                          "id": 224,
+                          "tdViewList": [
+                            {
+                              "id": 803,
+                              "text": "部位",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 804,
+                              "text": "多在胸骨体后，可延及心前区，手掌大小，有时可放射至颈、咽喉、下颌、后背、左臂内侧及无名指和小指",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue2"
+                        },
+                        {
+                          "id": 225,
+                          "tdViewList": [
+                            {
+                              "id": 805,
+                              "text": "性质",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 806,
+                              "text": "闷痛、紧缩感、压迫感，或可呈烧灼感，但一般不表现为针刺感、刀割样锐痛；发作时被迫停止活动，症状或可好转",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue1"
+                        },
+                        {
+                          "id": 226,
+                          "tdViewList": [
+                            {
+                              "id": 807,
+                              "text": "持续时间",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 808,
+                              "text": "疼痛出现后逐步加重，达到峰值后逐渐消失，一般在数分钟和十余分钟内，很少超过30 min",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue2"
+                        },
+                        {
+                          "id": 227,
+                          "tdViewList": [
+                            {
+                              "id": 809,
+                              "text": "缓解方式",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 810,
+                              "text": "一般在停止诱发活动后可好转，或舌下含服硝酸甘油类药物后几分钟内好转",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue1"
+                        },
+                        {
+                          "id": 228,
+                          "tdViewList": [
+                            {
+                              "id": 811,
+                              "text": "伴随症状",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 812,
+                              "text": "可伴有其他部位的放射痛，严重时可有出一过性冷汗、濒死感；若合并反酸嗳气、胸壁压痛、过度通气等表现，需考虑其他疾病",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue2"
+                        }
+                      ]
+                    },
+                    {
+                      "id": 21,
+                      "rowNum": 1,
+                      "colNum": 1,
+                      "tableIndex": "表5-2-2",
+                      "tableName": "稳定型心绞痛CCS分级",
+                      "extend": false,
+                      "explanation": "",
+                      "tbCss": "",
+                      "trViews": [
+                        {
+                          "id": 229,
+                          "tdViewList": [
+                            {
+                              "id": 813,
+                              "text": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/c028418c52dda459",
+                              "type": "picture",
+                              "tdCss": "text-align:center;"
+                            }
+                          ],
+                          "tableClass": "blue2"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 2486,
+              "section": [
+                {
+                  "id": 2487,
+                  "text": "    心绞痛发作时一般无特异性体征，比较常见的体征有：血压升高、心率加快、皮肤出汗，可有一过性心尖部收缩期杂音（提示暂时性乳头肌功能不全、二尖瓣关闭不全）、第三或第四心音奔马律（提示心肌功能不全）。",
+                  "title": "3. 体征",
+                  "typeEnum": "HT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2488,
+          "text": "<span class='fang'>【辅助检查】</span>",
+          "typeEnum": "HF",
+          "section": [
+            {
+              "id": 2489,
+              "section": [
+                {
+                  "id": 2490,
+                  "text": "    血常规检查有无贫血，可帮助明确有无继发性心肌缺血的原因，血小板计数为后续抗血小板药物使用提供参考。血脂和血糖水平的检测可协助了解有无冠心病的危险因素。稳定型心绞痛患者的血清心肌损伤标志物水平均在正常范围。",
+                  "title": "1. 实验室检查",
+                  "typeEnum": "HT"
+                }
+              ]
+            },
+            {
+              "id": 2491,
+              "section": [
+                {
+                  "id": 2492,
+                  "text": "",
+                  "title": "2. 心电图",
+                  "typeEnum": "HT"
+                },
+                {
+                  "id": 2493,
+                  "text": "(1) 静息时心电图    多数在正常范围，也可能有陈旧性心肌梗死的改变或非特异性ST段和T波异常，或者出现房室或束支传导阻滞或室性、房性期前收缩等心律失常。",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2494,
+                  "text": "(2) 症状发作时心电图    此时心电图检查较有意义，特别是和静息心电图比较发现有动态改变者。多出现暂时性心肌缺血引起的ST段移位。因心内膜下心肌更容易缺血，故常见反映心内膜下心肌缺血的ST段压低（≥0.1 mV），发作缓解后恢复。有时出现T波倒置。在平时有T波持续倒置的患者，发作时可变为直立（“假性正常化”）。T波改变虽然对反映心肌缺血的特异性不如ST段压低，但如与平时心电图比较有明显差别，也有助于诊断。",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2495,
+                  "text": "(3) 动态心电图    动态心电图（又称24 h心电图监测，Holter）可连续记录并自动分析24 h（或更长时间）的心电图（双极胸导联或同步12导联），可发现ST段、T波改变和各种心律失常，可将患者症状发作时间点与心电图变化做对照分析，胸痛发作时相应时间的缺血性ST-T改变有助于确定心绞痛的诊断，也可检出无痛性心肌缺血。",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2496,
+                  "text": "(4) 负荷心电图    最常用的是运动负荷心电图检查，也可通过药物负荷（如多巴酚丁胺）。增加心脏负荷可以诱发心肌缺血。运动方式主要为分级活动平板或踏车，其运动强度可逐步分期升级，前者较为常用。该检查以达到按年龄预计的最大心率（HRmax）或亚极量心率（85%～90%的最大心率）为负荷目标，前者称为极量运动试验，后者称为亚极量运动试验。该检查除了可以协助冠心病的诊断，还可以判断药物或冠状动脉介入治疗的疗效。",
+                  "typeEnum": "Common",
+                  "keyWord": [
+                    {
+                      "id": 131,
+                      "type": 16,
+                      "word": "HRmax",
+                      "readAudio": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/3e8e0cb09b741b54"
+                    }
+                  ]
+                },
+                {
+                  "id": 2497,
+                  "text": "运动中应持续监测心电图改变，运动前、运动中每当运动负荷量增加一次均应记录心电图，运动终止后即刻及此后每2 min均应重复心电图记录直至心率恢复至运动前水平。心电图记录时应同步测定血压。运动中出现典型心绞痛发作，心电图上出现ST段水平型或下斜型压低≥0.1 mV（J点后60～80 ms）且持续2 min为运动试验阳性标准（图5-2-1）。运动中若出现心绞痛、步态不稳，出现严重心律失常[如短阵室性心动过速（接连3个以上室性期前收缩）、严重心动过缓或房室传导阻滞等]或血压下降时，应立即停止运动。心肌梗死急性期、不稳定型心绞痛、疑诊主动脉夹层、高血压危象、明显心力衰竭、严重心律失常或急性疾病者禁做运动试验。本试验有一定比例的假阳性和假阴性，单纯运动心电图阳性或阴性结果不能作为诊断或排除冠心病的依据。同时，运动试验阳性而冠状动脉造影检查阴性的患者，还需考虑微血管性心绞痛。",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2498,
+                  "text": "",
+                  "mediaBlocks": [
+                    {
+                      "id": 153,
+                      "name": "运动平板试验",
+                      "order": "图5-2-1",
+                      "pictures": [
+                        {
+                          "id": 174,
+                          "abbreviation": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/6f040c043d01c021",
+                          "mediaType": "PPT",
+                          "title": "图5-2-1&nbsp;&nbsp;&nbsp;&nbsp;运动平板试验",
+                          "tips": "",
+                          "mediaPPTItems": [
+                            {
+                              "id": 10,
+                              "name": "运动开始",
+                              "path": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/26b9da50432bce9c"
+                            },
+                            {
+                              "id": 11,
+                              "name": "运动中",
+                              "path": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/a4d609417e5cd9fd"
+                            },
+                            {
+                              "id": 12,
+                              "name": "运动减速至停止",
+                              "path": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/66dfbe33f8bc4794"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "typeEnum": "Common",
+                  "layout": "SINGLE"
+                },
+                {
+                  "id": 2499,
+                  "text": "",
+                  "typeEnum": "Common"
+                }
+              ]
+            },
+            {
+              "id": 2500,
+              "section": [
+                {
+                  "id": 2501,
+                  "text": "",
+                  "title": "3. 影像学检查",
+                  "typeEnum": "HT"
+                },
+                {
+                  "id": 2502,
+                  "text": "(1) 心脏彩色多普勒超声（超声心动图）检查    无创，简便易行，可床旁检查。多数稳定型心绞痛患者，静息状态下的超声心动图检查无异常，如发现局部或多壁段心室收缩活动异常，提示有陈旧性心肌梗死或严重心肌缺血病史。超声心动图可测定左心室功能，射血分数降低者预后差。运动或药物负荷超声心动图检查可以评价心肌灌注和存活性。超声心动图还有助于发现其他需与冠状动脉狭窄导致的心绞痛相鉴别的疾病如梗阻性肥厚型心肌病、主动脉瓣狭窄等。",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2503,
+                  "text": "(2) 冠状动脉多排螺旋CT    无创、简便易行，注射对比剂后获得的CT冠状动脉造影（CTA）图像可进行二维或三维重建，用于判断冠状动脉管腔狭窄程度及管壁钙化情况，对判断管壁内斑块分布范围和斑块的性质也有一定的价值。对于冠状动脉旁路移植术后、先天性冠状动脉发育异常的患者，还可以用于明确血管的走行。冠状动脉CTA具有较高的阴性预测值，如未见狭窄病变，一般不需再行有创性冠脉造影；局限性是定量管腔狭窄程度的准确性有待提高，钙化病变对管腔狭窄的判断存在较大影响，放射暴露剂量较大（图5-2-2）。",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2504,
+                  "text": "",
+                  "mediaBlocks": [
+                    {
+                      "id": 154,
+                      "name": "冠脉CTA",
+                      "order": "图5-2-2",
+                      "pictures": [
+                        {
+                          "id": 175,
+                          "abbreviation": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/d7b0e2a23983c853",
+                          "original": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/dfdb52e447e15a26",
+                          "mediaType": "PICTURE",
+                          "title": "图5-2-2&nbsp;&nbsp;&nbsp;&nbsp;冠脉CTA",
+                          "tips": ""
+                        },
+                        {
+                          "id": 176,
+                          "abbreviation": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/3aad958478a549be",
+                          "original": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/e19727fd9d5aa0f1",
+                          "mediaType": "PICTURE",
+                          "title": "图5-2-2&nbsp;&nbsp;&nbsp;&nbsp;冠脉CTA",
+                          "tips": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "typeEnum": "Common",
+                  "layout": "DOUBLE"
+                },
+                {
+                  "id": 2505,
+                  "text": "",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2506,
+                  "text": "(3) 心脏放射性核素",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2507,
+                  "text": "1) 静息和负荷核素心肌显像    核素<sup>201</sup>Tl（铊）随冠状动脉血流能很快被正常心肌细胞所摄取，静息状态下，铊显像所示灌注缺损主要见于心肌梗死后瘢痕部位。在冠状动脉供血不足时，明显的灌注缺损仅见于运动后心肌缺血区。不能运动的患者可做药物负荷试验（包括双嘧达莫、腺苷或多巴酚丁胺），诱发缺血可取得与运动试验相似的效果。近年来有用<sup>99m</sup>Tc-MIBI取代<sup>201</sup>Tl做心肌显像，可取得与之相似的良好效果，它在心肌内分布随时间变化相对固定，无明显再分布，显像在数小时内进行，但负荷检测需二次给药。",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2508,
+                  "text": "2) 正电子发射断层心肌显像    正电子发射断层心肌显像（PET）利用发射正电子的核素示踪剂如<sup>18</sup>F标记的葡萄糖进行心肌显像。除可判断心肌的血流灌注情况外，尚可了解心肌的总体代谢情况。通过对心肌血流灌注和代谢显像匹配分析可准确评估心肌的活力，对于判断存活心肌的范围、进一步明确有创手术治疗的价值有重要作用。",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2509,
+                  "text": "3) 放射性核素心腔造影    应用<sup>99m</sup>Tc进行体内红细胞标记，得到心腔内血池显影，可测定左心室射血分数及显示心肌缺血区室壁局部运动障碍。",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2510,
+                  "text": "(4) 冠状动脉造影    冠状动脉造影是目前诊断冠心病的“金标准”。作为一种有创的检查，通过穿刺患者的桡动脉或者股动脉，将造影导管送至左、右冠状动脉的开口，然后注入含碘造影剂，在不同X线透视体位下观察冠状动脉的走行及病变情况（视频5-2-1）。一般认为，管腔面积狭窄超过70%～75%的狭窄病变，可能影响冠状动脉血供，需要进行干预（球囊扩张或者支架置入术）（图5-2-3）。在冠状动脉造影难以判断病变程度和斑块性质时，还可以应用冠状动脉内超声显像（intravascular ultrasound, IVUS）（图5-2-4）、冠状动脉内光学相干断层显像（optical coherence tomography, OCT）（图5-2-5）及冠状动脉血流储备分数测定（fractional flow reserve, FFR）（图5-2-6）来进一步明确。",
+                  "typeEnum": "Common",
+                  "keyWord": [
+                    {
+                      "id": 132,
+                      "type": 16,
+                      "word": "intravascular ultrasound, IVUS",
+                      "readAudio": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/8fed51736c3006fd"
+                    },
+                    {
+                      "id": 133,
+                      "type": 16,
+                      "word": "optical coherence tomography, OCT",
+                      "readAudio": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/b26b0f999a4c79e2"
+                    },
+                    {
+                      "id": 134,
+                      "type": 16,
+                      "word": "fractional flow reserve, FFR",
+                      "readAudio": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/f046ec164959cc8c"
+                    }
+                  ]
+                },
+                {
+                  "id": 2511,
+                  "text": "",
+                  "mediaBlocks": [
+                    {
+                      "id": 155,
+                      "name": "冠状动脉造影",
+                      "order": "视频5-2-1",
+                      "pictures": [
+                        {
+                          "id": 177,
+                          "abbreviation": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/428fc110ae8df8bc",
+                          "mediaType": "VIDEO",
+                          "title": "视频5-2-1&nbsp;&nbsp;&nbsp;&nbsp;冠状动脉造影",
+                          "tips": "注：左冠状动脉",
+                          "mediaVideoItems": [
+                            {
+                              "id": 22,
+                              "abbreviation": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/428fc110ae8df8bc",
+                              "path": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/72bf1684296a256f"
+                            }
+                          ]
+                        },
+                        {
+                          "id": 178,
+                          "abbreviation": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/16a673d7789d094f",
+                          "mediaType": "VIDEO",
+                          "title": "视频5-2-1&nbsp;&nbsp;&nbsp;&nbsp;冠状动脉造影",
+                          "tips": "注：右冠状动脉",
+                          "mediaVideoItems": [
+                            {
+                              "id": 23,
+                              "abbreviation": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/16a673d7789d094f",
+                              "path": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/6c6f5469b1663848"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "typeEnum": "Common",
+                  "layout": "DOUBLE"
+                },
+                {
+                  "id": 2512,
+                  "text": "",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2513,
+                  "text": "",
+                  "mediaBlocks": [
+                    {
+                      "id": 156,
+                      "name": "冠状动脉造影",
+                      "order": "图5-2-3",
+                      "pictures": [
+                        {
+                          "id": 179,
+                          "abbreviation": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/e404910d042b7dea",
+                          "mediaType": "PPT",
+                          "title": "图5-2-3&nbsp;&nbsp;&nbsp;&nbsp;冠状动脉造影",
+                          "tips": "",
+                          "mediaPPTItems": [
+                            {
+                              "id": 13,
+                              "name": "回旋支狭窄",
+                              "path": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/331cd8d9fe30bd80"
+                            },
+                            {
+                              "id": 14,
+                              "name": "支架置入",
+                              "path": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/88c8f8aae038f257"
+                            },
+                            {
+                              "id": 15,
+                              "name": "血管狭窄解除",
+                              "path": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/7c28bfff119bcdf2"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": 157,
+                      "name": "冠状动脉内超声显像",
+                      "order": "图5-2-4",
+                      "pictures": [
+                        {
+                          "id": 180,
+                          "abbreviation": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/6bb4ba1aa0373a68",
+                          "original": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/2149d059f8ab4795",
+                          "mediaType": "PICTURE",
+                          "title": "图5-2-4&nbsp;&nbsp;&nbsp;&nbsp;冠状动脉内超声显像",
+                          "tips": "注：正常冠脉管腔"
+                        },
+                        {
+                          "id": 181,
+                          "abbreviation": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/7f386af5cb2112bf",
+                          "original": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/3edde3f6ce5578b0",
+                          "mediaType": "PICTURE",
+                          "title": "图5-2-4&nbsp;&nbsp;&nbsp;&nbsp;冠状动脉内超声显像",
+                          "tips": "注：冠脉内斑块并造成血管狭窄"
+                        }
+                      ]
+                    }
+                  ],
+                  "typeEnum": "Common",
+                  "layout": "TRIPLE"
+                },
+                {
+                  "id": 2514,
+                  "text": "",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2515,
+                  "text": "",
+                  "mediaBlocks": [
+                    {
+                      "id": 158,
+                      "name": "OCT影像图",
+                      "order": "图5-2-5",
+                      "pictures": [
+                        {
+                          "id": 182,
+                          "abbreviation": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/81631d2e88553c95",
+                          "original": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/2cc9b1b0aac82bfb",
+                          "mediaType": "PICTURE",
+                          "title": "图5-2-5&nbsp;&nbsp;&nbsp;&nbsp;OCT影像图",
+                          "tips": ""
+                        }
+                      ]
+                    },
+                    {
+                      "id": 159,
+                      "name": "FFR定义",
+                      "order": "图5-2-6",
+                      "pictures": [
+                        {
+                          "id": 183,
+                          "abbreviation": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/de9bfe0f14853a14",
+                          "original": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/243a2c0e99360345",
+                          "mediaType": "PICTURE",
+                          "title": "图5-2-6&nbsp;&nbsp;&nbsp;&nbsp;FFR定义",
+                          "tips": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "typeEnum": "Common",
+                  "layout": "MULTI_SINGLE"
+                },
+                {
+                  "id": 2516,
+                  "text": "",
+                  "typeEnum": "Common"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2517,
+          "text": "<span class='fang'>【诊断与鉴别诊断】</span>",
+          "typeEnum": "HF",
+          "section": [
+            {
+              "id": 2518,
+              "text": "根据诊断流程协助诊断冠心病（图5-2-7）。诊断稳定型心绞痛的同时，需要同时评估心绞痛的严重度分级（CCS分级）。",
+              "typeEnum": "Common"
+            },
+            {
+              "id": 2519,
+              "text": "心绞痛虽然是冠心病的一种常见临床表现，但是临床上遇到的胸痛患者可能由许多其他原因引起，不能先入为主的单纯考虑冠心病，而忽略其他系统疾病的可能性。需要结合患者的临床表现特点、实验室检查和辅助检查的提示，综合诊断。心绞痛患者需要和其他原因导致的心肌缺血或心脏性疼痛及胸部或腹部其他器官疾病导致的疼痛相鉴别，可参考图5-2-8。",
+              "typeEnum": "Common"
+            },
+            {
+              "id": 2520,
+              "text": "",
+              "mediaBlocks": [
+                {
+                  "id": 160,
+                  "name": "诊断流程",
+                  "order": "图5-2-7",
+                  "pictures": [
+                    {
+                      "id": 184,
+                      "abbreviation": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/5c8b34b17e3dd332",
+                      "original": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/b01402482249722b",
+                      "mediaType": "PICTURE",
+                      "title": "图5-2-7&nbsp;&nbsp;&nbsp;&nbsp;诊断流程",
+                      "tips": ""
+                    }
+                  ]
+                },
+                {
+                  "id": 161,
+                  "name": "鉴别诊断",
+                  "order": "图5-2-8",
+                  "pictures": [
+                    {
+                      "id": 185,
+                      "abbreviation": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/d7ca43da826f39bc",
+                      "original": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/3f6da3d412a9ff9e",
+                      "mediaType": "PICTURE",
+                      "title": "图5-2-8&nbsp;&nbsp;&nbsp;&nbsp;鉴别诊断",
+                      "tips": ""
+                    }
+                  ]
+                }
+              ],
+              "typeEnum": "Common",
+              "layout": "MULTI_SINGLE"
+            },
+            {
+              "id": 2521,
+              "text": "",
+              "typeEnum": "Common"
+            }
+          ]
+        },
+        {
+          "id": 2522,
+          "text": "<span class='fang'>【治疗】</span>",
+          "typeEnum": "HF",
+          "section": [
+            {
+              "id": 2523,
+              "text": "稳定型心绞痛的治疗目的包括：①预防心肌梗死和猝死发生、改善预后、延长生存期，这是主要目的；②减少缺血发作从而减轻患者症状、提高生活质量。治疗方法包括稳定斑块、预防血栓形成，增加冠状动脉血供和降低心肌耗氧。防治措施可归纳为ABCDE方案（图5-2-9）。",
+              "typeEnum": "Common"
+            },
+            {
+              "id": 2524,
+              "text": "",
+              "mediaBlocks": [
+                {
+                  "id": 162,
+                  "name": "ABCDE治疗",
+                  "order": "图5-2-9",
+                  "pictures": [
+                    {
+                      "id": 186,
+                      "abbreviation": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/dde8943ed2033c2a",
+                      "original": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/8e0cc40d81eba5c7",
+                      "mediaType": "PICTURE",
+                      "title": "图5-2-9&nbsp;&nbsp;&nbsp;&nbsp;ABCDE治疗",
+                      "tips": ""
+                    }
+                  ]
+                }
+              ],
+              "typeEnum": "Common",
+              "layout": "SINGLE"
+            },
+            {
+              "id": 2525,
+              "text": "",
+              "typeEnum": "Common"
+            },
+            {
+              "id": 2526,
+              "section": [
+                {
+                  "id": 2527,
+                  "text": "",
+                  "title": "1. 一般治疗",
+                  "typeEnum": "HT"
+                },
+                {
+                  "id": 2528,
+                  "text": "(1) 休息    发作时立刻休息，一般患者在停止活动后症状即逐渐消失，宜尽量避免各种已知的诱因。",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2529,
+                  "text": "(2) 调节饮食    合理安排饮食成分（图5-1-7），同时一次性进食不应过饱。",
+                  "typeEnum": "Common",
+                  "keyWord": [
+                    {
+                      "id": 135,
+                      "name": "图5-1-7",
+                      "type": 1,
+                      "mediaBlock_id": 151
+                    }
+                  ]
+                },
+                {
+                  "id": 2530,
+                  "text": "(3) 戒烟限酒",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2531,
+                  "text": "(4) 劳逸结合    调整日常生活与工作量；减轻精神负担；保持适当的体力活动，但以不致发生疼痛症状为度；一般不需卧床休息。",
+                  "typeEnum": "Common"
+                }
+              ]
+            },
+            {
+              "id": 2532,
+              "section": [
+                {
+                  "id": 2533,
+                  "text": "    对于稳定型心绞痛的药物治疗，可为两大类：一类缓解患者的心绞痛症状，另一类是改善患者的预后（预防缺血性心血管事件）。",
+                  "title": "2. 药物治疗",
+                  "typeEnum": "HT"
+                },
+                {
+                  "id": 2534,
+                  "text": "(1) 缓解症状    目前推荐的一线药物有硝酸酯类药物、β受体阻滞药、钙离子拮抗药（图5-2-10）；如果一线药物治疗效果不佳，可以考虑改用或加用二线类药物：伊伐布雷定、曲美他嗪、尼可地尔等。",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2535,
+                  "text": "",
+                  "mediaBlocks": [
+                    {
+                      "id": 163,
+                      "name": "药物治疗的机制",
+                      "order": "图5-2-10",
+                      "pictures": [
+                        {
+                          "id": 187,
+                          "abbreviation": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/2899a783ef071df6",
+                          "original": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/5415539ecc719d6e",
+                          "mediaType": "PICTURE",
+                          "title": "图5-2-10&nbsp;&nbsp;&nbsp;&nbsp;药物治疗的机制",
+                          "tips": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "typeEnum": "Common",
+                  "layout": "SINGLE"
+                },
+                {
+                  "id": 2536,
+                  "text": "",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2537,
+                  "text": "1) 硝酸酯类药物    为内皮依赖性血管扩张药，通过扩张静脉减少回心血量、降低左心室舒张末期容量和室壁张力，从而减少心肌需氧量，也可扩张冠状动脉而增加供氧量，改善心肌灌注，从而减低心绞痛发作的频率和程度。硝酸酯类药物的种类、用法见表5-2-3。硝酸酯类还有皮肤贴剂，用于预防心绞痛发作。此类药物的不良反应主要有头痛、面色潮红、心率反射性加快和低血压等，头痛在长效药中更为多见。有青光眼者慎用此类药物。",
+                  "typeEnum": "Common",
+                  "tableViews": [
+                    {
+                      "id": 22,
+                      "rowNum": 6,
+                      "colNum": 5,
+                      "tableIndex": "表5-2-3",
+                      "tableName": "稳定型心绞痛患者中硝酸酯类药物的应用",
+                      "extend": false,
+                      "explanation": "",
+                      "tbCss": "font-size:12px",
+                      "trViews": [
+                        {
+                          "id": 230,
+                          "tdViewList": [
+                            {
+                              "id": 814,
+                              "text": "类型",
+                              "rowSpan": 2,
+                              "type": "text",
+                              "tdCss": "border-bottom:1px solid #333; vertical-align:middle;width:18%;"
+                            },
+                            {
+                              "id": 815,
+                              "text": "短效",
+                              "colSpan": 2,
+                              "type": "text",
+                              "tdCss": "border-bottom:1px solid #333; text-align:center;"
+                            },
+                            {
+                              "id": 816,
+                              "text": "",
+                              "type": "text",
+                              "tdCss": "border-bottom:1px solid #333;text-align:center;width:22%;"
+                            },
+                            {
+                              "id": 817,
+                              "text": "",
+                              "type": "text",
+                              "tdCss": "border-bottom:1px solid #333;text-align:center;width:25%;"
+                            }
+                          ],
+                          "tableClass": "blue"
+                        },
+                        {
+                          "id": 231,
+                          "tdViewList": [
+                            {
+                              "id": 818,
+                              "text": "喷雾剂",
+                              "type": "text",
+                              "tdCss": "border-bottom:1px solid #333;width:18%;"
+                            },
+                            {
+                              "id": 819,
+                              "text": "硝酸甘油",
+                              "type": "text",
+                              "tdCss": "border-bottom:1px solid #333;width:17%;"
+                            },
+                            {
+                              "id": 820,
+                              "text": "二硝酸异山梨酯（消心痛）",
+                              "type": "text",
+                              "tdCss": "border-bottom:1px solid #333;"
+                            },
+                            {
+                              "id": 821,
+                              "text": "单硝酸异山梨酯",
+                              "type": "text",
+                              "tdCss": "border-bottom:1px solid #333;"
+                            }
+                          ],
+                          "tableClass": "blue"
+                        },
+                        {
+                          "id": 232,
+                          "tdViewList": [
+                            {
+                              "id": 822,
+                              "text": "用途",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 823,
+                              "text": "缓解急性发作",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 824,
+                              "text": "缓解急性发作",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 825,
+                              "text": "预防发作",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 826,
+                              "text": "预防发作",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue1"
+                        },
+                        {
+                          "id": 233,
+                          "tdViewList": [
+                            {
+                              "id": 827,
+                              "text": "用法",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 828,
+                              "text": "喷吸",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 829,
+                              "text": "舌下含化",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 830,
+                              "text": "口服",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 831,
+                              "text": "口服",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue2"
+                        },
+                        {
+                          "id": 234,
+                          "tdViewList": [
+                            {
+                              "id": 832,
+                              "text": "剂量",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 833,
+                              "text": "1～2喷",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 834,
+                              "text": "0.5～1 mg",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 835,
+                              "text": "5～20 mg，每日3次",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 836,
+                              "text": "30～60 mg，每日1次",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue1"
+                        },
+                        {
+                          "id": 235,
+                          "tdViewList": [
+                            {
+                              "id": 837,
+                              "text": "作用持续时间",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 838,
+                              "text": "约30 min",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 839,
+                              "text": "约30 min",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 840,
+                              "text": "2～3 h",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 841,
+                              "text": "16～20 h",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue2"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": 2538,
+                  "text": "2) β受体阻滞药    能抑制心β肾上腺素能受体，进而减慢心率、降低心肌耗氧量以减少心绞痛发作（图5-2-11）。冠心病患者理想的静息心率为55～60/min。推荐使用无内在拟交感活性的选择性β<sub>1</sub>受体阻滞药，使用应个体化，从较小剂量开始，逐级增加剂量，以能缓解症状，无特殊情况，不擅自停用，否则容易症状反跳。临床常用的β受体阻滞药包括美托洛尔普通片（25～100 mg，每日2次，口服）、美托洛尔缓释片（47.5～190 mg，每日1次，口服）和比索洛尔（5～10 mg，每日1次，口服）等。对于严重心动过缓、高度房室传导阻滞、窦房结功能紊乱、有明显的支气管痉挛或支气管哮喘的患者，禁用或慎用β受体阻滞药。外周血管疾病、严重抑郁、非喘息型慢性肺源性心脏病的患者慎用。",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2539,
+                  "text": "",
+                  "mediaBlocks": [
+                    {
+                      "id": 164,
+                      "name": "交感兴奋的影响",
+                      "order": "图5-2-11",
+                      "pictures": [
+                        {
+                          "id": 188,
+                          "abbreviation": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/2338aebf06674a27",
+                          "original": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/0c74512360e92f0c",
+                          "mediaType": "PICTURE",
+                          "title": "图5-2-11&nbsp;&nbsp;&nbsp;&nbsp;交感兴奋的影响",
+                          "tips": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "typeEnum": "Common",
+                  "layout": "SINGLE"
+                },
+                {
+                  "id": 2540,
+                  "text": "",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2541,
+                  "text": "3) 钙通道阻滞药    本类药物抑制钙离子进入细胞内，抑制心肌细胞兴奋-收缩偶联中钙离子的利用，进而抑制心肌收缩，减少心肌氧耗；扩张冠状动脉，解除冠状动脉痉挛，同时还具有扩张周围血管、降低动脉压的作用。常用制剂有：维拉帕米（普通片40～80 mg，每日3次；缓释片240 mg，每日1次）、地尔硫䓬（普通片30～60 mg，每日3次；缓释片90 mg，每日1次）、硝苯地平（控释片30 mg，每日1次）、氨氯地平（5～10 mg，每日1次）、贝尼地平（4～8 mg，每日1次）。该类药物的主要副作用有头痛、头晕、外周水肿、便秘、心悸、面部潮红等；地尔硫䓬和维拉帕米不能应用于心力衰竭、严重心动过缓、高度房室传导阻滞和病态窦房结综合征的患者。",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2542,
+                  "text": "4) 其他    伊伐布雷定，通过减慢窦性心率来减少心肌氧耗，减少心绞痛的发作，用于禁用或不能耐受β受体阻滞药的窦性心律的稳定型心绞痛患者，起始剂量为5 mg，每日2次口服；曲美他嗪，通过抑制脂肪酸氧化和增加葡萄糖代谢，提高氧的利用效率而治疗心肌缺血，剂量为20 mg，每日3次，口服；尼可地尔是一种钾通道开放药，与硝酸酯类制剂具有相似的药理特性，对稳定型心绞痛治疗可能有效，剂量为2.5～5 mg，每日3次，口服。",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2543,
+                  "text": "(2) 改善预后的药物",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2544,
+                  "text": "1) 阿司匹林    通过抑制环氧化酶和血栓烷A<sub>2</sub>的合成达到抗血小板聚集的作用，每日75～150 mg口服。其主要不良反应为胃肠道不适和（或）出血、皮下瘀斑、阿司匹林过敏等。对于合并慢性胃炎、食管炎的患者，可以尝试合用质子泵抑制药来保护胃黏膜，对于不能耐受阿司匹林的患者可改用西洛他唑或者氯吡格雷替代治疗。",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2545,
+                  "text": "2) 氯吡格雷    通过选择性不可逆的抑制血小板二磷酸腺苷（ADP）受体而阻断ADP依赖激活的血小板糖蛋白Ⅱb/Ⅲa复合物，有效地减少ADP介导的血小板激活和聚集，同时氯吡格雷是一种前体类药物，需要经肝代谢后发挥作用，因此与很多经肝代谢的药物有相互影响，如华法林、胺碘酮、奥美拉唑/埃索美拉唑等。氯吡格雷主要用于支架置入术后的患者，建议和阿司匹林联用，置入裸金属支架者，术后联用至少1个月，置入药物洗脱支架者，术后联用1年；也可以作为阿司匹林禁忌证患者的替代治疗。该药起效快，顿服300 mg后2 h即能达到有效血药浓度，常用维持剂量为75 mg，每日1次。",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2546,
+                  "text": "3) 他汀类药物    他汀类药物是一种极其重要的改善预后的药物，通过有效降低血清胆固醇水平，特别是LDL-C，有利于延缓粥样硬化斑块的进展，达到稳定斑块及抗炎等调脂外作用（图5-2-12）。需要将稳定型心绞痛的LDL-C水平至少控制到2.6 mmol/L以下，高危的患者甚至需要控制到1.7～1.8 mmol/L（表5-2-4，表5-2-5），或根据患者的心血管危险度，进行高强度（LDL-C下降50%以上）和中等强度（LDL-C下降30%～50%）的降脂治疗，特别对于合并糖尿病和高龄患者，调脂治疗至关重要。",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2547,
+                  "text": "",
+                  "mediaBlocks": [
+                    {
+                      "id": 165,
+                      "name": "他汀类药物的机制",
+                      "order": "图5-2-12",
+                      "pictures": [
+                        {
+                          "id": 189,
+                          "abbreviation": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/b8b25ee6808d6db9",
+                          "original": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/0a00238066a9e710",
+                          "mediaType": "PICTURE",
+                          "title": "图5-2-12&nbsp;&nbsp;&nbsp;&nbsp;他汀类药物的机制",
+                          "tips": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "typeEnum": "Common",
+                  "layout": "SINGLE"
+                },
+                {
+                  "id": 2548,
+                  "text": "",
+                  "typeEnum": "Common",
+                  "tableViews": [
+                    {
+                      "id": 23,
+                      "rowNum": 6,
+                      "colNum": 2,
+                      "tableIndex": "表5-2-4",
+                      "tableName": "急性冠状动脉综合征各指南降脂目标",
+                      "extend": false,
+                      "explanation": "",
+                      "tbCss": "",
+                      "trViews": [
+                        {
+                          "id": 236,
+                          "tdViewList": [
+                            {
+                              "id": 842,
+                              "text": "指南",
+                              "type": "text",
+                              "tdCss": "border-bottom:1px solid #333;"
+                            },
+                            {
+                              "id": 843,
+                              "text": "启动值",
+                              "type": "text",
+                              "tdCss": "border-bottom:1px solid #333;"
+                            }
+                          ],
+                          "tableClass": "blue"
+                        },
+                        {
+                          "id": 237,
+                          "tdViewList": [
+                            {
+                              "id": 844,
+                              "text": "<p class='(tableh)'>2001 NCEP</p><p class='tableh'>ATP Ⅲ指南</p>",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 845,
+                              "text": "LDL-C≥130 mg/dl （<100 mg/dl不考虑）",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue2"
+                        },
+                        {
+                          "id": 238,
+                          "tdViewList": [
+                            {
+                              "id": 846,
+                              "text": "<p class='(tableh)'>2004NCEP</p><p class='tableh'>ATP Ⅲ更新</p>",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 847,
+                              "text": "LDL-C<100 mg/dl可考虑",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue1"
+                        },
+                        {
+                          "id": 239,
+                          "tdViewList": [
+                            {
+                              "id": 848,
+                              "text": "2007中国指南",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 849,
+                              "text": "LDL-C≤80 mg/dl",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue2"
+                        },
+                        {
+                          "id": 240,
+                          "tdViewList": [
+                            {
+                              "id": 850,
+                              "text": "2009加拿大指南",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 851,
+                              "text": "无考虑LDL-C水平",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue1"
+                        },
+                        {
+                          "id": 241,
+                          "tdViewList": [
+                            {
+                              "id": 852,
+                              "text": "2011 ESC/EAS指南",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 853,
+                              "text": "立即启动",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue2"
+                        }
+                      ]
+                    },
+                    {
+                      "id": 24,
+                      "rowNum": 6,
+                      "colNum": 2,
+                      "tableIndex": "表5-2-5",
+                      "tableName": "稳定性冠心病各指南降脂目标",
+                      "extend": false,
+                      "explanation": "",
+                      "tbCss": "",
+                      "trViews": [
+                        {
+                          "id": 242,
+                          "tdViewList": [
+                            {
+                              "id": 854,
+                              "text": "指南",
+                              "type": "text",
+                              "tdCss": "border-bottom:1px solid #333;"
+                            },
+                            {
+                              "id": 855,
+                              "text": "启动值",
+                              "type": "text",
+                              "tdCss": "border-bottom:1px solid #333;"
+                            }
+                          ],
+                          "tableClass": "blue"
+                        },
+                        {
+                          "id": 243,
+                          "tdViewList": [
+                            {
+                              "id": 856,
+                              "text": "<p class='(tableh)'>2001 NCEP</p><p class='tableh'>ATP Ⅲ指南</p>",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 857,
+                              "text": "LDL-C≥130 mg/dl （<100 mg/dl不考虑）",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue2"
+                        },
+                        {
+                          "id": 244,
+                          "tdViewList": [
+                            {
+                              "id": 858,
+                              "text": "<p class='(tableh)'>2004 NCEP</p><p class='tableh'>ATP Ⅲ更新</p>",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 859,
+                              "text": "LDL-C≥100 mg/dl可考虑",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue1"
+                        },
+                        {
+                          "id": 245,
+                          "tdViewList": [
+                            {
+                              "id": 860,
+                              "text": "2007 中国指南",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 861,
+                              "text": "LDL-C≤100 mg/dl",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue2"
+                        },
+                        {
+                          "id": 246,
+                          "tdViewList": [
+                            {
+                              "id": 862,
+                              "text": "2009 加拿大指南",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 863,
+                              "text": "无须考虑LDL-C水平",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue1"
+                        },
+                        {
+                          "id": 247,
+                          "tdViewList": [
+                            {
+                              "id": 864,
+                              "text": "2011 ESC/EAS指南",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 865,
+                              "text": "均可考虑药物治疗",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue2"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": 2549,
+                  "text": "目前，临床常用的他汀类药物包括瑞舒伐他汀（5～20 mg，每日1次）、阿托伐他汀（10～80 mg，每日1次）、辛伐他汀（10～40 mg，每日1次）、普伐他汀（10～40 mg，每日1次）、氟伐他汀（40～80 mg，每日1次）、匹伐他汀（1～4 mg，每日1次）、洛伐他汀（20～40 mg，每日1次）等。不同降脂强度的他汀类药物和剂量，见表5-2-6。他汀类药物的总体安全性很高，但在应用时仍应注意监测转氨酶及肌酸激酶等指标，及时发现药物相关性的肝损害和肌病。",
+                  "typeEnum": "Common",
+                  "tableViews": [
+                    {
+                      "id": 25,
+                      "rowNum": 3,
+                      "colNum": 4,
+                      "tableIndex": "表5-2-6",
+                      "tableName": "他汀类药物的不同降脂强度",
+                      "extend": false,
+                      "explanation": "",
+                      "tbCss": "font-size:12px",
+                      "trViews": [
+                        {
+                          "id": 248,
+                          "tdViewList": [
+                            {
+                              "id": 866,
+                              "text": "",
+                              "type": "text",
+                              "tdCss": "border-bottom:1px solid #333;text-align:center;width:20%;"
+                            },
+                            {
+                              "id": 867,
+                              "text": "高强度他汀",
+                              "type": "text",
+                              "tdCss": "border-bottom:1px solid #333;width:26%;"
+                            },
+                            {
+                              "id": 868,
+                              "text": "中等强度他汀",
+                              "type": "text",
+                              "tdCss": "border-bottom:1px solid #333;width:28%;"
+                            },
+                            {
+                              "id": 869,
+                              "text": "低强度他汀",
+                              "type": "text",
+                              "tdCss": "border-bottom:1px solid #333;width:26%;"
+                            }
+                          ],
+                          "tableClass": "blue"
+                        },
+                        {
+                          "id": 249,
+                          "tdViewList": [
+                            {
+                              "id": 870,
+                              "text": "LDL-C降低幅度",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 871,
+                              "text": "≥50%",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 872,
+                              "text": "30%～50%",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 873,
+                              "text": "＜30%",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue2"
+                        },
+                        {
+                          "id": 250,
+                          "tdViewList": [
+                            {
+                              "id": 874,
+                              "text": "<p class='(tableh)' style='font-size:12px'>常用药物及剂量</p>",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 875,
+                              "text": "<p class='(tableh)' style='(font-size:12px)'>阿托伐他汀40～80 mg</p><p class='(tableh)' style='font-size:12px'>瑞舒伐他汀20～40 mg</p>",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 876,
+                              "text": "<p class='(tableh)' style='(font-size:12px)'>阿托伐他汀10～20 mg</p><p class='(tableh)' style='(font-size:12px)'>瑞舒伐他汀5～10 mg</p><p class='(tableh)' style='(font-size:12px)'>辛伐他汀20～40 mg</p><p class='(tableh)' style='(font-size:12px)'>普伐他汀40～80 mg</p><p class='(tableh)' style='(font-size:12px)'>洛伐他汀40 mg</p><p class='(tableh)' style='(font-size:12px)'>氟伐他汀80 mg</p><p class='(tableh)' style='font-size:12px'>匹伐他汀2～4 mg</p>",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 877,
+                              "text": "<p class='(tableh)' style='(font-size:12px)'>辛伐他汀10 mg</p><p class='(tableh)' style='(font-size:12px)'>普伐他汀10～20 mg</p><p class='(tableh)' style='(font-size:12px)'>洛伐他汀20 mg</p><p class='(tableh)' style='(font-size:12px)'>氟伐他汀20～40 mg</p><p class='(tableh)' style='font-size:12px'>匹伐他汀1 mg</p>",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue1"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": 2550,
+                  "text": "4) 血管紧张素转换酶抑制药或血管紧张素受体拮抗药    血管紧张素转换酶抑制药（ACEI）或血管紧张素受体拮抗药（ARB）二者可以通过减少或者拮抗血管紧张素的作用，扩张血管、减轻心脏负荷，同时可以改善心肌重构，改善心血管的预后，使冠心病患者的心因性死亡、非致死性心肌梗死等主要终点事件的危险性降低。在稳定型心绞痛患者中，合并高血压、糖尿病、心力衰竭或左心室收缩功能不全的患者，推荐使用ACEI，不能耐受ACEI类药物者可使用ARB类药物，应用时除需要监控血压，还需注意血肌酐、电解质的变化，同时注意有无血管神经性水肿。临床常用的ACEI和ARB类药物，见表5-2-7。",
+                  "typeEnum": "Common",
+                  "tableViews": [
+                    {
+                      "id": 26,
+                      "rowNum": 9,
+                      "colNum": 4,
+                      "tableIndex": "表5-2-7",
+                      "tableName": "临床常用的ACEI和ARB药物",
+                      "extend": false,
+                      "explanation": "",
+                      "tbCss": "",
+                      "trViews": [
+                        {
+                          "id": 251,
+                          "tdViewList": [
+                            {
+                              "id": 878,
+                              "text": "血管紧张素转换酶抑制药（ACEI）",
+                              "colSpan": 2,
+                              "type": "text",
+                              "tdCss": "border-bottom:1px solid #333;border-right:1px solid #333;text-align:center;"
+                            },
+                            {
+                              "id": 879,
+                              "text": "",
+                              "colSpan": 2,
+                              "type": "text",
+                              "tdCss": "border-bottom:1px solid #333;text-align:center;"
+                            }
+                          ],
+                          "tableClass": "blue"
+                        },
+                        {
+                          "id": 252,
+                          "tdViewList": [
+                            {
+                              "id": 880,
+                              "text": "名称",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 881,
+                              "text": "用法",
+                              "type": "text",
+                              "tdCss": "border-right:1px solid #333;"
+                            },
+                            {
+                              "id": 882,
+                              "text": "名称",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 883,
+                              "text": "用法",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue2"
+                        },
+                        {
+                          "id": 253,
+                          "tdViewList": [
+                            {
+                              "id": 884,
+                              "text": "培哚普利",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 885,
+                              "text": "4～8 mg，每日1次",
+                              "type": "text",
+                              "tdCss": "border-right:1px solid #333;"
+                            },
+                            {
+                              "id": 886,
+                              "text": "氯沙坦",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 887,
+                              "text": "50～100 mg，每日1次",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue1"
+                        },
+                        {
+                          "id": 254,
+                          "tdViewList": [
+                            {
+                              "id": 888,
+                              "text": "依那普利",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 889,
+                              "text": "5～10 mg，每日1～2次",
+                              "type": "text",
+                              "tdCss": "border-right:1px solid #333;"
+                            },
+                            {
+                              "id": 890,
+                              "text": "缬沙坦",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 891,
+                              "text": "80～160 mg，每日1次",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue2"
+                        },
+                        {
+                          "id": 255,
+                          "tdViewList": [
+                            {
+                              "id": 892,
+                              "text": "赖诺普利",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 893,
+                              "text": "10～20 mg，每日1次",
+                              "type": "text",
+                              "tdCss": "border-right:1px solid #333;"
+                            },
+                            {
+                              "id": 894,
+                              "text": "替米沙坦",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 895,
+                              "text": "40～80 mg，每日1次",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue1"
+                        },
+                        {
+                          "id": 256,
+                          "tdViewList": [
+                            {
+                              "id": 896,
+                              "text": "贝那普利",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 897,
+                              "text": "10～20 mg，每日1次",
+                              "type": "text",
+                              "tdCss": "border-right:1px solid #333;"
+                            },
+                            {
+                              "id": 898,
+                              "text": "厄贝沙坦",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 899,
+                              "text": "150～300 mg，每日1次",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue2"
+                        },
+                        {
+                          "id": 257,
+                          "tdViewList": [
+                            {
+                              "id": 900,
+                              "text": "雷米普利",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 901,
+                              "text": "5～10 mg，每日1次",
+                              "type": "text",
+                              "tdCss": "border-right:1px solid #333;"
+                            },
+                            {
+                              "id": 902,
+                              "text": "坎地沙坦",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 903,
+                              "text": "8～16 mg，每日1次",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue1"
+                        },
+                        {
+                          "id": 258,
+                          "tdViewList": [
+                            {
+                              "id": 904,
+                              "text": "福辛普利",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 905,
+                              "text": "10～20 mg，每日1次",
+                              "type": "text",
+                              "tdCss": "border-right:1px solid #333;"
+                            },
+                            {
+                              "id": 906,
+                              "text": "奥美沙坦",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 907,
+                              "text": "20～40 mg，每日1次",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue2"
+                        },
+                        {
+                          "id": 259,
+                          "tdViewList": [
+                            {
+                              "id": 908,
+                              "text": "卡托普利",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 909,
+                              "text": "12.5～25 mg，每日3次",
+                              "type": "text",
+                              "tdCss": "border-right:1px solid #333;"
+                            },
+                            {
+                              "id": 910,
+                              "text": "",
+                              "type": "text",
+                              "tdCss": ""
+                            },
+                            {
+                              "id": 911,
+                              "text": "",
+                              "type": "text",
+                              "tdCss": ""
+                            }
+                          ],
+                          "tableClass": "blue1"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 2551,
+              "section": [
+                {
+                  "id": 2552,
+                  "text": "",
+                  "title": "3. 血运重建治疗",
+                  "typeEnum": "HT"
+                },
+                {
+                  "id": 2553,
+                  "text": "(1) 经皮冠状动脉介入治疗    经皮冠状动脉介入治疗（percutaneous coronary intervention, PCI）是指一组经皮冠状动脉介入治疗的技术，包括经皮球囊冠状动脉成形术（PTCA）、冠状动脉支架置入术（动画5-2-1）等，它已经成为冠心病治疗的重要手段之一。针对稳定型心绞痛，积极的介入治疗可以改善患者心绞痛的症状、提高患者的生活质量。然而，与优化的药物治疗相比，心肌梗死的发生率、病死率无显著差异，这可能与介入术后的再狭窄及晚期支架内血栓的发生存在相关。同时，冠状动脉介入治疗的必要性，除了考虑血管影像学的狭窄程度，还需要考虑病变血管和缺血的相关性。此时，无创的负荷心电图、磁共振、心肌核素检查、FFR具有重要的参考价值。",
+                  "typeEnum": "Common",
+                  "keyWord": [
+                    {
+                      "id": 136,
+                      "type": 16,
+                      "word": "percutaneous coronary intervention, PCI",
+                      "readAudio": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/17d42eaf35f7312b"
+                    }
+                  ]
+                },
+                {
+                  "id": 2554,
+                  "text": "",
+                  "mediaBlocks": [
+                    {
+                      "id": 166,
+                      "name": "冠脉支架置入术",
+                      "order": "动画5-2-1",
+                      "pictures": [
+                        {
+                          "id": 190,
+                          "abbreviation": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/30497a5d1d4ef2b3",
+                          "mediaType": "VIDEO",
+                          "title": "动画5-2-1&nbsp;&nbsp;&nbsp;&nbsp;冠脉支架置入术",
+                          "tips": "",
+                          "mediaVideoItems": [
+                            {
+                              "id": 24,
+                              "abbreviation": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/30497a5d1d4ef2b3",
+                              "path": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/467eb229fbdef506"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "typeEnum": "Common",
+                  "layout": "SINGLE"
+                },
+                {
+                  "id": 2555,
+                  "text": "",
+                  "typeEnum": "Common"
+                },
+                {
+                  "id": 2556,
+                  "text": "(2) 冠状动脉旁路移植术    冠状动脉旁路移植术（coronary artery bypass graft, CABG），俗称冠脉搭桥术，通过取患者自身的大隐静脉作为旁路移植材料，一端吻合在主动脉，另一端吻合在有病变的冠状动脉段的远端；或游离内乳动脉与病变冠状动脉远端吻合，引主动脉的血流以改善病变冠状动脉所供血心肌的血流供应。外科手术虽然创伤较大，但是可以对病变血管进行一次性的完全性血运重建，明显改善心肌缺血。随着近来操作技能及器械等方面的改进，手术成功率也大幅度提高。当然，移植的旁路血管也存在再次闭塞的可能，因此应个体化权衡利弊，慎重选择手术适应证。",
+                  "typeEnum": "Common",
+                  "keyWord": [
+                    {
+                      "id": 137,
+                      "type": 16,
+                      "word": "coronary artery bypass graft, CABG",
+                      "readAudio": "https://imed3.imed.org.cn/mvw_imed_book/70d5723ed0fca8e0/cce96b4029ae6269"
+                    }
+                  ]
+                },
+                {
+                  "id": 2557,
+                  "text": "PCI或CABG的选择需要根据冠状动脉病变的复杂程度（可参考SYNTAX评分）、患者对开胸手术的耐受程度、患者的意愿等进行综合考虑。",
+                  "typeEnum": "Common"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2558,
+          "text": "<span class='fang'>【预后】</span>",
+          "typeEnum": "HF",
+          "section": [
+            {
+              "id": 2559,
+              "text": "稳定型心绞痛患者，通过积极的药物控制和优化调整，大多数能生存很多年，但有发生急性心肌梗死或猝死的风险。影响稳定型心绞痛患者预后的主要因素包括病变冠状动脉的心肌供血范围、心功能、粥样斑块的不稳定性及是否合并其他系统疾病。左主干病变患者的预后相对较差，此后依次为多支、双支和单支病变。左前降支病变一般较其他两支冠状动脉病变预后差。左心室射血分数降低和室壁运动障碍也影响预后；不稳定斑块的患者，发生急性心血管事件的风险也明显升高。另外，合并糖尿病、慢性肾病的患者，预后较差。",
+              "typeEnum": "Common"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

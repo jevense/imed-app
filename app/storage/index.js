@@ -1,8 +1,11 @@
 import Storage from 'react-native-storage';
 import {AsyncStorage} from 'react-native';
 import SectionLocation from './SectionLocation'
-import {bookList, chapterList} from "../pages/Store/mongodb"
+import {bookList, chapterList} from "./mongodb"
 import resource from '../resource'
+import book from './book'
+import chapter from './chapter'
+import section from './section'
 
 const host = 'http://192.168.9.9:8080/imed';
 // const host = 'http://123.56.10.21:8892';
@@ -35,7 +38,10 @@ const storage = new Storage({
         books(params) {
             let {id, resolve, reject} = params;
 
+            console.log(bookList)
             bookList.find({}, function (err, docs) {
+                docs = book
+                console.log(docs)
                 let books = docs.map(item => {
                     let {id: key = "", name: title = "", edition: editor = "", size = "", cover, textbook} = item;
                     let image = textbook ? resource[key] : {url: cover};
@@ -75,9 +81,9 @@ const storage = new Storage({
         chapter(params) {
             let {id, resolve, reject} = params;
 
-            id = 1//测试
-
             chapterList.find({id}, function (err, docs) {
+                docs = chapter
+                console.log(docs)
                 let bookName = docs['name'];
                 let chapterData = docs['chapters'].map(item => {
                     let {id = "", name: title = "", icon = "", sections: data = []} = item;
@@ -139,27 +145,39 @@ const storage = new Storage({
 
         section(params) {
             let {id, resolve, reject, syncParams: {bookId,}} = params;
-            fetch(`${host}/book/1/chapter/1/section/${id}.json`).then(response => {
-                return response.json();
-            }).then(json => {
-                let section = json['section'];
-                if (json && json['section']) {
-                    storage.save({
-                        key: 'section',
-                        id: id,
-                        data: section,
-                    });
-                    SectionLocation.save(bookId, id)
-                    // 成功则调用resolve
-                    resolve && resolve(section);
-                } else {
-                    // 失败则调用reject
-                    reject && reject(new Error('data parse error'));
-                }
-            }).catch(err => {
-                console.warn(err);
-                reject && reject(err);
+
+            chapterList.find({id}, function (err, docs) {
+                docs = section
+                let section = docs;
+                storage.save({
+                    key: 'section',
+                    id: id,
+                    data: section,
+                });
+                SectionLocation.save(bookId, id)
             });
+
+            // fetch(`${host}/book/1/chapter/1/section/${id}.json`).then(response => {
+            //     return response.json();
+            // }).then(json => {
+            //     let section = json['section'];
+            //     if (json && json['section']) {
+            //         storage.save({
+            //             key: 'section',
+            //             id: id,
+            //             data: section,
+            //         });
+            //         SectionLocation.save(bookId, id)
+            //         // 成功则调用resolve
+            //         resolve && resolve(section);
+            //     } else {
+            //         // 失败则调用reject
+            //         reject && reject(new Error('data parse error'));
+            //     }
+            // }).catch(err => {
+            //     console.warn(err);
+            //     reject && reject(err);
+            // });
         }
     }
 

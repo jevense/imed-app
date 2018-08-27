@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-import {Dimensions, View,} from "react-native"
+import {Dimensions, View,Text} from "react-native"
 import {connect} from "react-redux"
 import {changeModalVisible} from "../../actions/readerAction"
 import Header from "./Header"
@@ -76,7 +76,8 @@ class Content extends Component<{}> {
                         onMessage={this.onMessage}
                         javaScriptEnabled={true}
                         // injectJavaScript={this.injectJavaScript(sectionId, bookId)}
-                        injectedJavaScript={`let section=${dataSource}`}
+                        // injectedJavaScript={`let section=${dataSource}`}
+                        injectedJavaScript={`window.section=${dataSource}`}
                         source={require('../../assets/html/index.html')}
                     />
                 </View>

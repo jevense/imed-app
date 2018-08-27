@@ -1,6 +1,6 @@
 import {NavigationActions} from "react-navigation";
 import {storage} from "../storage"
-import {bookList,chapterList} from '../pages/Store/mongodb'
+import {bookList,chapterList} from '../storage/mongodb'
 
 export const init = () => {
     return (dispatch) => {
@@ -23,6 +23,7 @@ export const view = (value) => {
             dispatch(NavigationActions.navigate({routeName: 'BookAdd'}))
         } else if ('clear' === value) {
             storage.remove({key: 'books'});
+            console.log('=====')
             bookList.remove({}, { multi: true }, function (err, numRemoved) {
             });
             chapterList.remove({}, { multi: true }, function (err, numRemoved) {

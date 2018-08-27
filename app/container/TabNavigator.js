@@ -31,17 +31,6 @@ export default TabNavigator(
                 )
             }),
         },
-        Database: {
-            screen: Database,
-            navigationOptions: ({navigation}) => ({
-                tabBarLabel: '数据库',
-                tabBarIcon: ({focused, tintColor}) => (
-                    <Image source={require('../assets/DataBase_tabBar_Normal_Image.png')}
-                           style={{tintColor: tintColor}}
-                    />
-                )
-            }),
-        },
         Exam: {
             screen: Exam,
             navigationOptions: ({navigation}) => ({
@@ -53,12 +42,23 @@ export default TabNavigator(
                 )
             }),
         },
+        Database: {
+            screen: Database,
+            navigationOptions: ({navigation}) => ({
+                tabBarLabel: '视频',
+                tabBarIcon: ({focused, tintColor}) => (
+                    <Image source={require('../assets/DataBase_tabBar_Normal_Image.png')}
+                           style={{tintColor: tintColor}}
+                    />
+                )
+            }),
+        },
         Course: {
             screen: Course,
             navigationOptions: ({navigation}) => ({
-                tabBarLabel: '教程',
+                tabBarLabel: '我的',
                 tabBarIcon: ({focused, tintColor}) => (
-                    <Image source={require('../assets/Surgery_tabBar_Normal_Image.png')}
+                    <Image source={require('../assets/Profile_tabBar_Select_Image.png')}
                            style={{tintColor: tintColor}}
                     />
                 )

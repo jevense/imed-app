@@ -21,7 +21,7 @@ const TopNavigation = ({style, isList, changeView}) => (
                                   size={25}
                                   style={styles.itemIcon}
                         />
-                        <Text style={styles.itemText}>增加图书</Text>
+                        <Text style={styles.itemText}>我的书籍</Text>
                     </View>
 
                 </MenuOption>

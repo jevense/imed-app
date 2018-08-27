@@ -1,13 +1,39 @@
 import React, {Component} from 'react'
-import {StyleSheet, Text, View} from 'react-native'
+import {FlatList, Image, StatusBar, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import Ionicons from "react-native-vector-icons/Ionicons"
 import {connect} from "react-redux"
 import Realm from 'realm';
 
 class Store extends Component<{}> {
 
-    static navigationOptions = ({navigation, navigationOptions}) => ({
-        headerTitle: '书城',
-    });
+    static navigationOptions = ({navigation}) => {
+
+        return {
+            headerLeft: <TouchableOpacity
+                onPress={() => {
+                    navigation.navigate('DrawerOpen')
+                }}
+            >
+                <Image
+                    source={require('../../assets/Profile_tabBar_Select_Image.png')}
+                    style={styles.person}
+                />
+            </TouchableOpacity>,
+            headerTitle: '书城',
+            headerRight: <View style={{flexDirection: 'row'}}>
+                <TouchableOpacity
+                    style={{padding: 10}}
+                    onPress={() => {
+                        navigation.navigate('Search')
+                    }}>
+                    <Ionicons name='ios-search'
+                              size={25}
+                              style={{color: '#FC0D1B'}}
+                    />
+                </TouchableOpacity>
+            </View>,
+        };
+    };
 
     constructor(props) {
         super(props);

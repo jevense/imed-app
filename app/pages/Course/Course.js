@@ -1,20 +1,18 @@
 import React, {Component} from 'react'
 import {Button, StyleSheet} from 'react-native'
 import {connect} from "react-redux"
+import Person from "../Person/Person"
 
 
 class Course extends Component<{}> {
 
     static navigationOptions = ({navigation, navigationOptions}) => ({
-        headerTitle: '教程',
+        headerTitle: '我的',
     });
 
     render() {
         return (
-            <Button
-                onPress={() => this.props.navigation.goBack()}
-                title="教程"
-            />
+            <Person {...this.props}/>
         );
     }
 }

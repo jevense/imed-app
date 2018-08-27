@@ -11,7 +11,7 @@
 ; Ignore duplicate module providers
 ; For RN Apps installed via npm, "Libraries" folder is inside
 ; "node_modules/react-native" but in the source repo it is in the root
-.*/react-native/Libraries/.*
+.*/Libraries/react-native/React.js
 
 ; Ignore polyfills
 .*/Libraries/polyfills/.*
@@ -47,4 +47,4 @@ suppress_comment=\\(.\\|\n\\)*\\$FlowExpectedError
 ;unsafe.enable_getters_and_setters=true
 
 [version]
-^0.64.0
+^0.75.0
