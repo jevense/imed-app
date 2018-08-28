@@ -1,7 +1,7 @@
 import React from 'react'
 import {DrawerNavigator} from 'react-navigation';
 import {StyleSheet} from 'react-native'
-import Home from "../container/index"
+import Home from "../container"
 import Person from "../pages/Person/index";
 
 const styles = StyleSheet.create({

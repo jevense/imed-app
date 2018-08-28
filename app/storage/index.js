@@ -81,103 +81,103 @@ const storage = new Storage({
         chapter(params) {
             let {id, resolve, reject} = params;
 
-            chapterList.find({id}, function (err, docs) {
-                docs = chapter
-                console.log(docs)
-                let bookName = docs['name'];
-                let chapterData = docs['chapters'].map(item => {
-                    let {id = "", name: title = "", icon = "", sections: data = []} = item;
-                    return {id, title, data,}
-                });
-                let data = {bookName, chapterData};
-                storage.save({
-                    key: 'chapter',
-                    id: id,
-                    data: data,
-                });
-                //初始化章节位置
-                if (chapterData && chapterData[0] && chapterData[0]['data'] && chapterData[0]['data'][0] && chapterData[0]['data'][0]['id']) {
-                    SectionLocation.save(id, chapterData[0]['data'][0]['id'])
-                    storage.load({
-                        key: 'section',
-                        id: chapterData[0]['data'][0]['id'],
-                        syncParams: {bookId: id},
-                    });
-                }
-            });
-
-            // fetch(`${host}/book/${id}/chapter.json`).then(response => {
-            //     return response.json();
-            // }).then(json => {
-            //     if (json && json['chapters'] && json['chapters']['chapters']) {
-            //         let bookName = json['chapters']['name'];
-            //         let chapterData = json['chapters']['chapters'].map(item => {
-            //             let {id = "", name: title = "", icon = "", sections: data = []} = item;
-            //             return {id, title, data,}
+            // chapterList.find({id}, function (err, docs) {
+            //     docs = chapter
+            //     console.log(docs)
+            //     let bookName = docs['name'];
+            //     let chapterData = docs['chapters'].map(item => {
+            //         let {id = "", name: title = "", icon = "", sections: data = []} = item;
+            //         return {id, title, data,}
+            //     });
+            //     let data = {bookName, chapterData};
+            //     storage.save({
+            //         key: 'chapter',
+            //         id: id,
+            //         data: data,
+            //     });
+            //     //初始化章节位置
+            //     if (chapterData && chapterData[0] && chapterData[0]['data'] && chapterData[0]['data'][0] && chapterData[0]['data'][0]['id']) {
+            //         SectionLocation.save(id, chapterData[0]['data'][0]['id'])
+            //         storage.load({
+            //             key: 'section',
+            //             id: chapterData[0]['data'][0]['id'],
+            //             syncParams: {bookId: id},
             //         });
-            //         let data = {bookName, chapterData};
-            //         storage.save({
-            //             key: 'chapter',
-            //             id: id,
-            //             data: data,
-            //         });
-            //         //初始化章节位置
-            //         if (chapterData && chapterData[0] && chapterData[0]['data'] && chapterData[0]['data'][0] && chapterData[0]['data'][0]['id']) {
-            //             SectionLocation.save(id, chapterData[0]['data'][0]['id'])
-            //
-            //             storage.load({
-            //                 key: 'section',
-            //                 id: chapterData[0]['data'][0]['id'],
-            //                 syncParams: {bookId: id},
-            //             });
-            //         }
-            //         // 成功则调用resolve
-            //         resolve && resolve(data);
-            //     } else {
-            //         // 失败则调用reject
-            //         reject && reject(new Error('data parse error'));
             //     }
-            // }).catch(err => {
-            //     console.warn(err);
-            //     reject && reject(err);
             // });
+
+            fetch(`${host}/book/${id}/chapter.json`).then(response => {
+                return response.json();
+            }).then(json => {
+                if (json && json['chapters'] && json['chapters']['chapters']) {
+                    let bookName = json['chapters']['name'];
+                    let chapterData = json['chapters']['chapters'].map(item => {
+                        let {id = "", name: title = "", icon = "", sections: data = []} = item;
+                        return {id, title, data,}
+                    });
+                    let data = {bookName, chapterData};
+                    storage.save({
+                        key: 'chapter',
+                        id: id,
+                        data: data,
+                    });
+                    //初始化章节位置
+                    if (chapterData && chapterData[0] && chapterData[0]['data'] && chapterData[0]['data'][0] && chapterData[0]['data'][0]['id']) {
+                        SectionLocation.save(id, chapterData[0]['data'][0]['id'])
+
+                        storage.load({
+                            key: 'section',
+                            id: chapterData[0]['data'][0]['id'],
+                            syncParams: {bookId: id},
+                        });
+                    }
+                    // 成功则调用resolve
+                    resolve && resolve(data);
+                } else {
+                    // 失败则调用reject
+                    reject && reject(new Error('data parse error'));
+                }
+            }).catch(err => {
+                console.warn(err);
+                reject && reject(err);
+            });
         },
 
         section(params) {
             let {id, resolve, reject, syncParams: {bookId,}} = params;
 
-            chapterList.find({id}, function (err, docs) {
-                docs = section
-                let section = docs;
-                storage.save({
-                    key: 'section',
-                    id: id,
-                    data: section,
-                });
-                SectionLocation.save(bookId, id)
-            });
-
-            // fetch(`${host}/book/1/chapter/1/section/${id}.json`).then(response => {
-            //     return response.json();
-            // }).then(json => {
-            //     let section = json['section'];
-            //     if (json && json['section']) {
-            //         storage.save({
-            //             key: 'section',
-            //             id: id,
-            //             data: section,
-            //         });
-            //         SectionLocation.save(bookId, id)
-            //         // 成功则调用resolve
-            //         resolve && resolve(section);
-            //     } else {
-            //         // 失败则调用reject
-            //         reject && reject(new Error('data parse error'));
-            //     }
-            // }).catch(err => {
-            //     console.warn(err);
-            //     reject && reject(err);
+            // chapterList.find({id}, function (err, docs) {
+            //     docs = section
+            //     let section = docs;
+            //     storage.save({
+            //         key: 'section',
+            //         id: id,
+            //         data: section,
+            //     });
+            //     SectionLocation.save(bookId, id)
             // });
+
+            fetch(`${host}/book/1/chapter/1/section/${id}.json`).then(response => {
+                return response.json();
+            }).then(json => {
+                let section = json['section'];
+                if (json && json['section']) {
+                    storage.save({
+                        key: 'section',
+                        id: id,
+                        data: section,
+                    });
+                    SectionLocation.save(bookId, id)
+                    // 成功则调用resolve
+                    resolve && resolve(section);
+                } else {
+                    // 失败则调用reject
+                    reject && reject(new Error('data parse error'));
+                }
+            }).catch(err => {
+                console.warn(err);
+                reject && reject(err);
+            });
         }
     }
 

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <script src='vconsole.min.js'></script>
     <style>
         body {
             -webkit-touch-callout: none;
@@ -80,6 +81,13 @@
     </ul>
 </div>
 </body>
+<script>new VConsole();</script>
+<script>
+    var render = function (data) {
+        alert(data)
+        console.log(data)
+    };
+</script>
 <script type="text/javascript">
     var EventUtil = {
         // 添加侦听事件
@@ -190,8 +198,6 @@
         var menu = document.getElementById("menu");
         menu.style.visibility = "hidden";
     });
-
-    alert(window.section)
 
     window.document.addEventListener('message', function (e) {
         const message = e.data

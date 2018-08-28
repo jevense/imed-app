@@ -19,17 +19,17 @@ const Side = ({chapter, changeSection,}) => (
                 <Text>笔记</Text>
             </TouchableOpacity>
         </View>
-        {/*<SectionList*/}
-            {/*ListHeaderComponent={<Text style={{fontSize: 30}}>{chapter.bookName}</Text>}*/}
-            {/*keyExtractor={(item) => item.id}*/}
-            {/*renderItem={({item}) =>*/}
-                {/*<TouchableOpacity onPress={() => changeSection(item.id)}>*/}
-                    {/*<Text style={{fontSize: 20, marginHorizontal: 20}}>{item.name}</Text>*/}
-                {/*</TouchableOpacity>*/}
-            {/*}*/}
-            {/*renderSectionHeader={({section}) => <Text*/}
-                {/*style={{fontSize: 25, backgroundColor: 'red'}}>{section.title}</Text>}*/}
-            {/*sections={chapter.chapterData}/>*/}
+        <SectionList
+            ListHeaderComponent={<Text style={{fontSize: 30}}>{chapter.bookName}</Text>}
+            keyExtractor={(item) => item.id}
+            renderItem={({item}) =>
+                <TouchableOpacity onPress={() => changeSection(item.id)}>
+                    <Text style={{fontSize: 20, marginHorizontal: 20}}>{item.name}</Text>
+                </TouchableOpacity>
+            }
+            renderSectionHeader={({section}) => <Text
+                style={{fontSize: 25, backgroundColor: 'red'}}>{section.title}</Text>}
+            sections={chapter.chapterData}/>
     </View>
 )
 

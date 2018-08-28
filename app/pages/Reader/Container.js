@@ -1,11 +1,11 @@
-import React, {Component} from "react"
-import {Dimensions, View,Text} from "react-native"
-import {connect} from "react-redux"
-import {changeModalVisible} from "../../actions/readerAction"
-import Header from "./Header"
-import Footer from "./Footer"
+import React, {Component} from 'react'
+import {Dimensions, View} from 'react-native'
+import {connect} from 'react-redux'
+import {changeModalVisible} from '../../actions/readerAction'
+import Header from './Header'
+import Footer from './Footer'
 import WebView from '../../component/BookWebView'
-import {storage} from "../../storage"
+import {storage} from '../../storage'
 
 let {width} = Dimensions.get('window');
 
@@ -20,29 +20,31 @@ class Content extends Component<{}> {
     }
 
     componentDidMount() {
-        this.webView.postMessage(JSON.stringify(this.props.dataSource))
+        // this.webView.postMessage('nihko')
     }
 
     componentWillReceiveProps(nextProps) {
         let {sectionId, bookId,} = nextProps
-        storage.load({
-            key: 'section',
-            id: sectionId,
-            syncParams: {bookId,},
-        }).then(dataSource => {
-            this.webView.postMessage(JSON.stringify(dataSource))
-        });
+        if (sectionId !== this.props.sectionId) {
+            storage.load({
+                key: 'section',
+                id: sectionId,
+                syncParams: {bookId,},
+            }).then(dataSource => {
+                this.webView.postMessage(JSON.stringify(dataSource))
+            });
+        }
     }
 
     onMessage = (message) => {
         console.log(message.nativeEvent.data)
         let {command, data} = JSON.parse(message.nativeEvent.data);
         switch (command) {
-            case "test":
+            case 'test':
                 console.log(data);
                 break;
-            case "got the message inside webview":
-                console.log("we have got a message from webview! yeah");
+            case 'got the message inside webview':
+                console.log('we have got a message from webview! yeah');
                 break;
         }
     }
@@ -72,12 +74,11 @@ class Content extends Component<{}> {
                 >
                     <WebView
                         domStorageEnabled={true}
-                        ref={(ref) => this.webView = ref}
+                        ref={ref => this.webView = ref}
                         onMessage={this.onMessage}
                         javaScriptEnabled={true}
                         // injectJavaScript={this.injectJavaScript(sectionId, bookId)}
-                        // injectedJavaScript={`let section=${dataSource}`}
-                        injectedJavaScript={`window.section=${dataSource}`}
+                        injectedJavaScript={`render(${JSON.stringify(dataSource)})`}
                         source={require('../../assets/html/index.html')}
                     />
                 </View>

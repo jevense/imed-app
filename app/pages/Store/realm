@@ -1,0 +1,8 @@
+ Realm.open({
+             schema: [{name: 'Dog', properties: {name: 'string'}}]
+         }).then(realm => {
+             realm.write(() => {
+                 realm.create('Dog', {name: 'Rex'});
+             });
+             this.setState({realm});
+         });
