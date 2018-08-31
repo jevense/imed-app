@@ -17,7 +17,7 @@ export default class home extends Component {
         super(props);
         this.state = {
             tabShow: false,
-            label: ['精选', '图书', '考试', '视频'],
+            label: ['精选', '图书', '考试', '视频', '推荐'],
         };
     }
 
@@ -81,7 +81,7 @@ export default class home extends Component {
                         />
                     }
                     tabBarBackgroundColor='#fff'
-                    tabBarActiveTextColor='#b4282d'
+                    tabBarActiveTextColor='#F8343D'
                     tabBarInactiveTextColor='#333'
                     tabBarUnderlineStyle={styles.tabBarUnderline}
                 >
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
         fontSize: 14,
     },
     tabBarUnderline: {
-        backgroundColor: '#b4282d',
+        backgroundColor: '#F8343D',
         height: 2,
         width: width / 8,
         marginLeft: 6

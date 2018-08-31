@@ -8,6 +8,7 @@ import {
     Dimensions,
     ScrollView,
 } from 'react-native';
+import SwiperItem from "../Sheet/SwiperItem"
 
 // 取得屏幕的宽高Dimensions
 const { width, height } = Dimensions.get('window');
@@ -18,7 +19,7 @@ export default class otherpage extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>otherpage</Text>
+                <SwiperItem/>
             </View>
         );
     }

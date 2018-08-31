@@ -1,20 +1,10 @@
-import React, { Component } from 'react';
-import {
-    StyleSheet,
-    View,
-    Text,
-    Image,
-    TouchableOpacity,
-    Dimensions,
-    ScrollView,
-    FlatList,
-} from 'react-native';
-
+import React, {Component} from 'react';
+import {Dimensions, FlatList, Image, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
 //引用插件
 import Swiper from 'react-native-swiper';
 
 // 取得屏幕的宽高Dimensions
-const { width, height } = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 
 export default class recommend extends Component {
 
@@ -40,13 +30,13 @@ export default class recommend extends Component {
                     price: '9.9元起',
                 },
             ],
-            special:[
-                {title: '春宴 茶食礼盒 1.38千克', price: '168', describe:'定位高端,国际顶级品牌代工厂'},
-                {title: '日本AKOYA天然海水珍珠18K金项链天然海水珍珠18K金项链', price: '999', describe:'定位高端,国际顶级品牌代工厂'},
-                {title: '针织弹力女士短靴', price: '129', describe:'定位高端,国际顶级品牌代工厂'},
-                {title: '怀抱休闲椅组合（皮款）', price: '1699', describe:'定位高端,国际顶级品牌代工厂'},
-                {title: '针织弹力女士短靴', price: '168', describe:'定位高端,国际顶级品牌代工厂'},
-                {title: '日本AKOYA天然海水珍珠18K金项链', price: '999', describe:'定位高端,国际顶级品牌代工厂'},
+            special: [
+                {title: '春宴 茶食礼盒 1.38千克', price: '168', describe: '定位高端,国际顶级品牌代工厂'},
+                {title: '日本AKOYA天然海水珍珠18K金项链天然海水珍珠18K金项链', price: '999', describe: '定位高端,国际顶级品牌代工厂'},
+                {title: '针织弹力女士短靴', price: '129', describe: '定位高端,国际顶级品牌代工厂'},
+                {title: '怀抱休闲椅组合（皮款）', price: '1699', describe: '定位高端,国际顶级品牌代工厂'},
+                {title: '针织弹力女士短靴', price: '168', describe: '定位高端,国际顶级品牌代工厂'},
+                {title: '日本AKOYA天然海水珍珠18K金项链', price: '999', describe: '定位高端,国际顶级品牌代工厂'},
             ]
         };
     }
@@ -72,17 +62,17 @@ export default class recommend extends Component {
                     dotStyle={styles.dotStyle}
                     activeDotStyle={styles.activeDotStyle}
                 >
-                    <Image source={require('../../assets/img/1.jpg')} style={styles.bannerImg} />
-                    <Image source={require('../../assets/img/2.jpg')} style={styles.bannerImg} />
-                    <Image source={require('../../assets/img/3.jpg')} style={styles.bannerImg} />
-                    <Image source={require('../../assets/img/4.jpg')} style={styles.bannerImg} />
-                    <Image source={require('../../assets/img/3.jpg')} style={styles.bannerImg} />
+                    <Image source={require('../../assets/img/1.jpg')} style={styles.bannerImg}/>
+                    <Image source={require('../../assets/img/2.jpg')} style={styles.bannerImg}/>
+                    <Image source={require('../../assets/img/3.jpg')} style={styles.bannerImg}/>
+                    <Image source={require('../../assets/img/4.jpg')} style={styles.bannerImg}/>
+                    <Image source={require('../../assets/img/3.jpg')} style={styles.bannerImg}/>
                 </Swiper>
             )
         } else {
             return (
-                <View style={{ height: width * 40 / 75 }}>
-                    <Image source={require('../../assets/img/1.jpg')} style={styles.bannerImg} />
+                <View style={{height: width * 40 / 75}}>
+                    <Image source={require('../../assets/img/1.jpg')} style={styles.bannerImg}/>
                 </View>
             );
         }
@@ -96,7 +86,7 @@ export default class recommend extends Component {
                 {
                     tip.map((item, index) => (
                         <View style={styles.tipItemBox} key={index}>
-                            <Image source={require('../../assets/img/yes.png')} style={styles.redyes} />
+                            <Image source={require('../../assets/img/yes.png')} style={styles.redyes}/>
                             <Text style={styles.tipItem}>{item}</Text>
                         </View>
                     ))
@@ -106,7 +96,7 @@ export default class recommend extends Component {
     }
 
     // 私人订制(一行三个)
-    renderSpecial(){
+    renderSpecial() {
         return (
             <View style={styles.moduleBox}>
                 <Text style={styles.subtitle}>私人订制</Text>
@@ -119,10 +109,11 @@ export default class recommend extends Component {
             </View>
         )
     }
-    renderSpecialItem = ({ item }) => {
+
+    renderSpecialItem = ({item}) => {
         return (
             <TouchableOpacity style={styles.specialItem}>
-                <Image source={require('../../assets/img/goods.png')} style={styles.specialImg} />
+                <Image source={require('../../assets/img/goods.png')} style={styles.specialImg}/>
                 <View style={styles.specialContainer}>
                     <Text style={styles.specialTitle} numberOfLines={2}>{item.title}</Text>
                     <Text style={styles.specialPrice}>￥{item.price}</Text>
@@ -146,10 +137,11 @@ export default class recommend extends Component {
             </View>
         )
     }
-    renderTopicItem = ({ item }) => {
+
+    renderTopicItem = ({item}) => {
         return (
             <TouchableOpacity style={styles.topicItem}>
-                <Image source={require('../../assets/img/topic.jpg')} style={styles.topicImg} />
+                <Image source={require('../../assets/img/topic.jpg')} style={styles.topicImg}/>
                 <View style={styles.topicContainer}>
                     <View style={styles.topicText}>
                         <Text style={styles.topicTitle}>{item.title}</Text>
@@ -162,7 +154,7 @@ export default class recommend extends Component {
     }
 
     // 猜你喜欢(一行两个)
-    renderLike(){
+    renderLike() {
         return (
             <View style={styles.moduleBox}>
                 <Text style={styles.subtitle}>猜你喜欢</Text>
@@ -175,10 +167,11 @@ export default class recommend extends Component {
             </View>
         )
     }
-    renderLikeItem = ({ item }) => {
+
+    renderLikeItem = ({item}) => {
         return (
             <TouchableOpacity style={styles.likeItem}>
-                <Image source={require('../../assets/img/goods.png')} style={styles.likeImg} />
+                <Image source={require('../../assets/img/goods.png')} style={styles.likeImg}/>
                 <Text style={styles.likeDesc} numberOfLines={1}>{item.describe}</Text>
                 <View style={styles.likeContainer}>
                     <Text style={styles.likeTitle} numberOfLines={2}>{item.title}</Text>
@@ -253,93 +246,93 @@ const styles = StyleSheet.create({
     },
     moduleBox: {
         width: width,
-        alignItems:'center',
+        alignItems: 'center',
         backgroundColor: '#fff',
-        paddingBottom:10,
-        marginBottom:10,
+        paddingBottom: 10,
+        marginBottom: 10,
     },
-    subtitle:{
-        fontSize:16,
-        color:'#666',
-        padding:15,
+    subtitle: {
+        fontSize: 16,
+        color: '#666',
+        padding: 15,
     },
     topicItem: {
-        width: width*0.7,
-        marginLeft:15,
+        width: width * 0.7,
+        marginLeft: 15,
     },
     topicImg: {
-        width: width*0.7,
-        height: width*0.4,
-        borderWidth:0.5,
-        borderColor:'#cdcdcd',
-        borderRadius:2,
+        width: width * 0.7,
+        height: width * 0.4,
+        borderWidth: 0.5,
+        borderColor: '#cdcdcd',
+        borderRadius: 2,
     },
-    topicContainer:{
+    topicContainer: {
         flexDirection: 'row',
-        justifyContent:'space-between',
-        marginTop:10,
+        justifyContent: 'space-between',
+        marginTop: 10,
     },
-    topicTitle:{
-        fontSize:16,
-        color:'#666',
+    topicTitle: {
+        fontSize: 16,
+        color: '#666',
     },
-    topicDesc:{
-        fontSize:13,
-        color:'#999',
-        marginTop:3,
+    topicDesc: {
+        fontSize: 13,
+        color: '#999',
+        marginTop: 3,
     },
-    topicPrice:{
-        fontSize:14,
-        color:'#b4282d',
+    topicPrice: {
+        fontSize: 14,
+        color: '#b4282d',
     },
-    specialItem:{
-        width:width/3 -12,
-        marginLeft:4,
-        marginRight:5,
-        marginBottom:15,
+    specialItem: {
+        width: width / 3 - 12,
+        marginLeft: 4,
+        marginRight: 5,
+        marginBottom: 15,
     },
-    specialImg:{
-        width:width/3 -12,
-        height:width/3 -12,
-        backgroundColor:'#f4f4f4'
+    specialImg: {
+        width: width / 3 - 12,
+        height: width / 3 - 12,
+        backgroundColor: '#f4f4f4'
     },
-    specialTitle:{
-        fontSize:14,
-        color:'#666',
-        marginTop:8,
-        marginBottom:4,
+    specialTitle: {
+        fontSize: 14,
+        color: '#666',
+        marginTop: 8,
+        marginBottom: 4,
     },
-    specialPrice:{
-        fontSize:14,
-        color:'#b4282d',
+    specialPrice: {
+        fontSize: 14,
+        color: '#b4282d',
     },
-    likeItem:{
-        width:width/2 -15,
-        marginLeft:5,
-        marginRight:5,
-        marginBottom:15,
+    likeItem: {
+        width: width / 2 - 15,
+        marginLeft: 5,
+        marginRight: 5,
+        marginBottom: 15,
     },
-    likeImg:{
-        width:width/2 -15,
-        height:width/2 -15,
-        backgroundColor:'#f4f4f4'
+    likeImg: {
+        width: width / 2 - 15,
+        height: width / 2 - 15,
+        backgroundColor: '#f4f4f4'
     },
-    likeDesc:{
-        backgroundColor:'#F1ECE2',
-        color:'#9F8A60',
-        paddingTop:8,
-        paddingBottom:8,
-        paddingLeft:4,
-        paddingRight:4,
+    likeDesc: {
+        backgroundColor: '#F1ECE2',
+        color: '#9F8A60',
+        paddingTop: 8,
+        paddingBottom: 8,
+        paddingLeft: 4,
+        paddingRight: 4,
     },
-    likeTitle:{
-        fontSize:14,
-        color:'#666',
-        marginTop:8,
-        marginBottom:4,
+    likeTitle: {
+        fontSize: 14,
+        color: '#666',
+        marginTop: 8,
+        marginBottom: 4,
     },
-    likePrice:{
-        fontSize:14,
-        color:'#b4282d',
+    likePrice: {
+        fontSize: 14,
+        color: '#b4282d',
     }
 });
