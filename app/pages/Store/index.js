@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Dimensions, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
+import Ionicons from "react-native-vector-icons/Ionicons"
 // 引用头部组件
 import CommonHead from './commonHead';
 //引用插件
@@ -7,6 +8,7 @@ import ScrollableTabView, {ScrollableTabBar} from 'react-native-scrollable-tab-v
 
 import Recommend from './recommend';
 import Otherpage from './otherpage';
+import WellChose from './WellChosen';
 
 // 取得屏幕的宽高Dimensions
 const {width, height} = Dimensions.get('window');
@@ -61,7 +63,10 @@ export default class home extends Component {
             <TouchableOpacity onPress={() => {
                 this.props.navigation.navigate('MessageCenter')
             }} style={styles.navRight}>
-                <Image source={require('../../assets/img/remind.png')} style={styles.navIcon}/>
+                {/*<Image source={require('../../assets/img/remind.png')} style={styles.navIcon}/>*/}
+                <Ionicons name='ios-menu'
+                          size={25}
+                          sstyle={styles.navIcon}/>
                 <Text style={styles.navText}>分类</Text>
             </TouchableOpacity>
         )
@@ -92,6 +97,10 @@ export default class home extends Component {
                                     <ScrollView tabLabel={item} key={index}>
                                         <Recommend/>
                                     </ScrollView>
+                                )
+                            } else if (item === '精选') {
+                                return (
+                                    <WellChose key={index}/>
                                 )
                             } else {
                                 return (
