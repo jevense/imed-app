@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {Animated, Dimensions, Image, PixelRatio, StyleSheet, Text, TouchableOpacity, View} from 'react-native'
-import Camera from 'react-native-camera'
+import {RNCamera} from 'react-native-camera'
 
 let gScreen = {
     width: Dimensions.get('window').width,
@@ -64,7 +64,7 @@ export default class Scanner extends Component {
 
     render() {
         return (
-            <Camera
+            <RNCamera
                 ref={camera => this.camera = camera}
                 style={{width: gScreen.width, height: gScreen.height}}
                 aspect={Camera.constants.Aspect.fill}
@@ -74,7 +74,7 @@ export default class Scanner extends Component {
                 <ScannerPromptTitle/>
                 <ScannerAnimatedContent/>
                 <ScannerBarCodeReadPrompt ref={s => this.scannerPrompt = s}/>
-            </Camera>
+            </RNCamera>
         )
     }
 }
