@@ -67,7 +67,7 @@ export default class Scanner extends Component {
             <RNCamera
                 ref={camera => this.camera = camera}
                 style={{width: gScreen.width, height: gScreen.height}}
-                aspect={Camera.constants.Aspect.fill}
+                // aspect={Camera.constants.Aspect.fill}
                 onBarCodeRead={this._onBarCodeRead}
             >
                 <ScannerHeader onPress={this._onBack}/>

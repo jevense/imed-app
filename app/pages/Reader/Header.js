@@ -14,7 +14,7 @@ class Header extends Component<{}> {
         let {navigation, closeReader} = this.props;
         return (<View style={styles.container}>
             <View style={styles.left}>
-                <TouchableOpacity onPress={() => closeReader()}>
+                <TouchableOpacity onPress={closeReader}>
                     <Ionicons name='ios-arrow-back-outline'
                               size={25}
                               style={styles.itemIcon}
@@ -22,13 +22,13 @@ class Header extends Component<{}> {
                 </TouchableOpacity>
             </View>
             <View style={styles.right}>
-                <TouchableOpacity onPress={() => closeReader()}>
+                <TouchableOpacity onPress={closeReader}>
                     <Ionicons name='ios-bookmark-outline'
                               size={25}
                               style={styles.itemIcon}
                     />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => closeReader()}>
+                <TouchableOpacity onPress={closeReader}>
                     <Ionicons name='ios-more-outline'
                               size={25}
                               style={styles.itemIcon}

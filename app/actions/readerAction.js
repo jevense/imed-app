@@ -17,7 +17,6 @@ export const goBack = () => {
 
 export const fillData = (sectionId, bookId) => {
     return (dispatch) => {
-
     }
 };
 

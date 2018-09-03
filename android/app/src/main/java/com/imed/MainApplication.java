@@ -3,6 +3,7 @@ package com.imed;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.RNFetchBlob.RNFetchBlobPackage;
 
 import io.realm.react.RealmReactPackage;
@@ -33,6 +34,7 @@ public class MainApplication extends Application implements ReactApplication {
         protected List<ReactPackage> getPackages() {
             return Arrays.asList(
                     new MainReactPackage(),
+            new RNDeviceInfo(),
             new RNFetchBlobPackage(),
                     new RealmReactPackage(),
                     new VectorIconsPackage(),

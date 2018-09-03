@@ -4,7 +4,14 @@ let {height, width} = Dimensions.get('window');
 const numColumns = 3;
 let dataSource = [];
 
-const initialState = {dataSource, isList: false, numColumns, columnType: {numColumns}, itemWidth: (width) / numColumns};
+const initialState = {
+    dataSource,
+    isList: false,
+    numColumns,
+    columnType: {numColumns},
+    itemWidth: (width) / numColumns,
+    searchVisible: false
+};
 
 
 // 不同类别的事件使用switch对应处理过程
@@ -27,6 +34,16 @@ export default function sheetReducer(state = initialState, action) {
                 ...state,
                 isList: true,
                 columnType: {}
+            };
+        case 'openSearch':
+            return {
+                ...state,
+                searchVisible: true
+            };
+        case 'closeSearch':
+            return {
+                ...state,
+                searchVisible: false
             };
         default:
             return state;

@@ -9,11 +9,14 @@ import ScrollableTabView, {ScrollableTabBar} from 'react-native-scrollable-tab-v
 import Recommend from './recommend';
 import Otherpage from './otherpage';
 import WellChose from './WellChosen';
+import Search from "../Search"
+import {connect} from "react-redux"
+import {openSearch} from "../../actions/sheetAction"
 
 // 取得屏幕的宽高Dimensions
 const {width, height} = Dimensions.get('window');
 
-export default class home extends Component {
+class Home extends Component {
 
     constructor(props) {
         super(props);
@@ -44,11 +47,9 @@ export default class home extends Component {
     }
 
     // 头部中间
-    renderTitleItem() {
+    renderTitleItem(openSearch) {
         return (
-            <TouchableOpacity onPress={() => {
-                this.props.navigation.navigate('Search')
-            }}>
+            <TouchableOpacity onPress={openSearch}>
                 <View style={styles.searchBox}>
                     <Image source={require('../../assets/img/search.png')} style={styles.searchIcon}/>
                     <Text style={styles.searchContent}>搜索图书</Text>
@@ -77,49 +78,53 @@ export default class home extends Component {
         let label = this.state.label
         if (this.state.tabShow) {
             return (
-                <ScrollableTabView
-                    style={{paddingTop: 8}}
-                    renderTabBar={() =>
-                        <ScrollableTabBar
-                            style={{height: 35}}
-                            tabStyle={{height: 34, paddingLeft: 15, paddingRight: 15,}}
-                        />
-                    }
-                    tabBarBackgroundColor='#fff'
-                    tabBarActiveTextColor='#F8343D'
-                    tabBarInactiveTextColor='#333'
-                    tabBarUnderlineStyle={styles.tabBarUnderline}
-                >
-                    {
-                        label.map((item, index) => {
-                            if (item === '推荐') {
-                                return (
-                                    <ScrollView tabLabel={item} key={index}>
-                                        <Recommend/>
-                                    </ScrollView>
-                                )
-                            } else if (item === '精选') {
-                                return (
-                                    <WellChose key={index}/>
-                                )
-                            } else {
-                                return (
-                                    <Otherpage tabLabel={item} key={index}/>
-                                )
-                            }
-                        })
-                    }
-                </ScrollableTabView>
+                <View>
+                    <Search/>
+                    <ScrollableTabView
+                        style={{paddingTop: 8}}
+                        renderTabBar={() =>
+                            <ScrollableTabBar
+                                style={{height: 35}}
+                                tabStyle={{height: 34, paddingLeft: 15, paddingRight: 15,}}
+                            />
+                        }
+                        tabBarBackgroundColor='#fff'
+                        tabBarActiveTextColor='#F8343D'
+                        tabBarInactiveTextColor='#333'
+                        tabBarUnderlineStyle={styles.tabBarUnderline}
+                    >
+                        {
+                            label.map((item, index) => {
+                                if (item === '推荐') {
+                                    return (
+                                        <ScrollView tabLabel={item} key={index}>
+                                            <Recommend/>
+                                        </ScrollView>
+                                    )
+                                } else if (item === '精选') {
+                                    return (
+                                        <WellChose tabLabel={item} key={index}/>
+                                    )
+                                } else {
+                                    return (
+                                        <Otherpage tabLabel={item} key={index}/>
+                                    )
+                                }
+                            })
+                        }
+                    </ScrollableTabView>
+                </View>
             )
         }
     }
 
     render() {
+        let {openSearch} = this.props
         return (
             <View style={styles.container}>
                 <CommonHead
                     leftItem={() => this.renderLeftItem()}
-                    titleItem={() => this.renderTitleItem()}
+                    titleItem={() => this.renderTitleItem(openSearch)}
                     rightItem={() => this.renderRightItem()}
                 />
                 <View style={{flex: 1}}>
@@ -129,6 +134,16 @@ export default class home extends Component {
         );
     }
 }
+
+export default connect(
+    (state) => ({
+        // dataSource: state.sheet.dataSource,
+    }),
+    (dispatch) => ({
+        openSearch: () => dispatch(openSearch()),
+    })
+)(Home)
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,

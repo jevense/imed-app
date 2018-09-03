@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
-import {FlatList, Image, StatusBar, StyleSheet, TouchableOpacity, View,} from 'react-native';
+import {FlatList, StatusBar, StyleSheet, TouchableOpacity, View,} from 'react-native';
 import Ionicons from "react-native-vector-icons/Ionicons"
 import {connect} from "react-redux"
 import {Divider} from "react-native-elements"
-import Search from "../Search/index"
 import Menu from "./Menu"
 import ListItem from "./ListItem"
 import GridItem from "./GridItem"
 import SwiperItem from "./SwiperItem"
 import Reader from "../Reader"
 import {openReader} from "../../actions/readerAction"
-import {init} from "../../actions/sheetAction"
+import {init, openSearch} from "../../actions/sheetAction"
+import Search from "../Search"
 
 
 class Sheet extends Component<{}> {
@@ -22,24 +22,31 @@ class Sheet extends Component<{}> {
 
     static navigationOptions = ({navigation}) => {
 
+        let {
+            params = {}
+        } = navigation.state
+
+        let {
+            openSearch = () => {
+            }
+        } = params
+
         return {
-            headerLeft: <TouchableOpacity
-                onPress={() => {
-                    navigation.navigate('DrawerOpen')
-                }}
-            >
-                <Image
-                    source={require('../../assets/Profile_tabBar_Select_Image.png')}
-                    style={styles.person}
-                />
-            </TouchableOpacity>,
+            // headerLeft: <TouchableOpacity
+            //     onPress={() => {
+            //         navigation.navigate('DrawerOpen')
+            //     }}
+            // >
+            //     <Image
+            //         source={require('../../assets/Profile_tabBar_Select_Image.png')}
+            //         style={styles.person}
+            //     />
+            // </TouchableOpacity>,
             headerTitle: '书架',
             headerRight: <View style={{flexDirection: 'row'}}>
                 <TouchableOpacity
                     style={{padding: 10}}
-                    onPress={() => {
-                        navigation.navigate('Search')
-                    }}>
+                    onPress={openSearch}>
                     <Ionicons name='ios-search'
                               size={25}
                               style={{color: '#FC0D1B'}}
@@ -52,6 +59,9 @@ class Sheet extends Component<{}> {
 
     componentWillMount() {
         this.props.init()
+        this.props.navigation.setParams({
+            openSearch: this.props.openSearch
+        })
         // async function getDataSource() {
         //     let response = await fetch();
         //     let json = await response.json();
@@ -73,12 +83,13 @@ class Sheet extends Component<{}> {
     };
 
     render() {
-        let {itemWidth, columnType, openReader, dataSource,} = this.props
+        let {itemWidth, columnType, openReader, dataSource, searchVisible, navigation,} = this.props
         let result = this.switchType()
         return (
             <View>
                 <StatusBar backgroundColor={'black'}/>
                 <Reader/>
+                <Search/>
                 <FlatList
                     key={result.keyType}
                     contentContainerStyle={styles.contentContainerStyle}
@@ -128,6 +139,7 @@ export default connect(
     (dispatch) => ({
         init: () => dispatch(init()),
         openReader: (bookId) => dispatch(openReader(bookId)),
+        openSearch: () => dispatch(openSearch()),
     })
 )(Sheet)
 

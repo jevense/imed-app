@@ -1,17 +1,8 @@
-import React, { Component } from 'react';
-import {
-    StyleSheet,
-    View,
-    Text,
-    Image,
-    TouchableOpacity,
-    Dimensions,
-    ScrollView,
-} from 'react-native';
-import SwiperItem from "../Sheet/SwiperItem"
+import React, {Component} from 'react';
+import {Dimensions, StyleSheet, Text, View,} from 'react-native';
 
 // 取得屏幕的宽高Dimensions
-const { width, height } = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 
 
 export default class otherpage extends Component {
@@ -19,7 +10,7 @@ export default class otherpage extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <SwiperItem/>
+                <Text>TEST</Text>
             </View>
         );
     }

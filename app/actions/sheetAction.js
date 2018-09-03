@@ -1,6 +1,6 @@
 import {NavigationActions} from "react-navigation";
 import {storage} from "../storage"
-import {bookList,chapterList} from '../storage/mongodb'
+import {bookList, chapterList} from '../storage/mongodb'
 
 export const init = () => {
     return (dispatch) => {
@@ -24,10 +24,22 @@ export const view = (value) => {
         } else if ('clear' === value) {
             storage.remove({key: 'books'});
             console.log('=====')
-            bookList.remove({}, { multi: true }, function (err, numRemoved) {
+            bookList.remove({}, {multi: true}, function (err, numRemoved) {
             });
-            chapterList.remove({}, { multi: true }, function (err, numRemoved) {
+            chapterList.remove({}, {multi: true}, function (err, numRemoved) {
             });
         }
     }
 };
+
+export const openSearch = () => {
+    return (dispatch) => {
+        dispatch({type: 'openSearch'})
+    }
+}
+
+export const closeSearch = () => {
+    return (dispatch) => {
+        dispatch({type: 'closeSearch'})
+    }
+}

@@ -4,10 +4,21 @@ import Swiper from 'react-native-swiper';
 
 
 export default class SwiperItem extends Component<{}> {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            autoplay: false,
+            loop: false,
+        };
+    }
+
     render() {
+        let {autoplay, loop} = this.state;
         return (
             <View style={styles.wrapper}>
-                <Swiper autoplay
+                <Swiper autoplay={autoplay}
+                        loop={loop}
                         paginationStyle={{bottom: 5}}
                     // showsPagination={false}
                 >

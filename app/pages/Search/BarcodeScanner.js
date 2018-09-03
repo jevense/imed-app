@@ -20,7 +20,11 @@ class BarcodeScanner extends Component<{}> {
                     }}
                     onBarCodeRead={() => (this.onBarCodeRead)}
                     style={styles.preview}
-                    aspect={Camera.constants.Aspect.fill}>
+                    type={RNCamera.Constants.Type.back}
+                    flashMode={RNCamera.Constants.FlashMode.on}
+                    permissionDialogTitle={'Permission to use camera'}
+                    permissionDialogMessage={'We need your permission to use your camera phone'}
+                >
                     <Text style={styles.capture} onPress={this.takePicture.bind(this)}>[CAPTURE]</Text>
                 </RNCamera>
             </View>
