@@ -3,7 +3,7 @@ import {addNavigationHelpers, StackNavigator,} from 'react-navigation';
 import {connect} from 'react-redux';
 import LoginPage from '../pages/LoginPage'
 import DrawerNavigator from './DrawerNavigator'
-import {addListener} from '../store/ConfigureStore';
+import {addListener} from '../store/ConfigureStore'
 
 export const AppNavigator = StackNavigator({
     Login: {

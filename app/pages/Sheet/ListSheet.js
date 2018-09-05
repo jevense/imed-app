@@ -37,7 +37,8 @@ export default class LocalSheet extends Component<{}> {
                         </View>
                     </TouchableOpacity>)} //每一行render
                 ItemSeparatorComponent={() => <View style={{height: 1, backgroundColor: 'gray'}}/>} //分隔线
-                keyExtractor={(item) => item.key}  //使用json中的title动态绑定key
+                // keyExtractor={item => `${item.key}`}  //使用json中的title动态绑定key
+                keyExtractor={(item, index) => item.key.toString()}
             />
         );
     }

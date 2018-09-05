@@ -38,8 +38,38 @@ export const openSearch = () => {
     }
 }
 
+export const openCart = () => {
+    return (dispatch) => {
+        dispatch({type: 'openCart'})
+    }
+}
+
 export const closeSearch = () => {
     return (dispatch) => {
         dispatch({type: 'closeSearch'})
+    }
+}
+
+export const closeCart = () => {
+    return (dispatch) => {
+        dispatch({type: 'closeCart'})
+    }
+}
+
+export const toggleCheck = (index) => {
+    return (dispatch) => {
+        dispatch({type: 'toggleCheck', index})
+    }
+}
+
+export const toggleSelectAll = () => {
+    return (dispatch) => {
+        dispatch({type: 'toggleSelectAll'})
+    }
+}
+
+export const deleteCart = () => {
+    return (dispatch) => {
+        dispatch({type: 'deleteCart'})
     }
 }

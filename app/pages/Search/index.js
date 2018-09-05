@@ -10,7 +10,7 @@ class SearchComponent extends Component<{}> {
         let {searchVisible} = this.props;
         return (
             <Modal
-                animationType="slide"
+                animationType="fade"
                 transparent={false}
                 visible={searchVisible}
                 onRequestClose={() => {

@@ -137,6 +137,9 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-charts-wrapper')
+    compile project(':react-native-quick-actions')
+    compile project(':react-native-picker')
     compile project(':react-native-device-info')
     compile project(':rn-fetch-blob')
     compile project(':realm')

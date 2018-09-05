@@ -9,7 +9,7 @@ import Ionicons from "react-native-vector-icons/Ionicons"
 class Search extends Component {
 
     static navigationOptions = ({navigation, navigationOptions}) => {
-        navigationOptions.tabBarVisible = false;
+        // navigationOptions.tabBarVisible = false;
 
         let {
             params = {}

@@ -1,5 +1,5 @@
+import React, {Component} from "react"
 import {FlatList, RefreshControl, Text} from "react-native"
-import React from "react"
 
 class RefreshableList extends Component {
     constructor(props) {

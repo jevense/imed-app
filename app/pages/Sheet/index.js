@@ -95,7 +95,7 @@ class Sheet extends Component<{}> {
                     contentContainerStyle={styles.contentContainerStyle}
                     ListHeaderComponent={() => (<SwiperItem/>)}
                     data={dataSource}
-                    keyExtractor={(item) => item.key}
+                    keyExtractor={(item) => item.key.toString()}
                     // keyExtractor={(item) => item.title}
                     renderItem={
                         ({item}) => result.renderType({item, itemWidth, openReader})

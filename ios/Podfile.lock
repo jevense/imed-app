@@ -1,0 +1,113 @@
+PODS:
+  - boost-for-react-native (1.63.0)
+  - Charts (3.0.5):
+    - Charts/Core (= 3.0.5)
+  - Charts/Core (3.0.5)
+  - DoubleConversion (1.1.5)
+  - Folly (2016.10.31.00):
+    - boost-for-react-native
+    - DoubleConversion
+    - glog
+  - glog (0.3.4)
+  - React (0.56.0):
+    - React/Core (= 0.56.0)
+  - React/ART (0.56.0):
+    - React/Core
+  - React/Core (0.56.0):
+    - yoga (= 0.56.0.React)
+  - React/CxxBridge (0.56.0):
+    - Folly (= 2016.10.31.00)
+    - React/Core
+    - React/cxxreact
+  - React/cxxreact (0.56.0):
+    - boost-for-react-native (= 1.63.0)
+    - Folly (= 2016.10.31.00)
+    - React/jschelpers
+    - React/jsinspector
+  - React/DevSupport (0.56.0):
+    - React/Core
+    - React/RCTWebSocket
+  - React/fishhook (0.56.0)
+  - React/jschelpers (0.56.0):
+    - Folly (= 2016.10.31.00)
+    - React/PrivateDatabase
+  - React/jsinspector (0.56.0)
+  - React/PrivateDatabase (0.56.0)
+  - React/RCTActionSheet (0.56.0):
+    - React/Core
+  - React/RCTAnimation (0.56.0):
+    - React/Core
+  - React/RCTBlob (0.56.0):
+    - React/Core
+  - React/RCTGeolocation (0.56.0):
+    - React/Core
+  - React/RCTImage (0.56.0):
+    - React/Core
+    - React/RCTNetwork
+  - React/RCTLinkingIOS (0.56.0):
+    - React/Core
+  - React/RCTNetwork (0.56.0):
+    - React/Core
+  - React/RCTText (0.56.0):
+    - React/Core
+  - React/RCTVibration (0.56.0):
+    - React/Core
+  - React/RCTWebSocket (0.56.0):
+    - React/Core
+    - React/fishhook
+    - React/RCTBlob
+  - RNCharts (0.4.4):
+    - Charts
+    - React
+    - SwiftyJSON
+  - SwiftyJSON (4.0.0)
+  - yoga (0.56.0.React)
+
+DEPENDENCIES:
+  - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
+  - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
+  - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
+  - React/ART (from `../node_modules/react-native/`)
+  - React/Core (from `../node_modules/react-native/`)
+  - React/CxxBridge (from `../node_modules/react-native/`)
+  - React/DevSupport (from `../node_modules/react-native/`)
+  - React/RCTActionSheet (from `../node_modules/react-native/`)
+  - React/RCTAnimation (from `../node_modules/react-native/`)
+  - React/RCTGeolocation (from `../node_modules/react-native/`)
+  - React/RCTImage (from `../node_modules/react-native/`)
+  - React/RCTLinkingIOS (from `../node_modules/react-native/`)
+  - React/RCTNetwork (from `../node_modules/react-native/`)
+  - React/RCTText (from `../node_modules/react-native/`)
+  - React/RCTVibration (from `../node_modules/react-native/`)
+  - React/RCTWebSocket (from `../node_modules/react-native/`)
+  - RNCharts (from `../node_modules/react-native-charts-wrapper`)
+  - yoga (from `../node_modules/react-native/ReactCommon/yoga/`)
+
+EXTERNAL SOURCES:
+  DoubleConversion:
+    :podspec: ../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec
+  Folly:
+    :podspec: ../node_modules/react-native/third-party-podspecs/Folly.podspec
+  glog:
+    :podspec: ../node_modules/react-native/third-party-podspecs/glog.podspec
+  React:
+    :path: ../node_modules/react-native/
+  RNCharts:
+    :path: ../node_modules/react-native-charts-wrapper
+  yoga:
+    :path: ../node_modules/react-native/ReactCommon/yoga/
+
+SPEC CHECKSUMS:
+  boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
+  Charts: 45cdc985b764c838b35ee47eb1365d15735f6d1a
+  DoubleConversion: a9706f16e388b53ff12cca34473428ee29746a26
+  Folly: c89ac2d5c6ab169cd7397ef27485c44f35f742c7
+  glog: b3b0330915eccea41c5cc9731a77cf564a9be5ea
+  React: 1fe0eb13d90b625d94c3b117c274dcfd2e760e11
+  RNCharts: 5cfadffa4c5faf30c719d785c7dff59461b31207
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  yoga: b1ce48b6cf950b98deae82838f5173ea7cf89e85
+
+PODFILE CHECKSUM: 69a6a15d3be88a531062162c387287ed5cbf72fc
+
+COCOAPODS: 1.4.0

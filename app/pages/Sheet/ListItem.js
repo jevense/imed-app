@@ -1,11 +1,36 @@
-import {Image, PixelRatio, StyleSheet, Text, TouchableOpacity, View} from "react-native"
 import React from "react"
+import {PixelRatio, StyleSheet, Text, View,Image} from "react-native"
 import {Button} from "react-native-elements"
-import {CachedImage} from "react-native-img-cache"
+import Swipeout from 'react-native-swipeout'
 
 export default ({item, openReader}) => (
-    <TouchableOpacity onPress={() => {
-    }}>
+    <Swipeout
+        autoClose={true}
+        left={[
+            {
+                text: '取消置顶',
+                type: 'secondary',
+                onPress: () => {
+
+                }
+            },
+        ]}
+        right={[
+            {
+                text: '置顶',
+                type: 'primary',
+                onPress: () => {
+
+                }
+            },
+            {
+                text: '删除',
+                type: 'delete',
+                onPress: () => {
+
+                }
+            }
+        ]}>
         <View style={{
             flexDirection: 'row',
             justifyContent: 'space-between',
@@ -13,7 +38,7 @@ export default ({item, openReader}) => (
             backgroundColor: 'white',
             padding: 10,
         }}>
-            <CachedImage style={{width: 72, height: 100}} source={item.image}/>
+            <Image style={{width: 72, height: 100}} source={item.image}/>
             <View style={{width: 160, marginHorizontal: 5}}>
                 <Text style={{fontSize: 17}}>{item.title}</Text>
                 <Text style={{color: 'gray'}}>主编：{item.editor}</Text>
@@ -37,7 +62,7 @@ export default ({item, openReader}) => (
                 />
             </View>
         </View>
-    </TouchableOpacity>)
+    </Swipeout>)
 
 
 const styles = StyleSheet.create({
