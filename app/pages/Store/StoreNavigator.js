@@ -1,6 +1,7 @@
 import {StackNavigator} from 'react-navigation';
 import Store from './Store';
 import Category from './Category';
+import Products from './Products';
 
 const stackNavigator = StackNavigator({
     Store: {
@@ -8,6 +9,9 @@ const stackNavigator = StackNavigator({
     },
     Category: {
         screen: Category,
+    },
+    Products: {
+        screen: Products,
     }
 }, {
     initialRouteName: 'Store', // 默认显示界面
