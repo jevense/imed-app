@@ -85,6 +85,23 @@ class ProductList extends Component {
                             </View>
                         </TouchableHighlight>
                     </View>
+                    <View>
+                        <View>
+                            <Text>书籍简介</Text>
+                        </View>
+                        <View>
+                            <Text>书籍简介</Text>
+                        </View>
+                        <View>
+                            <TouchableHighlight style={styles.buyButton} onPress={() => {
+                            }}>
+                                <Ionicons name='ios-arrow-down-outline'
+                                          size={25}
+                                          sstyle={styles.navIcon}/>
+
+                            </TouchableHighlight>
+                        </View>
+                    </View>
                 </ScrollView>
                 <TouchableHighlight style={styles.buyButton} onPress={() => {
                 }}>

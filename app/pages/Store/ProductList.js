@@ -10,6 +10,7 @@ import ListItem from "./ListItem"
 import {Divider} from "react-native-elements"
 import resource from "../../resource"
 import docs from '../../storage/book'
+import Search from "../Search"
 
 // 取得屏幕的宽高Dimensions
 const {width, height} = Dimensions.get('window');
@@ -68,6 +69,7 @@ class ProductList extends Component {
 
         return (
             <View style={styles.container}>
+                <Search/>
                 <FlatList
                     data={books}
                     keyExtractor={(item, index) => `book${index}`}
