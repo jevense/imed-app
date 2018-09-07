@@ -1,16 +1,20 @@
 import React, {Component} from 'react';
-import {Dimensions, Image, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
+import {Dimensions, FlatList, Image, StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
 // 引用头部组件
 //引用插件
 import {connect} from "react-redux"
 import {openSearch} from "../../actions/sheetAction"
 import Ionicons from "react-native-vector-icons/Ionicons"
 import {toggleView} from "../../actions/storeAction"
+import ListItem from "./ListItem"
+import {Divider} from "react-native-elements"
+import resource from "../../resource"
+import docs from '../../storage/book'
 
 // 取得屏幕的宽高Dimensions
 const {width, height} = Dimensions.get('window');
 
-class Products extends Component {
+class ProductList extends Component {
 
     static navigationOptions = ({navigation, navigationOptions}) => {
         let {
@@ -20,9 +24,9 @@ class Products extends Component {
         let {
             isList = true,
             toggleView = () => {
-                isList = false
             }
         } = params
+        navigationOptions.tabBarVisible = false
         return {
             headerTitle: (<TouchableOpacity onPress={openSearch}>
                 <View style={styles.searchBox}>
@@ -31,7 +35,10 @@ class Products extends Component {
                 </View>
             </TouchableOpacity>),
             headerRight: (
-                <TouchableOpacity onPress={toggleView}>
+                <TouchableOpacity onPress={() => {
+                    toggleView();
+                    navigation.setParams({isList: !isList,})
+                }}>
                     <Ionicons name={isList ? 'ios-keypad-outline' : 'ios-list-box-outline'}
                               size={25}
                               style={styles.itemIcon}
@@ -53,8 +60,20 @@ class Products extends Component {
     };
 
     render() {
+        let books = docs.map(item => {
+            let {id: key = "", name: title = "", edition: editor = "", size = "", cover, textbook} = item;
+            let image = textbook ? resource[key] : {url: cover};
+            return {key, title, editor, size, image}
+        });
+
         return (
             <View style={styles.container}>
+                <FlatList
+                    data={books}
+                    keyExtractor={(item, index) => `book${index}`}
+                    renderItem={({item}) => ListItem({item})}
+                    ItemSeparatorComponent={() => <Divider style={{height: 1, backgroundColor: 'gray'}}/>}
+                />
             </View>
         );
     }
@@ -67,13 +86,12 @@ export default connect(
     (dispatch) => ({
         toggleView: () => dispatch(toggleView()),
     })
-)(Products)
+)(ProductList)
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        alignItems: 'center',
         backgroundColor: '#fff',
+        width: width,
     },
     navLeft: {
         alignItems: 'center',
@@ -116,5 +134,6 @@ const styles = StyleSheet.create({
     },
     itemIcon: {
         color: '#FC0D1B',
+        margin: 10,
     },
 });

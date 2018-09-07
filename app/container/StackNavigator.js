@@ -1,7 +1,7 @@
 import {StackNavigator} from 'react-navigation';
 import Sheet from '../pages/Sheet';
 import BookAdd from '../pages/BookAdd';
-import Products from "../pages/Store/Products"
+import ProductInfo from "../pages/Store/ShareDemo"
 
 const stackNavigator = StackNavigator({
     Sheet: {
@@ -11,10 +11,10 @@ const stackNavigator = StackNavigator({
         screen: BookAdd,
     },
     Category: {
-        screen: Products,
+        screen: ProductInfo,
     },
 }, {
-    initialRouteName: 'Sheet', // 默认显示界面
+    initialRouteName: 'Category', // 默认显示界面
     navigationOptions: {  // 屏幕导航的默认选项, 也可以在组件内用 static navigationOptions 设置(会覆盖此处的设置)
         gesturesEnabled: false,
         headerStyle: {

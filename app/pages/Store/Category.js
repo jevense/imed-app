@@ -8,7 +8,7 @@ class Category extends Component {
 
     static navigationOptions = {
         title: '分类',
-        headerBackTitle: '',
+        tabBarVisible: false
     }
 
     constructor() {
@@ -103,7 +103,7 @@ class Category extends Component {
                                 <Text>{section.title}</Text>
                                 <TouchableHighlight onPress={
                                     () => {
-                                        this.props.navigation.navigate('Products')
+                                        this.props.navigation.navigate('ProductList')
                                     }
                                 }>
                                     <Text>更多</Text>
